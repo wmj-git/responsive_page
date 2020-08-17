@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*轮播图*/
+.banner {
+  height: 21rem;
+  background-size: cover;
+  background-color: rgba(18, 216, 240, 0.13); }
+
+.carousel-indicators {
+  bottom: 320px; }
+
+.sectionOne {
+  height: 21rem;
+  font-size: 1.42rem;
+  background-color: #fff; }
+  .sectionOne .item-6 {
+    background-color: rgba(85, 255, 97, 0.33);
+    height: 14.3rem; }
+  .sectionOne .item-4 {
+    height: 14.3rem;
+    background-color: rgba(76, 174, 76, 0.79); }
+  .sectionOne .bg-text {
+    font-size: 1rem; }
+  .sectionOne .small-text {
+    font-size: .8rem; }
+
+.sectionTwo {
+  background-color: #fff; }
+  .sectionTwo .item-6 {
+    background-color: rgba(85, 255, 97, 0.33);
+    height: 14.3rem; }
+  .sectionTwo .item-4 {
+    height: 14.3rem;
+    background-color: rgba(76, 174, 76, 0.79); }
+  .sectionTwo .bg-text {
+    font-size: 1rem; }
+  .sectionTwo .small-text {
+    font-size: .8rem; }
+
+/*# sourceMappingURL=index.css.map */

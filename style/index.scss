@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/*轮播图*/
+.banner{
+  height: 21rem;
+  background-size: cover;
+  background-color: rgba(18, 216, 240, 0.13);
+  //background-image: url("../image/banner.jpg");
+}
+.fullpage{
+  & .container{
+    //border: 3px solid #000;
+    //border-radius: 10px;
+  }
+
+}
+.carousel-indicators{
+  bottom: 320px;
+}
+.sectionOne {
+  height: 21rem;
+  font-size: 1.42rem;
+  background-color: #fff;
+  & .item-6 {
+    background-color: rgba(85, 255, 97, 0.33);
+    height: 14.3rem;
+  }
+  & .item-4 {
+    height: 14.3rem;
+    background-color: rgba(76, 174, 76, 0.79);
+  }
+  & .bg-text {
+    font-size: 1rem;
+  }
+  & .small-text {
+    font-size: .8rem;
+  }
+}
+.sectionTwo{
+  background-color: #fff;
+
+  & .item-6 {
+    background-color: rgba(85, 255, 97, 0.33);
+    height: 14.3rem;
+  }
+  & .item-4 {
+    height: 14.3rem;
+    background-color: rgba(76, 174, 76, 0.79);
+  }
+  & .bg-text {
+    font-size: 1rem;
+  }
+  & .small-text {
+    font-size: .8rem;
+  }
+}

@@ -1,0 +1,41 @@
+<div class="nav_box">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="index.html">首页</a>
+                    <a class="nav-item nav-link " href="online.html">线上会员</a>
+                    <a class="nav-item nav-link" href="offline.html">线下VIP服务</a>
+                    <a class="nav-item nav-link" href="consulting.html">情感咨询</a>
+                    <a class="nav-item nav-link" href="case.html">成功案例</a>
+                    <a class="nav-item nav-link " href="activity.html">相亲活动</a>
+                    <a class="nav-item nav-link " href="about.html">关于我们</a>
+                    <a class="nav-item nav-link ">400 023 8520</a>
+                    <a class="nav-item nav-link ">
+                        <a class="login_btn">登录</a>
+                        <a class="login_btn line">|</a>
+                        <a class="login_btn">注册</a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<script type="text/javascript">
+    var urlstr = location.href;
+    var urlstatus=false;
+    $(".navbar-nav a").each(function () {
+        if ((urlstr + '/').indexOf($(this).attr('href')) > -1&&$(this).attr('href')!='') {
+            $(this).addClass('active'); urlstatus = true;
+        } else {
+            $(this).removeClass('active');
+        }
+    });
+    if (!urlstatus) {$("#navbar-nav a").eq(0).addClass('active'); }
+</script>

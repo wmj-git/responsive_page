@@ -1,0 +1,56 @@
+.nav_box {
+  .bg-light {
+    background-color: #fff !important;
+    //background-color: transparent !important;
+    .container {
+      //border-width: 3px 3px 0;
+      //border-style: solid;
+      //background-color: rgba(255, 255, 255, 0.51);
+      //border-color: #000;
+      //border-radius: 10px 10px 0 0;
+    }
+  }
+  //height: 50px;
+  font-size: .7rem;
+  .navbar-nav {
+    & a.nav-item.nav-link {
+      padding: 10px 0;
+      margin: 0 10px;
+      &.active {
+        color: $backgroundColor-highlight;
+        border-bottom: 2px solid $backgroundColor-highlight;
+      }
+    }
+  }
+  .login_btn {
+    line-height: 42px;
+    &.line {
+      padding: 0 5px;
+      color: #d0d0d0;
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .nav_box {
+    & .navbar-brand {
+      padding-left: 20px;
+    }
+
+    .navbar-collapse {
+      padding-left: 0;
+
+      & .navbar-nav {
+        float: right;
+        width: 100px;
+        text-align: center;
+        & a.nav-item.nav-link {
+          &.active {
+            border: none !important;
+          }
+        }
+      }
+    }
+  }
+
+}

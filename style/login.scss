@@ -1,0 +1,77 @@
+@import "variable";
+
+.login_box {
+  background-color: rgba(0, 111, 229, 0.44);
+  height: 36rem;
+}
+
+.login_header {
+  margin: 0 auto;
+  top: 8rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px 2px #8483839e;
+  padding: .5rem 0;
+  & .circle{
+    width: 4rem;
+    height: 4rem;
+    left: 50%;
+    margin-left: -2rem;
+    top: -2rem;
+    box-shadow:  0px -6px 9px 0px #8483836b;;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fff;
+  }
+  & .text-center {
+    margin-bottom: 2rem;
+    padding: 2rem 0 1rem;
+    border-bottom: 2px solid lighten($backgroundColor-highlight, 20%);
+    color: $backgroundColor-highlight;
+  }
+  & .form-horizontal {
+    margin: 0 auto;
+  }
+  & .form-group {
+    margin: 1rem 0;
+    input {
+      border: none;
+      color: #000;
+      background-color: $lighten-colorful;
+      border-radius: 0;
+      font-size: .8rem;
+    }
+    .checkbox {
+      font-size: .8rem;
+    }
+    .btn-info {
+      background-color: $backgroundColor-highlight;
+      color: #fff;
+      padding: .5rem 0;
+      &:active,&:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus{
+        background-color:$backgroundColor-highlight;
+        box-shadow: 0 0 .5rem darken($backgroundColor-highlight,5%);
+        border-color: transparent;
+      }
+
+    }
+    input[type=checkbox], input[type=radio] {
+      margin-right: 5px;
+    }
+    label{
+      color: $backgroundColor-highlight;
+      font-size: .6rem;
+    }
+    .form-control:focus{
+      box-shadow: unset;
+    }
+  }
+}
+
+.nav-item span {
+  color: $backgroundColor-highlight !important;
+}
+
+.nav_box .login_btn {
+  text-decoration: underline !important;
+}
