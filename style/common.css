@@ -1,16 +1,21 @@
 @charset "UTF-8";
 .nav_box {
-  font-size: .7rem; }
+  font-size: .8rem; }
   .nav_box .bg-light {
     background-color: #fff !important; }
   .nav_box .navbar-nav a.nav-item.nav-link {
+    color: black;
     padding: 10px 0;
     margin: 0 10px; }
+    .nav_box .navbar-nav a.nav-item.nav-link .phone_img {
+      width: 17px;
+      height: 17px;
+      margin-right: 6px; }
     .nav_box .navbar-nav a.nav-item.nav-link.active {
       color: #9c8ef0;
       border-bottom: 2px solid #9c8ef0; }
   .nav_box .login_btn {
-    line-height: 42px; }
+    color: #333333; }
     .nav_box .login_btn.line {
       padding: 0 5px;
       color: #d0d0d0; }
@@ -22,10 +27,11 @@
     padding-left: 0; }
     .nav_box .navbar-collapse .navbar-nav {
       float: right;
-      width: 100px;
       text-align: center; }
       .nav_box .navbar-collapse .navbar-nav a.nav-item.nav-link.active {
-        border: none !important; } }
+        border: none !important; }
+  .nav_box .navbar-toggler {
+    border: none; } }
 html {
   font-size: 62.5% !important;
   /* 10梅16=62.5% */ }

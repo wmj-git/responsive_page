@@ -11,11 +11,17 @@
     }
   }
   //height: 50px;
-  font-size: .7rem;
+  font-size: .8rem;
   .navbar-nav {
     & a.nav-item.nav-link {
+      color: black;
       padding: 10px 0;
       margin: 0 10px;
+      & .phone_img{
+        width: 17px;
+        height: 17px;
+        margin-right: 6px;
+      }
       &.active {
         color: $backgroundColor-highlight;
         border-bottom: 2px solid $backgroundColor-highlight;
@@ -23,7 +29,7 @@
     }
   }
   .login_btn {
-    line-height: 42px;
+    color: darken($textColor-base,80%);
     &.line {
       padding: 0 5px;
       color: #d0d0d0;
@@ -42,7 +48,6 @@
 
       & .navbar-nav {
         float: right;
-        width: 100px;
         text-align: center;
         & a.nav-item.nav-link {
           &.active {
@@ -50,6 +55,9 @@
           }
         }
       }
+    }
+    .navbar-toggler{
+border:none;
     }
   }
 
