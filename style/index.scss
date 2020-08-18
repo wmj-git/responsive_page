@@ -258,7 +258,7 @@
         left: -.95rem;
         bottom: -.95rem;
       }
-      & .banner_left{
+      & .banner_left {
         left: -2rem;
         bottom: 1rem;
       }
@@ -301,7 +301,9 @@
       }
     }
   }
-  & .JQ-slide-content  li{position:absolute;}
+  & .JQ-slide-content li {
+    position: absolute;
+  }
   & .JQ-slide-nav {
     box-shadow: inset 0px 2px 17px #e7a4a563;
     padding: 0;
@@ -320,12 +322,15 @@
       }
     }
   }
-  & .flex-layout{
+  & .flex-layout {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-
+    & .change_btn {
+      background-color:#e7a4a563 ;
+      height: auto;
+    }
   }
 
 }
