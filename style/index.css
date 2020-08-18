@@ -6,7 +6,7 @@
   margin: 0 10px;
   background-color: #b9b9b9; }
 .carousel-indicators .active {
-  background-color: #9c8ef0;
+  background-color: rgba(156, 142, 240, 0.47);
   width: 40px;
   border-radius: 5px; }
 
@@ -26,7 +26,7 @@
   font-size: 1.42rem;
   background-color: #fff; }
   .sectionPage .item-6 .section_title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold; }
   .sectionPage .item-6 .sub_title {
     font-size: .8rem;
@@ -41,19 +41,6 @@
     font-size: .8rem; }
   .sectionPage .col {
     border: 1px solid #000; }
-
-.sectionTwo {
-  background-color: #fff; }
-  .sectionTwo .item-6 {
-    background-color: rgba(85, 255, 97, 0.33);
-    height: 14.3rem; }
-  .sectionTwo .item-4 {
-    height: 14.3rem;
-    background-color: rgba(76, 174, 76, 0.79); }
-  .sectionTwo .bg-text {
-    font-size: 1rem; }
-  .sectionTwo .small-text {
-    font-size: .8rem; }
 
 .pic-layout {
   padding-top: 1rem; }
@@ -86,21 +73,32 @@
     width: 11rem; }
 
 .see_more {
-  background-color: #9c8ef0;
+  background-color: rgba(156, 142, 240, 0.47);
+  margin: 2rem auto;
   height: 2rem;
-  margin: 2rem auto 0;
+  line-height: 2rem;
   width: 90%;
   border-radius: 1rem;
   color: #fff;
   font-size: 1rem;
-  border: none;
-  line-height: 2rem; }
+  border: none; }
 
 @media screen and (max-width: 768px) {
   .col-responsive-5 {
     width: 100%; }
     .col-responsive-5 img {
-      width: 100%; } }
+      width: 100%; }
+
+  .service-item .service_line {
+    border-right: none !important; }
+
+  .item-6 {
+    padding-top: 2rem; }
+
+  .see_more {
+    height: auto;
+    line-height: unset;
+    padding: .5rem 0; } }
 /*选项卡*/
 .hy_tabs {
   padding-right: 0; }
@@ -123,8 +121,150 @@
     padding: 0 5px; }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-  background-color: #9c8ef0;
+  background-color: rgba(156, 142, 240, 0.47);
   border-radius: 12px;
   color: #fff; }
+
+/*婚恋服务*/
+.service-item {
+  padding-top: 1rem; }
+  .service-item .service-img {
+    height: 8rem;
+    background-color: #f1f1f1;
+    margin-bottom: 1rem; }
+    .service-item .service-img img {
+      width: 100%;
+      height: 8rem; }
+  .service-item h6 {
+    font-weight: bold;
+    margin: 0; }
+  .service-item .service_line {
+    padding: 0 14px 0 15px;
+    border-right: 1px solid #d8d8d8; }
+  .service-item .service-part {
+    padding: .5rem 0; }
+  .service-item .service_content span {
+    font-size: .4rem;
+    color: #8b8b8b; }
+  .service-item .service_content .service_more {
+    width: auto;
+    padding: .25rem 1rem;
+    background-color: transparent;
+    border-radius: 1.5rem;
+    font-size: .6rem;
+    color: #bebebe;
+    border: none;
+    border: 1px solid #bebebe; }
+    .service-item .service_content .service_more:hover {
+      color: #fff;
+      border-color: rgba(156, 142, 240, 0.47);
+      background-color: rgba(156, 142, 240, 0.47); }
+
+/*情感咨询*/
+.consultation_page .fp-tableCell {
+  background-color: #fcfcfc !important; }
+
+.consultation_header {
+  height: 10rem;
+  vertical-align: middle;
+  background-size: contain;
+  background-color: #fcfcfc;
+  position: relative; }
+  .consultation_header .consultation_img {
+    position: absolute;
+    top: -0.5rem;
+    max-width: 1020px;
+    left: 50%;
+    margin-left: -32rem; }
+
+.consultation_box {
+  max-width: 1130px;
+  margin-right: 21.5rem;
+  margin: 0 auto;
+  height: 16rem;
+  background-color: #f6e2e3;
+  box-shadow: 0 0 4px #f6e2e3;
+  position: relative; }
+  .consultation_box .consultation_outBox {
+    position: absolute;
+    max-width: 1080px;
+    right: 0;
+    box-shadow: -3px 14px 10px #ead1d2;
+    bottom: 1.5rem;
+    width: 100%;
+    background-color: #fff;
+    height: 20rem; }
+    .consultation_box .consultation_outBox .consultation_banner {
+      top: 3rem;
+      height: 14rem;
+      padding: 0; }
+      .consultation_box .consultation_outBox .consultation_banner .consultation-img {
+        width: 100%;
+        height: 14rem;
+        position: absolute;
+        left: 0;
+        top: 0; }
+      .consultation_box .consultation_outBox .consultation_banner .left-bottom {
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        border-bottom: .9rem solid #e7a4a5;
+        border-left: .9rem solid #e7a4a5;
+        left: -.95rem;
+        bottom: -.95rem; }
+      .consultation_box .consultation_outBox .consultation_banner .banner_left {
+        left: -2rem;
+        bottom: 1rem; }
+  .consultation_box .content_box {
+    display: flex;
+    align-items: center; }
+    .consultation_box .content_box .consultation-content {
+      font-size: 1.3rem;
+      color: rgba(156, 142, 240, 0.47); }
+      .consultation_box .content_box .consultation-content .content_title {
+        font-weight: bold; }
+      .consultation_box .content_box .consultation-content .content_sub_title {
+        font-size: 1rem; }
+      .consultation_box .content_box .consultation-content .content_page {
+        font-size: .75rem;
+        color: #8b8b8b;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        line-height: 1.5rem;
+        text-align: justify;
+        padding-top: 1rem; }
+      .consultation_box .content_box .consultation-content .consultation_btn {
+        background-color: rgba(156, 142, 240, 0.47);
+        border: none;
+        height: 1.5rem;
+        width: 5rem;
+        border-radius: .75rem;
+        line-height: 1.5rem;
+        font-size: .8rem;
+        color: #fff; }
+  .consultation_box .JQ-slide-content li {
+    position: absolute; }
+  .consultation_box .JQ-slide-nav {
+    box-shadow: inset 0px 2px 17px #e7a4a563;
+    padding: 0;
+    width: inherit;
+    text-align: center; }
+    .consultation_box .JQ-slide-nav li {
+      background-color: transparent;
+      padding: 1.5rem 1rem; }
+      .consultation_box .JQ-slide-nav li img {
+        width: 4rem;
+        height: auto; }
+      .consultation_box .JQ-slide-nav li.on {
+        background-color: rgba(156, 142, 240, 0.47); }
+  .consultation_box .flex-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; }
 
 /*# sourceMappingURL=index.css.map */

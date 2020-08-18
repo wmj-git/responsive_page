@@ -25,7 +25,7 @@
   background-color: #fff;
   & .item-6 {
     & .section_title {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: bold;
     }
     & .sub_title {
@@ -47,25 +47,6 @@
   }
   .col {
     border: 1px solid #000;
-  }
-}
-
-.sectionTwo {
-  background-color: #fff;
-
-  & .item-6 {
-    background-color: rgba(85, 255, 97, 0.33);
-    height: 14.3rem;
-  }
-  & .item-4 {
-    height: 14.3rem;
-    background-color: rgba(76, 174, 76, 0.79);
-  }
-  & .bg-text {
-    font-size: 1rem;
-  }
-  & .small-text {
-    font-size: .8rem;
   }
 }
 
@@ -106,14 +87,14 @@
 
 .see_more {
   background-color: $backgroundColor-highlight;
+  margin: 2rem auto;
   height: 2rem;
-  margin: 2rem auto 0;
+  line-height: 2rem;
   width: 90%;
   border-radius: 1rem;
   color: $textColor-base;
   font-size: 1rem;
   border: none;
-  line-height: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -122,6 +103,19 @@
     & img {
       width: 100%;
     }
+  }
+  .service-item {
+    & .service_line {
+      border-right: none !important;
+    }
+  }
+  .item-6 {
+    padding-top: 2rem;
+  }
+  .see_more {
+    height: auto;
+    line-height: unset;
+    padding: .5rem 0;
   }
 }
 
@@ -156,4 +150,182 @@
   background-color: $backgroundColor-highlight;
   border-radius: 12px;
   color: $textColor-base;
+}
+
+/*婚恋服务*/
+.service-item {
+  padding-top: 1rem;
+  .service-img {
+    height: 8rem;
+    background-color: lighten($text-gray, 40%);
+    margin-bottom: 1rem;
+    & img {
+      width: 100%;
+      height: 8rem;
+    }
+  }
+
+  h6 {
+    font-weight: bold;
+    margin: 0;
+  }
+  & .service_line {
+    padding: 0 14px 0 15px;
+    border-right: 1px solid lighten($text-gray, 30%);
+  }
+  & .service-part {
+    padding: .5rem 0;
+  }
+  .service_content {
+    & span {
+      font-size: .4rem;
+      color: $text-gray;
+    }
+    & .service_more {
+      width: auto;
+      padding: .25rem 1rem;
+      background-color: transparent;
+      border-radius: 1.5rem;
+      font-size: .6rem;
+      color: lighten($text-gray, 20%);
+      border: none;
+      border: 1px solid lighten($text-gray, 20%);
+      &:hover {
+        color: $textColor-base;
+        border-color: $backgroundColor-highlight;
+        background-color: $backgroundColor-highlight;
+      }
+    }
+  }
+}
+
+/*情感咨询*/
+.consultation_page {
+  & .fp-tableCell {
+    background-color: #fcfcfc !important;
+  }
+}
+
+.consultation_header {
+  height: 10rem;
+  vertical-align: middle;
+  background-size: contain;
+  background-color: #fcfcfc;
+  position: relative;
+  & .consultation_img {
+    position: absolute;
+    top: -0.5rem;
+    max-width: 1020px;
+    left: 50%;
+    margin-left: -32rem;
+  }
+}
+
+.consultation_box {
+  max-width: 1130px;
+  margin-right: 21.5rem;
+  margin: 0 auto;
+  height: 16rem;
+  background-color: #f6e2e3;
+  box-shadow: 0 0 4px #f6e2e3;
+  position: relative;
+  & .consultation_outBox {
+    position: absolute;
+    max-width: 1080px;
+    right: 0;
+    box-shadow: -3px 14px 10px #ead1d2;
+    bottom: 1.5rem;
+    width: 100%;
+    background-color: $textColor-base;
+    height: 20rem;
+    & .consultation_banner {
+      top: 3rem;
+      height: 14rem;
+      padding: 0;
+      & .consultation-img {
+        width: 100%;
+        height: 14rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      & .left-bottom {
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        border-bottom: .9rem solid #e7a4a5;
+        border-left: .9rem solid #e7a4a5;
+        left: -.95rem;
+        bottom: -.95rem;
+      }
+      & .banner_left{
+        left: -2rem;
+        bottom: 1rem;
+      }
+    }
+  }
+  & .content_box {
+    display: flex;
+    align-items: center;
+    & .consultation-content {
+      font-size: 1.3rem;
+      color: $backgroundColor-highlight;
+      & .content_title {
+        font-weight: bold;
+      }
+      & .content_sub_title {
+        font-size: 1rem;
+      }
+      & .content_page {
+        font-size: .75rem;
+        color: $text-gray;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        line-height: 1.5rem;
+        text-align: justify;
+        padding-top: 1rem;
+      }
+      & .consultation_btn {
+        background-color: $backgroundColor-highlight;
+        border: none;
+        height: 1.5rem;
+        width: 5rem;
+        border-radius: .75rem;
+        line-height: 1.5rem;
+        font-size: .8rem;
+        color: #fff;
+      }
+    }
+  }
+  & .JQ-slide-content  li{position:absolute;}
+  & .JQ-slide-nav {
+    box-shadow: inset 0px 2px 17px #e7a4a563;
+    padding: 0;
+    width: inherit;
+    text-align: center;
+    & li {
+      background-color: transparent;
+      padding: 1.5rem 1rem;
+
+      & img {
+        width: 4rem;
+        height: auto;
+      }
+      &.on {
+        background-color: $backgroundColor-highlight;
+      }
+    }
+  }
+  & .flex-layout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+  }
+
 }

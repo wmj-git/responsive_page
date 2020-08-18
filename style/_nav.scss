@@ -16,8 +16,8 @@
     & a.nav-item.nav-link {
       color: black;
       padding: 10px 0;
-      margin: 0 10px;
-      & .phone_img{
+      margin: 0 .3rem;
+      & .phone_img {
         width: 17px;
         height: 17px;
         margin-right: 6px;
@@ -29,7 +29,7 @@
     }
   }
   .login_btn {
-    color: darken($textColor-base,80%);
+    color: darken($textColor-base, 80%);
     &.line {
       padding: 0 5px;
       color: #d0d0d0;
@@ -56,8 +56,8 @@
         }
       }
     }
-    .navbar-toggler{
-border:none;
+    .navbar-toggler {
+      border: none;
     }
   }
 

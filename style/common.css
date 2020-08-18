@@ -6,14 +6,14 @@
   .nav_box .navbar-nav a.nav-item.nav-link {
     color: black;
     padding: 10px 0;
-    margin: 0 10px; }
+    margin: 0 .3rem; }
     .nav_box .navbar-nav a.nav-item.nav-link .phone_img {
       width: 17px;
       height: 17px;
       margin-right: 6px; }
     .nav_box .navbar-nav a.nav-item.nav-link.active {
-      color: #9c8ef0;
-      border-bottom: 2px solid #9c8ef0; }
+      color: rgba(156, 142, 240, 0.47);
+      border-bottom: 2px solid rgba(156, 142, 240, 0.47); }
   .nav_box .login_btn {
     color: #333333; }
     .nav_box .login_btn.line {
@@ -68,5 +68,13 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #d6d6d6; }
+
+button:focus {
+  outline: none; }
+button:hover {
+  cursor: pointer; }
+
+ul li {
+  list-style: none; }
 
 /*# sourceMappingURL=common.css.map */
