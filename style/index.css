@@ -421,4 +421,23 @@
     border-radius: 1rem;
     background-color: rgba(156, 142, 240, 0.47); }
 
+/*资讯中心*/
+.news_box .news_header {
+  margin-bottom: 2rem; }
+  .news_box .news_header .case_tabs .nav-link {
+    border: 1px solid rgba(139, 139, 139, 0.31);
+    border-radius: .5rem;
+    margin: 0 .2rem; }
+    .news_box .news_header .case_tabs .nav-link:last-child {
+      margin-right: 0; }
+.news_box .news_banner .col-md-4 {
+  padding: 0 .5rem; }
+  .news_box .news_banner .col-md-4:first-child {
+    padding-left: .2rem; }
+  .news_box .news_banner .col-md-4:last-child {
+    padding-right: .2rem; }
+.news_box .news_banner .news_img {
+  width: 100%;
+  height: auto; }
+
 /*# sourceMappingURL=index.css.map */
