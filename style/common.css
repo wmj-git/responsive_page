@@ -2,7 +2,7 @@
 .nav_box {
   font-size: .8rem; }
   .nav_box .bg-light {
-    background-color: #ffffffa1 !important; }
+    background-color: #fff !important; }
   .nav_box .navbar-nav a.nav-item.nav-link {
     color: black;
     padding: 10px 0;
@@ -80,7 +80,7 @@ ul li {
 .footer {
   text-align: center;
   padding: .5rem;
-  margin: 3rem auto;
+  margin: 5rem auto 3rem;
   color: black;
   font-size: .8rem; }
   .footer .footer_nav {

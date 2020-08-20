@@ -1,6 +1,15 @@
 @charset "UTF-8";
 @import "banner";
 @import "variable";
+
+.header {
+  & .nav_box {
+    & .bg-light {
+      background-color: rgba(255, 255, 255, 0.7) !important;
+    }
+  }
+}
+
 /*轮播图*/
 .banner {
   width: 100%;

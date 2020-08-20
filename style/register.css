@@ -1,0 +1,59 @@
+.register_box .nav_box .bg-light {
+  background-color: #fff !important; }
+.register_box .nav_box .register_btn button {
+  border: none;
+  border-radius: 1rem;
+  padding: .2rem 1rem;
+  color: white;
+  font-size: .8rem;
+  background-color: #9c8ef0; }
+.register_box .register_form {
+  padding: 1rem;
+  position: relative; }
+  .register_box .register_form .register-content {
+    font-size: .8rem;
+    color: black; }
+    .register_box .register_form .register-content .register_item {
+      padding-left: .3rem;
+      height: .8rem;
+      font-weight: bold;
+      line-height: .8rem;
+      border-left: 3px solid #9c8ef0; }
+      .register_box .register_form .register-content .register_item .register_info {
+        margin-left: 4%;
+        font-weight: normal; }
+        .register_box .register_form .register-content .register_item .register_info span {
+          color: #9c8ef0;
+          padding: 0 .2rem; }
+    .register_box .register_form .register-content .form-group {
+      font-size: .75rem; }
+      .register_box .register_form .register-content .form-group .line-height {
+        line-height: 1.6rem; }
+      .register_box .register_form .register-content .form-group label {
+        width: 4.7rem; }
+      .register_box .register_form .register-content .form-group input[type='tel'], .register_box .register_form .register-content .form-group input[type="password"] {
+        width: 100%;
+        border-color: rgba(0, 0, 0, 0);
+        background-color: #f4f4f4;
+        padding: .2rem .5rem; }
+      .register_box .register_form .register-content .form-group .padding-none {
+        padding: 0; }
+      .register_box .register_form .register-content .form-group .custom-select {
+        height: auto;
+        padding: .2rem; }
+      .register_box .register_form .register-content .form-group .register_margin {
+        margin-left: 4.7rem;
+        font-size: .7rem;
+        color: #000000; }
+        .register_box .register_form .register-content .form-group .register_margin a {
+          color: #9c8ef0;
+          text-decoration: underline; }
+        .register_box .register_form .register-content .form-group .register_margin .register_btn {
+          border: none;
+          border-radius: 3px;
+          padding: .5rem 3rem;
+          color: #fff;
+          font-size: .8rem;
+          background: linear-gradient(to right, #a068ef, #886cf0); }
+
+/*# sourceMappingURL=register.css.map */
