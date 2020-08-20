@@ -230,117 +230,119 @@
 }
 
 .consultation_box {
-  max-width: 1180px;
+  max-width: 59rem;
   margin: 0 auto;
   left: -2.2rem;
   height: 16rem;
   background-color: #f6e2e3;
   box-shadow: 0 0 4px #f6e2e3;
   position: relative;
-  & .consultation_outBox {
-    position: absolute;
-    max-width: 1084px;
-    right: 0;
-    box-shadow: -3px 14px 10px #ead1d2;
-    bottom: 1.5rem;
-    width: 100%;
-    background-color: $textColor-base;
-    height: 20rem;
-    & .consultation_banner {
-      top: 3rem;
-      height: 14rem;
-      padding: 0;
-      & .consultation-img {
-        width: 100%;
+  & .consultation_container {
+    & .consultation_outBox {
+      position: absolute;
+      max-width: 54.2rem;
+      right: 0;
+      box-shadow: -3px 14px 10px #ead1d2;
+      bottom: 1.5rem;
+      width: 100%;
+      background-color: $textColor-base;
+      height: 20rem;
+      & .consultation_banner {
+        top: 3rem;
         height: 14rem;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-      & .left-bottom {
-        position: absolute;
-        width: 6rem;
-        height: 6rem;
-        border-bottom: .9rem solid #e7a4a5;
-        border-left: .9rem solid #e7a4a5;
-        left: -.95rem;
-        bottom: -.95rem;
-      }
-      & .banner_left {
-        left: -2rem;
-        bottom: 1rem;
-      }
-    }
-  }
-  & .content_box {
-    display: flex;
-    align-items: center;
-    & .consultation-content {
-      font-size: 1.3rem;
-      color: $backgroundColor-highlight;
-      & .content_title {
-        font-weight: bold;
-      }
-      & .content_sub_title {
-        font-size: 1rem;
-      }
-      & .content_page {
-        font-size: .75rem;
-        color: $text-gray;
-        word-break: break-all;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-        line-height: 1.5rem;
-        text-align: justify;
-        padding-top: 1rem;
-      }
-      & .consultation_btn {
-        background-color: $backgroundColor-highlight;
-        border: none;
-        height: 1.5rem;
-        width: 5rem;
-        border-radius: .75rem;
-        line-height: 1.5rem;
-        font-size: .8rem;
-        color: #fff;
+        padding: 0;
+        & .consultation-img {
+          width: 100%;
+          height: 14rem;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        & .left-bottom {
+          position: absolute;
+          width: 6rem;
+          height: 6rem;
+          border-bottom: .9rem solid #e7a4a5;
+          border-left: .9rem solid #e7a4a5;
+          left: -.95rem;
+          bottom: -.95rem;
+        }
+        & .banner_left {
+          left: -2rem;
+          bottom: 1rem;
+        }
       }
     }
-  }
-  & .JQ-slide-content li {
-    position: absolute;
-  }
-  & .JQ-slide-nav {
-    box-shadow: inset 0px 2px 17px #e7a4a563;
-    padding: 0;
-    width: inherit;
-    height: 19.5rem;
-    overflow: hidden;
-    text-align: center;
-    & li {
-      background-color: #efdbdc;
-      height: 6.5rem;
-      line-height: 6.5rem;
+    & .content_box {
+      display: flex;
+      align-items: center;
+      & .consultation-content {
+        font-size: 1.3rem;
+        color: $backgroundColor-highlight;
+        & .content_title {
+          font-weight: bold;
+        }
+        & .content_sub_title {
+          font-size: 1rem;
+        }
+        & .content_page {
+          font-size: .75rem;
+          color: #8b8b8bd9;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          line-height: 1.5rem;
+          text-align: justify;
+          padding-top: 1rem;
+        }
+        & .consultation_btn {
+          background-color: $backgroundColor-highlight;
+          border: none;
+          height: 1.5rem;
+          width: 5rem;
+          border-radius: .75rem;
+          line-height: 1.5rem;
+          font-size: .8rem;
+          color: #fff;
+        }
+      }
+    }
+    & .JQ-slide-content li {
+      position: absolute;
+    }
+    & .JQ-slide-nav {
+      box-shadow: inset 0px 2px 17px #e7a4a563;
+      padding: 0;
+      width: inherit;
+      height: 19.5rem;
+      overflow: hidden;
+      text-align: center;
+      & li {
+        background-color: #efdbdc;
+        height: 6.5rem;
+        line-height: 6.5rem;
 
-      & img {
-        width: 8rem;
-        height: inherit;
-      }
-      &.on {
-        background-color: $backgroundColor-highlight;
+        & img {
+          width: 8rem;
+          height: inherit;
+        }
+        &.on {
+          background-color: $backgroundColor-highlight;
+        }
       }
     }
-  }
-  & .flex-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    & .change_btn {
-      background-color: #e7a4a563;
-      height: auto;
+    & .flex-layout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      & .change_btn {
+        background-color: #e7a4a563;
+        height: auto;
+      }
     }
   }
 
@@ -433,7 +435,7 @@
     bottom: 2rem;
     & .flashBg {
       width: 58rem;
-      height: 30rem;
+      height: 25rem;
       margin: 0 auto;
       position: relative;
       overflow: hidden;
@@ -477,7 +479,7 @@
               margin: 0;
               height: 1.7rem;
               padding-left: .5rem;
-              color: $textColor-base;
+              color: #ffffffd4;
             }
             & .case_item {
               font-size: .7rem;
@@ -541,18 +543,121 @@
     }
   }
   & .news_banner {
+    padding-right: 0;
     & .col-md-4 {
       padding: 0 .5rem;
-      &:first-child{
-        padding-left: .2rem;
+      &:first-child {
+        padding-left: 0;
       }
-      &:last-child{
-        padding-right: .2rem;
+      &:last-child {
+        padding-right: 0;
       }
     }
     & .news_img {
       width: 100%;
-      height: auto;
+      height: 11rem;
+      margin-bottom: 1rem;
+    }
+    & .news_info {
+      font-size: .7rem;
+      color: black;
+      margin: .5rem auto;
+      & .news_title {
+        font-size: .75rem;
+        margin: 1rem 0;
+      }
+      & .news_sub_title {
+        margin: .5rem 0 1rem;
+        color: #8b8b8b;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-height: 1rem;
+        height: 2rem;
+        overflow: hidden;
+      }
+      & .news_time {
+        border-top: 1px solid #8b8b8b26;
+        padding: 1.2rem 0;
+      }
+    }
+  }
+}
+
+/*联系我们*/
+.contact_banner {
+  width: 100%;
+  top: 0;
+  margin-bottom: 2rem;
+  position: relative;
+  & .contact_img {
+    width: 100%;
+    height: auto;
+    max-height: 30rem;
+  }
+}
+
+.contact_box {
+  & .contact_footer {
+    padding-bottom: 1rem;
+  }
+  & .contact_style {
+    font-size: .8rem;
+    color: black;
+    padding: 0 0 1rem;
+    & p {
+      margin-bottom: .2rem;
+      & span {
+        width: 4rem;
+        text-align: justify;
+        display: inline-block;
+        text-align-last: justify;
+      }
+    }
+    & .contact_title {
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+    & .contact_info {
+      font-size: .75rem;
+      color: #878787;
+    }
+    & .form-contact {
+      position: relative;
+      & .form-group {
+        &.form-group-item {
+          margin-bottom: .5rem;
+        }
+        & label {
+          font-size: .7rem;
+          color: #5f5f5f;
+        }
+        & .form-control {
+          border: none;
+          border-bottom: 1px solid #ced4da;
+          border-radius: 0;
+          padding: 0;
+          width: 100%;
+          &:focus {
+            box-shadow: unset;
+          }
+        }
+      }
+
+      & .btn_commit {
+        float: left;
+        background-color: $backgroundColor-highlight;
+        color: $textColor-base;
+        font-size: .8rem;
+        border-radius: 1rem;
+        padding: .2rem 2rem;
+        border: none;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+      }
     }
   }
 }

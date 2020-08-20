@@ -11,15 +11,17 @@
     <link rel="stylesheet" href="style/login.css">
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <title>Title</title>
+    <script src="js/layer/layer.js"></script>
+    <title>余生婚恋</title>
 </head>
 <body>
 
 <div class="login_box">
     <div class="nav_box">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-            <div class="container">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="nav">
+            <div class="container login_nav">
                 <a class="navbar-brand" href="#">
+                    <img class="logo_img " src="image/logo.png">
                 </a>
                 <div class="regist">
                     <div class="nav-item nav-link">
@@ -33,7 +35,7 @@
     <div class="login-form">
         <div class="container">
             <div id="login_header" class="login_header col-md-5">
-                <span class="circle"></span>
+                <span class="circle"><img src="image/logo_login.png" class="login_logo"></span>
                 <h5 class="text-center">登录余生婚恋</h5>
                 <form class="form-horizontal" role="form">
                     <div class="form-group has-error ">
@@ -60,14 +62,20 @@
                             <input type="button" class="form-control btn btn-info" onclick="loginFn()" value="立即登录">
                         </div>
                     </div>
+                    <div class="form-group form_register">
+                        <a href="#" class="register">免费注册</a>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-    <div class="login_footer"></div>
+    <div id="footer"></div>
 </div>
 <script>
     $(function () {
+        $("#footer").load("page/include/footer.html");
+        let top = $("#nav").outerHeight();
+        $(".login-form").css("top",top+"px");
     });
 
     function loginFn() {

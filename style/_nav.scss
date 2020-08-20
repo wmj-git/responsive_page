@@ -1,6 +1,6 @@
 .nav_box {
   .bg-light {
-    background-color: #fff !important;
+    background-color: #ffffffa1 !important;
     //background-color: transparent !important;
     .container {
       //border-width: 3px 3px 0;
@@ -40,7 +40,7 @@
 @media (max-width: 786px) {
   .nav_box {
     & .navbar-brand {
-      padding-left: 20px;
+      padding-left: 1rem;
     }
 
     .navbar-collapse {
