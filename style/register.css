@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .register_box .nav_box .bg-light {
   background-color: #fff !important; }
 .register_box .nav_box .register_btn button {
@@ -33,7 +34,8 @@
               color: #9c8ef0;
               padding: 0 .2rem; }
         .register_box .register_form .container .register-content .register_left .form-group {
-          font-size: .75rem; }
+          font-size: .75rem;
+          /*拖动块的样式*/ }
           .register_box .register_form .container .register-content .register_left .form-group .line-height {
             line-height: 1.6rem; }
           .register_box .register_form .container .register-content .register_left .form-group label {
@@ -43,6 +45,59 @@
             border-color: rgba(0, 0, 0, 0);
             background-color: #f4f4f4;
             padding: .2rem .5rem; }
+          .register_box .register_form .container .register-content .register_left .form-group input[type="range"] {
+            -webkit-appearance: none;
+            /*清除系统默认样式*/
+            width: 94.5%;
+            background: -webkit-linear-gradient(#a068ef, #9463f7) no-repeat, #d8d8d8;
+            background-size: 40% 100%;
+            height: .3rem;
+            position: absolute;
+            top: 14px;
+            left: 11px;
+            z-index: 1; }
+          .register_box .register_form .container .register-content .register_left .form-group input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: .9rem;
+            width: .9rem;
+            background: url("../image/circle.png") no-repeat center; }
+          .register_box .register_form .container .register-content .register_left .form-group .register_tooltip {
+            background: #fff;
+            box-shadow: 0 0 4px #bbb;
+            background-size: 100% 100%;
+            height: 1.2rem;
+            line-height: 1.2rem;
+            padding: .2rem;
+            position: relative;
+            left: 7.5rem;
+            top: -1.3rem;
+            z-index: 2;
+            border-radius: 6px; }
+            .register_box .register_form .container .register-content .register_left .form-group .register_tooltip::after {
+              position: absolute;
+              content: "";
+              left: .8rem;
+              top: 1.4rem;
+              border-top: 8px solid #fff;
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent; }
+          .register_box .register_form .container .register-content .register_left .form-group .birth_width {
+            width: 24rem;
+            display: inline-block; }
+            .register_box .register_form .container .register-content .register_left .form-group .birth_width select {
+              width: 6rem; }
+          .register_box .register_form .container .register-content .register_left .form-group .rules_img {
+            position: absolute;
+            left: 0;
+            z-index: 0;
+            top: 0;
+            height: 2rem;
+            width: 100%; }
+          .register_box .register_form .container .register-content .register_left .form-group .distPicker {
+            display: inline-block;
+            width: 24rem; }
+            .register_box .register_form .container .register-content .register_left .form-group .distPicker select {
+              width: 7rem; }
           .register_box .register_form .container .register-content .register_left .form-group .padding-none {
             padding: 0; }
           .register_box .register_form .container .register-content .register_left .form-group .custom-select {
@@ -92,6 +147,17 @@
     .register_form .container .register_left .form-group .form-check-inline {
       width: 20%; }
     .register_form .container .register_left .form-group .register_margin {
-      margin-left: -.3rem !important; } }
+      margin-left: -.3rem !important; }
+    .register_form .container .register_left .form-group input[type="range"] {
+      top: 7px !important;
+      left: 7px !important; }
+    .register_form .container .register_left .form-group input[type="range"]::-webkit-slider-thumb {
+      width: 1rem !important;
+      height: 1rem !important;
+      border-radius: 50%; }
+    .register_form .container .register_left .form-group .register_tooltip {
+      padding: .1rem .2rem !important;
+      top: -1.6rem !important;
+      left: 11rem !important; } }
 
 /*# sourceMappingURL=register.css.map */

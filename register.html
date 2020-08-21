@@ -12,7 +12,12 @@
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/layer/layer.js"></script>
+    <script src="js/datapicker/distpicker.data.js"></script>
+    <script src="js/datapicker/distpicker.js"></script>
+    <script src="js/jquery.time.js"></script>
+    <script src="js/birthday.js"></script>
     <title>余生婚恋</title>
+
 </head>
 <body>
 
@@ -41,14 +46,43 @@
                             <div class="col-md-12">
                                 <label>我是一位</label>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                           id="inlineRadio1" value="option1">
+                                    <input class="form-check-input" type="radio" name="sexRadioOptions"
+                                           id="inlineRadio1" value="option1" checked>
                                     <label class="form-check-label" for="inlineRadio1">先生</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                    <input class="form-check-input" type="radio" name="sexRadioOptions"
                                            id="inlineRadio2" value="option2">
                                     <label class="form-check-label" for="inlineRadio2">女士</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>我的生日</label>
+                                <div class="row birth_width">
+                                    <select class="sel_year" name="YYYY" id="year">
+                                        <option value="">请选择</option>
+                                    </select>
+                                    <span>年</span>
+                                    <select class="sel_month" name="MM" id="month">
+                                        <option value="">请选择</option>
+                                    </select>
+                                    <span>月</span>
+                                    <select class="sel_day" name="DD" id="day">
+                                        <option value="">请选择</option>
+                                    </select>
+                                    <span>日</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>工作地区</label>
+                                <div id="distPicker" class="row distPicker">
+                                    <select class="" id="province10"></select>
+                                    <select class="" id="city10"></select>
+                                    <select class="" id="district10"></select>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +91,7 @@
                                 <label>婚姻状态</label>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                           id="marriage1" value="option1">
+                                           id="marriage1" value="option1" checked>
                                     <label class="form-check-label" for="marriage1">未婚</label>
                                 </div>
                                 <div class="form-check form-check-inline">
@@ -75,8 +109,11 @@
                         <div class="form-group">
                             <div class="col-md-12 row">
                                 <label>我的身高</label>
-                                <div class="col-md-8 padding-none">
-                                    <input type="range" class="form-control-range" id="formControlRange">
+                                <div class="col-md-8 padding-none register_rules">
+                                    <span id="show" class="register_tooltip">160cm</span>
+                                    <input type="range" class="form-control-range" id="formControlRange"
+                                           max="220" min="120" oninput="mark(event)">
+                                    <img src="image/rules.png" class="rules_img">
                                 </div>
                             </div>
                         </div>
@@ -86,13 +123,13 @@
                                 <div class="col-md-4 padding-none">
                                     <select class="custom-select" id="inlineFormCustomSelect">
                                         <option selected>请选择</option>
-                                        <option selected>博士</option>
-                                        <option value="1">硕士</option>
-                                        <option value="2">研究生</option>
-                                        <option value="3">本科</option>
-                                        <option value="3">大专</option>
-                                        <option value="3">高中</option>
-                                        <option value="3">初中</option>
+                                        <option value="1">博士</option>
+                                        <option value="2">硕士</option>
+                                        <option value="3">研究生</option>
+                                        <option value="4">本科</option>
+                                        <option value="4">大专</option>
+                                        <option value="5">高中</option>
+                                        <option value="7">初中</option>
                                     </select>
                                 </div>
                             </div>
@@ -101,7 +138,7 @@
                             <div class="col-md-12 row">
                                 <label class="line-height">我的月收入</label>
                                 <div class="col-md-4 padding-none">
-                                    <select class="custom-select" id="incomeSelect">
+                                    <select class="custom-select" name="incomeSelect" id="incomeSelect">
                                         <option selected>请选择</option>
                                         <option value="1">20k以上</option>
                                         <option value="2">20k</option>
@@ -165,12 +202,33 @@
     </div>
     <div id="footer"></div>
 </div>
+
 <script>
     $(function () {
+        $("#formControlRange").val(160);
         $("#footer").load("page/include/footer.html");
         let top = $("#nav").outerHeight();
         $(".register_form").css("top", top + "px");
+
+        $("#distPicker").distpicker({
+            autoSelect: false
+        });
+
+        let obj = document.getElementById("incomeSelect");
+        obj.onchange = function () {
+            console.log('选择收入', $("#incomeSelect option:selected").text());
+        }
     });
+
+    function mark() {
+        event || (event = window.event);
+        $('input[type=range]').val(event.target.value);
+        var info = ((event.target.value) - 120) / 100 * 100;
+        $("#show").html(event.target.value + "cm");
+        let left = (info * 4) / 20;
+        $('input[type=range]').css('background-size', info + '% 100%');
+        $(".register_tooltip").css("left", left + "rem");
+    }
 
 </script>
 </body>
