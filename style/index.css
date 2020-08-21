@@ -157,6 +157,74 @@
 /*情感咨询*/
 .consultation_page .fp-tableCell {
   background-color: #fcfcfc !important; }
+.consultation_page .consultation-bg {
+  background-color: #f6e2e3; }
+  .consultation_page .consultation-bg .container .consultation-container {
+    background-color: #fff;
+    line-height: 20rem; }
+    .consultation_page .consultation-bg .container .consultation-container .consultation-banner {
+      margin-left: 0; }
+      .consultation_page .consultation-bg .container .consultation-container .consultation-banner .consultation-img {
+        width: 100%;
+        position: relative; }
+      .consultation_page .consultation-bg .container .consultation-container .consultation-banner .JQ-slide-content li {
+        position: absolute; }
+      .consultation_page .consultation-bg .container .consultation-container .consultation-banner .consultation-content {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        margin: 4rem auto;
+        color: #9c8ef0; }
+        .consultation_page .consultation-bg .container .consultation-container .consultation-banner .consultation-content .content_title {
+          font-weight: bold; }
+        .consultation_page .consultation-bg .container .consultation-container .consultation-banner .consultation-content .content_sub_title {
+          font-size: 1rem; }
+        .consultation_page .consultation-bg .container .consultation-container .consultation-banner .consultation-content .content_page {
+          font-size: .75rem;
+          color: #8b8b8bd9;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          line-height: 1.5rem;
+          text-align: justify;
+          padding-top: 1rem; }
+        .consultation_page .consultation-bg .container .consultation-container .consultation-banner .consultation-content .consultation_btn {
+          background-color: #9c8ef0;
+          border: none;
+          height: 1.5rem;
+          width: 5rem;
+          border-radius: .75rem;
+          line-height: 1.5rem;
+          font-size: .8rem;
+          color: #fff; }
+      .consultation_page .consultation-bg .container .consultation-container .consultation-banner .left-bottom {
+        position: absolute;
+        width: 6rem;
+        height: 6rem;
+        border-bottom: .9rem solid #e7a4a5;
+        border-left: .9rem solid #e7a4a5;
+        left: 2.5rem;
+        bottom: 2.2rem; }
+    .consultation_page .consultation-bg .container .consultation-container .flex-layout {
+      padding: 0; }
+      .consultation_page .consultation-bg .container .consultation-container .flex-layout .JQ-slide-nav {
+        box-shadow: inset 0px 2px 17px #e7a4a563;
+        padding: 0;
+        width: inherit;
+        height: 19.5rem;
+        overflow: hidden;
+        text-align: center; }
+        .consultation_page .consultation-bg .container .consultation-container .flex-layout .JQ-slide-nav li {
+          background-color: #efdbdc;
+          height: 6.5rem;
+          line-height: 6.5rem; }
+          .consultation_page .consultation-bg .container .consultation-container .flex-layout .JQ-slide-nav li img {
+            width: 8rem;
+            height: inherit; }
+          .consultation_page .consultation-bg .container .consultation-container .flex-layout .JQ-slide-nav li.on {
+            background-color: #9c8ef0; }
 
 .consultation_header {
   height: 10rem;
@@ -534,20 +602,6 @@
     line-height: 2rem !important;
     height: 4rem !important; }
 
-  /*情感资讯*/
-  .consultation_box .consultation_container .consultation_outBox .consultation_banner {
-    width: 100%; }
-    .consultation_box .consultation_container .consultation_outBox .consultation_banner .consultation-content {
-      position: relative;
-      left: 0;
-      top: 150%;
-      width: 63%; }
-    .consultation_box .consultation_container .consultation_outBox .consultation_banner .left-bottom {
-      left: -.34rem !important; }
-  .consultation_box .consultation_container .consultation_outBox .flex-layout {
-    width: 50%;
-    left: 62%;
-    position: relative;
-    top: 43%; } }
+  /*情感资讯*/ }
 
 /*# sourceMappingURL=index.css.map */

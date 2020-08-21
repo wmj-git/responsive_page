@@ -199,6 +199,93 @@
   & .fp-tableCell {
     background-color: #fcfcfc !important;
   }
+  & .consultation-bg{
+    background-color: #f6e2e3;
+    & .container {
+      & .consultation-container {
+        background-color: #fff;
+        line-height: 20rem;
+        & .consultation-banner {
+          margin-left: 0;
+          & .consultation-img {
+            width: 100%;
+            position: relative;
+          }
+          & .JQ-slide-content li {
+            position: absolute;
+          }
+          & .consultation-content {
+            font-size: 1.3rem;
+            line-height: 2rem;
+            margin: 4rem auto;
+            color: $backgroundColor-highlight;
+            & .content_title {
+              font-weight: bold;
+            }
+            & .content_sub_title {
+              font-size: 1rem;
+            }
+            & .content_page {
+              font-size: .75rem;
+              color: #8b8b8bd9;
+              word-break: break-all;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3;
+              overflow: hidden;
+              line-height: 1.5rem;
+              text-align: justify;
+              padding-top: 1rem;
+            }
+            & .consultation_btn {
+              background-color: $backgroundColor-highlight;
+              border: none;
+              height: 1.5rem;
+              width: 5rem;
+              border-radius: .75rem;
+              line-height: 1.5rem;
+              font-size: .8rem;
+              color: #fff;
+            }
+          }
+          & .left-bottom {
+            position: absolute;
+            width: 6rem;
+            height: 6rem;
+            border-bottom: .9rem solid #e7a4a5;
+            border-left: .9rem solid #e7a4a5;
+            left: 2.5rem;
+            bottom: 2.2rem;
+          }
+        }
+        & .flex-layout {
+          padding: 0;
+          & .JQ-slide-nav {
+            box-shadow: inset 0px 2px 17px #e7a4a563;
+            padding: 0;
+            width: inherit;
+            height: 19.5rem;
+            overflow: hidden;
+            text-align: center;
+            & li {
+              background-color: #efdbdc;
+              height: 6.5rem;
+              line-height: 6.5rem;
+
+              & img {
+                width: 8rem;
+                height: inherit;
+              }
+              &.on {
+                background-color: $backgroundColor-highlight;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .consultation_header {
@@ -688,28 +775,5 @@
   }
 
   /*情感资讯*/
-  .consultation_box {
-    & .consultation_container {
-      & .consultation_outBox {
-        & .consultation_banner {
-          width: 100%;
-          & .consultation-content {
-            position: relative;
-            left: 0;
-            top: 150%;
-            width: 63%;
-          }
-          & .left-bottom {
-            left: -.34rem !important;
-          }
-        }
-        & .flex-layout {
-          width: 50%;
-          left: 62%;
-          position: relative;
-          top: 43%;
-        }
-      }
-    }
-  }
+
 }
