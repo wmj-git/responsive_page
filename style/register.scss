@@ -8,7 +8,7 @@
     & .register_btn {
       & button {
         border: none;
-        border-radius: 1rem;
+        border-radius: 8px;
         padding: .2rem 1rem;
         color: $textColor-base;
         font-size: .8rem;
@@ -17,62 +17,118 @@
     }
   }
   & .register_form {
-    padding: 1rem;
     position: relative;
-    & .register-content {
-      font-size: .8rem;
-      color: black;
-      & .register_item {
-        padding-left: .3rem;
-        height: .8rem;
-        font-weight: bold;
-        line-height: .8rem;
-        border-left: 3px solid $backgroundColor-highlight;
-        & .register_info {
-          margin-left: 4%;
-          font-weight: normal;
-          & span {
-            color: $backgroundColor-highlight;
-            padding: 0 .2rem;
+    background-color: #f9f9f9;
+    & .container {
+      background: #f9f9f9;
+      padding: 1rem 3rem;
+      & .register-content {
+        font-size: .8rem;
+        color: black;
+        & .register_left {
+          background-color: #fff;
+          padding: 1rem 15px;
+          overflow: hidden;
+          & .register_item {
+            padding-left: .3rem;
+            height: .8rem;
+            font-weight: bold;
+            line-height: .8rem;
+            border-left: 3px solid $backgroundColor-highlight;
+            & .register_info {
+              margin-left: 4%;
+              font-weight: normal;
+              & span {
+                color: $backgroundColor-highlight;
+                padding: 0 .2rem;
+              }
+            }
+          }
+          & .form-group {
+            font-size: .75rem;
+            & .line-height {
+              line-height: 1.6rem;
+            }
+            & label {
+              width: 4.7rem;
+            }
+            & input[type='tel'], & input[type= "password"] {
+              width: 100%;
+              border-color: rgba(0, 0, 0, 0);
+              background-color: #f4f4f4;
+              padding: .2rem .5rem;
+            }
+            & .padding-none {
+              padding: 0;
+            }
+            & .custom-select {
+              height: auto;
+              padding: .2rem;
+            }
+            & .register_margin {
+              margin-left: 4.7rem;
+              font-size: .7rem;
+              color: #000000;
+              & a {
+                color: $backgroundColor-highlight;
+                text-decoration: underline;
+              }
+              & .register_btn {
+                border: none;
+                border-radius: 3px;
+                padding: .5rem 3rem;
+                color: #fff;
+                font-size: .8rem;
+                background: linear-gradient(to right, #a068ef, #886cf0);
+              }
+            }
+          }
+        }
+        & .register_right {
+          position: relative;
+          & .register_img {
+            height: 36rem;
+            width: 100%;
+          }
+          & .register_title {
+            position: absolute;
+            top: 5rem;
+            margin-left: -7rem;
+            left: 50%;
+            width: 14rem;
+            height: 3rem;
+          }
+          & .register_copy {
+            position: absolute;
+            left: 50%;
+            margin-left: -63px;
+            top: 10rem;
+            text-align: center;
+            & p {
+              font-size: .7rem;
+              color: #000;
+            }
           }
         }
       }
-      & .form-group {
-        font-size: .75rem;
-        & .line-height {
-          line-height: 1.6rem;
-        }
-        & label {
-          width: 4.7rem;
-        }
-        & input[type='tel'], & input[type= "password"] {
-          width: 100%;
-          border-color: rgba(0, 0, 0, 0);
-          background-color: #f4f4f4;
-          padding: .2rem .5rem;
-        }
-        & .padding-none {
-          padding: 0;
-        }
-        & .custom-select {
-          height: auto;
-          padding: .2rem;
-        }
-        & .register_margin{
-          margin-left: 4.7rem;
-          font-size: .7rem;
-          color: #000000;
-          & a{
-            color: $backgroundColor-highlight;
-            text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register_form {
+    & .container {
+      padding: 0 !important;
+      & .register_left {
+        & .form-group {
+          & label {
+            width: 6rem !important;
           }
-          & .register_btn{
-            border: none;
-            border-radius: 3px;
-            padding: .5rem 3rem;
-            color: #fff;
-            font-size: .8rem;
-            background: linear-gradient(to right,#a068ef,#886cf0);
+          & .form-check-inline {
+            width: 20%;
+          }
+          & .register_margin{
+            margin-left: -.3rem !important;
           }
         }
       }
