@@ -104,33 +104,11 @@
   margin: 2rem auto;
   height: 2rem;
   line-height: 2rem;
-  width: 90%;
+  width: 10rem;
   border-radius: 1rem;
   color: $textColor-base;
   font-size: 1rem;
   border: none;
-}
-
-@media screen and (max-width: 768px) {
-  .col-responsive-5 {
-    width: 100%;
-    & img {
-      width: 100%;
-    }
-  }
-  .service-item {
-    & .service_line {
-      border-right: none !important;
-    }
-  }
-  .item-6 {
-    padding-top: 2rem;
-  }
-  .see_more {
-    height: auto;
-    line-height: unset;
-    padding: .5rem 0;
-  }
 }
 
 /*选项卡*/
@@ -388,8 +366,9 @@
     padding: 0;
     & .row {
       padding: 0;
-      & .col-md-4 {
+      & .blind_sub_banner {
         padding: 0 .5rem;
+        width: 33.3%;
         &:last-child {
           padding-right: 0;
         }
@@ -666,6 +645,70 @@
         position: absolute;
         left: 1rem;
         top: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .height_auto {
+    & .fp-tableCell {
+      height: auto !important;
+    }
+  }
+  .col-responsive-5 {
+    width: 50%;
+    & img {
+      width: 100%;
+    }
+  }
+  .item-6 {
+    padding-top: 2rem;
+  }
+  /* 婚恋服务*/
+  .service-item {
+    & .service_line {
+      border-right: none !important;
+    }
+  }
+  /*会员*/
+  .hy_tabs {
+    margin-top: .5rem;
+  }
+  /*资讯中心*/
+  .news_box {
+    & .news_banner {
+      & .news_info {
+        & .news_sub_title {
+          line-height: 2rem !important;
+          height: 4rem !important;
+        }
+      }
+    }
+  }
+
+  /*情感资讯*/
+  .consultation_box {
+    & .consultation_container {
+      & .consultation_outBox {
+        & .consultation_banner {
+          width: 100%;
+          & .consultation-content {
+            position: relative;
+            left: 0;
+            top: 150%;
+            width: 63%;
+          }
+          & .left-bottom {
+            left: -.34rem !important;
+          }
+        }
+        & .flex-layout {
+          width: 50%;
+          left: 62%;
+          position: relative;
+          top: 43%;
+        }
       }
     }
   }

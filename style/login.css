@@ -73,7 +73,8 @@
   width: 7rem;
   height: auto; }
 .nav_box .login_nav .login_btn {
-  text-decoration: underline !important; }
+  text-decoration: underline !important;
+  color: #9c8ef0; }
 .nav_box .login_nav .nav-item span {
   color: #9c8ef0 !important; }
 
