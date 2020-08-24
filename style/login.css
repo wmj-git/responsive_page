@@ -1,6 +1,6 @@
 .login-form {
   background-color: rgba(0, 111, 229, 0.44);
-  background: url("../image/login.png") no-repeat center;
+  background: url("../image/login_regist/login.png") no-repeat center;
   height: 36rem;
   position: relative;
   background-size: cover; }

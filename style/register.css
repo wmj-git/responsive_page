@@ -60,7 +60,7 @@
             -webkit-appearance: none;
             height: .9rem;
             width: .9rem;
-            background: url("../image/circle.png") no-repeat center; }
+            background: url("../image/login_regist/circle.png") no-repeat center; }
           .register_box .register_form .container .register-content .register_left .form-group .register_tooltip {
             background: #fff;
             box-shadow: 0 0 4px #bbb;
