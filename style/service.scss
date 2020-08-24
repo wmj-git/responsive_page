@@ -1,0 +1,55 @@
+@import "variable";
+
+.service_body {
+  background-color: #f6f6f6;
+}
+
+.service_bg {
+  width: 100%;
+}
+
+.service_container {
+  position: relative;
+  & .service_content {
+    padding: 1rem;
+    position: relative;
+    top: -10rem;
+    font-size: .7rem;
+    background-color: #fff;
+    & .service_part {
+      margin-bottom: 2rem;
+      & .item-6 {
+        & .section_title {
+          font-size: 1rem;
+          color: black;
+        }
+        & .sub_title {
+          font-size: .6rem;
+          color: darken($textColor-base, 40%);
+        }
+        & .sub_text {
+          font-size: .9rem;
+          color: black;
+          padding-top: 1rem;
+        }
+      }
+    }
+    & .service_agreement_page {
+      & li{
+        margin-bottom: 1rem;
+      }
+      & p{
+        color: #8a8989;
+        margin-bottom: .2rem;
+      }
+      & .title {
+        color: #000000;
+        font-size: .8rem;
+        padding-left: 40px;
+      }
+      & .item_title{
+        color: #000000;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.service_body {
+  background-color: #f6f6f6; }
+
+.service_bg {
+  width: 100%; }
+
+.service_container {
+  position: relative; }
+  .service_container .service_content {
+    padding: 1rem;
+    position: relative;
+    top: -10rem;
+    font-size: .7rem;
+    background-color: #fff; }
+    .service_container .service_content .service_part {
+      margin-bottom: 2rem; }
+      .service_container .service_content .service_part .item-6 .section_title {
+        font-size: 1rem;
+        color: black; }
+      .service_container .service_content .service_part .item-6 .sub_title {
+        font-size: .6rem;
+        color: #999999; }
+      .service_container .service_content .service_part .item-6 .sub_text {
+        font-size: .9rem;
+        color: black;
+        padding-top: 1rem; }
+    .service_container .service_content .service_agreement_page li {
+      margin-bottom: 1rem; }
+    .service_container .service_content .service_agreement_page p {
+      color: #8a8989;
+      margin-bottom: .2rem; }
+    .service_container .service_content .service_agreement_page .title {
+      color: #000000;
+      font-size: .8rem;
+      padding-left: 40px; }
+    .service_container .service_content .service_agreement_page .item_title {
+      color: #000000; }
+
+/*# sourceMappingURL=service.css.map */
