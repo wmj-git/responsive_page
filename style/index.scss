@@ -66,11 +66,13 @@
 
 .pic-layout {
   padding-top: 1rem;
+  position: relative;
 }
 
 /*自定义5列栅格*/
 .col-responsive-5 {
   width: 20%;
+  padding: 0 2px;
   float: left;
   text-align: center;
   overflow: hidden;
@@ -95,7 +97,7 @@
   & img {
     border-radius: 8px;
     height: auto;
-    width: 11rem;
+    width: 100%;
   }
 }
 
@@ -219,6 +221,7 @@
           margin-left: 0;
           & .consultation-img {
             width: 100%;
+            height: 281px;
             position: relative;
           }
           & .JQ-slide-content li {
@@ -634,15 +637,32 @@
       height: auto !important;
     }
   }
-  .col-responsive-5 {
-    width: 50%;
-    & img {
-      width: 100%;
-    }
-  }
   .item-6 {
     padding-top: 2rem;
   }
+
+  /*优质会员*/
+  .pic-layout {
+    & .col-responsive-5 {
+      width: 50%;
+      & a {
+        margin: 5px;
+      }
+      &.last_right {
+        position: absolute;
+        right: 0;
+      }
+      & img {
+        width: 100%;
+      }
+    }
+    & .see_more {
+      position: absolute;
+      right: 30px;
+      bottom: 0;
+    }
+  }
+
   /* 婚恋服务*/
   .service-item {
     & .service_line {
@@ -668,7 +688,7 @@
   /*情感咨询*/
   .consultation_page {
     height: auto !important;
-    padding: 10px 0 170px;
+    padding: 20px 0 170px;
     .consultation_header {
       height: 8rem !important;
       & .consultation_img {
@@ -681,14 +701,14 @@
       height: 207px !important;
       & .consultation-container {
         top: -18px !important;
-        height: 210px ;
+        height: 210px;
         line-height: 16rem !important;
         & .JQ-slide-content li {
           top: 10px;
           left: 2rem;
         }
-        & .consultation-img{
-          height: 178px;
+        & .consultation-img {
+          height: 178px !important;
         }
         & .consultation-content {
           margin-left: 50px !important;
@@ -696,18 +716,17 @@
           position: relative;
           & .consultation_btn {
             width: 7rem !important;
-            height: 20px !important;
-            line-height: 19px !important;
+            padding: 2px 0;
           }
         }
         & .flex-layout {
           & .JQ-slide-nav {
             position: relative;
             top: 200px;
-            height: 120px !important;
+            height: 130px !important;
             width: 20% !important;
             z-index: 1;
-            & li img{
+            & li img {
               width: 6rem !important;
             }
           }

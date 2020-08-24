@@ -12,22 +12,32 @@
   }
   //height: 50px;
   font-size: .8rem;
-  .navbar-nav {
-    & a.nav-item.nav-link {
-      color: black;
-      padding: 10px 0;
-      margin: 0 .3rem;
-      & .phone_img {
-        width: 17px;
-        height: 17px;
-        margin-right: 6px;
-      }
-      &.active {
-        color: $backgroundColor-highlight;
-        border-bottom: 2px solid $backgroundColor-highlight;
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: $backgroundColor-highlight;
+    color: #fff;
+    border-bottom: none;
+    padding: 10px 8px;
+
+  }
+    .nav-pills{
+      & a.nav-link {
+        border-radius: 0;
+        color: black;
+        padding: 10px 0;
+        margin: 0 .3rem;
+        & .phone_img {
+          width: 17px;
+          height: 17px;
+          margin-right: 6px;
+        }
+        &.active {
+          color: $backgroundColor-highlight;
+          background-color: transparent;
+          border-bottom: 2px solid $backgroundColor-highlight;
+        }
       }
     }
-  }
+
   .login_btn {
     color: darken($textColor-base, 80%);
     &.line {
@@ -49,11 +59,14 @@
       & .navbar-nav {
         float: right;
         text-align: center;
-        & a.nav-item.nav-link {
-          &.active {
-            border: none !important;
+        &.nav-pills{
+          & a.nav-item.nav-link {
+            &.active {
+              border: none !important;
+            }
           }
         }
+
       }
     }
     .navbar-toggler {

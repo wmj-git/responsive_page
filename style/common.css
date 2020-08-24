@@ -3,16 +3,23 @@
   font-size: .8rem; }
   .nav_box .bg-light {
     background-color: #fff !important; }
-  .nav_box .navbar-nav a.nav-item.nav-link {
+  .nav_box .nav-pills .nav-link.active, .nav_box .nav-pills .show > .nav-link {
+    background-color: #9c8ef0;
+    color: #fff;
+    border-bottom: none;
+    padding: 10px 8px; }
+  .nav_box .nav-pills a.nav-link {
+    border-radius: 0;
     color: black;
     padding: 10px 0;
     margin: 0 .3rem; }
-    .nav_box .navbar-nav a.nav-item.nav-link .phone_img {
+    .nav_box .nav-pills a.nav-link .phone_img {
       width: 17px;
       height: 17px;
       margin-right: 6px; }
-    .nav_box .navbar-nav a.nav-item.nav-link.active {
+    .nav_box .nav-pills a.nav-link.active {
       color: #9c8ef0;
+      background-color: transparent;
       border-bottom: 2px solid #9c8ef0; }
   .nav_box .login_btn {
     color: #333333; }
@@ -28,7 +35,7 @@
     .nav_box .navbar-collapse .navbar-nav {
       float: right;
       text-align: center; }
-      .nav_box .navbar-collapse .navbar-nav a.nav-item.nav-link.active {
+      .nav_box .navbar-collapse .navbar-nav.nav-pills a.nav-item.nav-link.active {
         border: none !important; }
   .nav_box .navbar-toggler {
     border: none; } }

@@ -28,7 +28,7 @@
 <div class="index_page">
     <div id="header" class="header"></div>
     <div id="fullpage" class="fullpage">
-        <div class="section banner fp-auto-height">
+        <div class="section banner">
             <div class="">
                 <div class="bd-example">
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -131,7 +131,7 @@
                             <div class="col-responsive-5">
                                 <a href="#" class="hy_hover"><img src="image/hy007.png"><span class="hy_info">重庆 · 25岁 · 180CM</span></a>
                             </div>
-                            <div class="col-responsive-5">
+                            <div class="col-responsive-5 last_right">
                                 <a href="#" class="hy_hover"><img src="image/hy008.png"><span class="hy_info">重庆 · 25岁 · 150CM</span></a>
                                 <a href="#" class="hy_hover"><img src="image/hy009.png"><span class="hy_info">重庆 · 29岁 · 160CM</span></a>
                             </div>
@@ -156,7 +156,7 @@
                             <div class="col-responsive-5">
                                 <a href="#" class="hy_hover"><img src="image/hy007.png"><span class="hy_info">重庆 · 25岁 · 180CM</span></a>
                             </div>
-                            <div class="col-responsive-5">
+                            <div class="col-responsive-5 last_right">
                                 <a href="#" class="hy_hover"><img src="image/hy008.png"><span class="hy_info">重庆 · 25岁 · 150CM</span></a>
                                 <a href="#" class="hy_hover"><img src="image/hy009.png"><span class="hy_info">重庆 · 29岁 · 160CM</span></a>
                             </div>
@@ -738,10 +738,17 @@
     function autoScrolling() {
         var $win = $(window).width();
         /*屏幕可见区域小于1024时，关闭全屏滚动，使用自带的滚动条*/
+        let banner_H = $(".banner").outerHeight();
+        $(".banner .carousel-item").css("height",banner_H);
+        $(".banner .banner-img").css("height",banner_H);
         if ($win < 1024) {
             $.fn.fullpage.setAutoScrolling(false);
+            $(".banner .carousel-item").css("height","auto");
+            $(".banner .banner-img").css("height","auto");
+            $(".banner").addClass("fp-auto-height");
         } else {
             $.fn.fullpage.setAutoScrolling(true);
+            $(".banner").removeClass("fp-auto-height");
         }
     }
 
