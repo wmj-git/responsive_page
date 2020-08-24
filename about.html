@@ -11,27 +11,87 @@
     <link rel="stylesheet" href="style/index.css"/>
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=dpB1d25b7smGMe8evaIAxw881Aq3AUfb"></script>
     <title>关于我们</title>
-    <style>
-        .about{
-            top: 60px;
-        }
-    </style>
+    <link rel="stylesheet" href="style/about.css">
 </head>
-<body>
-<div class="container">
-    <div id="header"></div>
-
-    <div class="about">
-        关于我们页面sac
-    </div>
+<body class="about_body">
+<div class="col-md-12 contact_map">
+    <div id="allmap" class="address_map"></div>
 </div>
+<div class="container about_container">
+    <div id="header"></div>
+    <div class="about_page">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="about_title">重庆牵喜婚姻咨询有限公司</div>
+                <div class="about_sub_title">Chongqing QianXi Marriage Consulting Co. LTD</div>
+                <div class="line">—</div>
+                <div class="about_info">
+                    <P>地址：重庆市江北区观音桥未来国际21楼2号</P>
+                    <P>热线电话：400-023-8520</P>
+                    <P>QQ：2686553268</P>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="about_title">招贤纳士</div>
+                <div class="about_sub_title">Elite recruitment</div>
+                <div class="line">—</div>
+                <div class="about_info">
+                    <P>联系人：蒋小姐</P>
+                    <p>邮箱：2686553268@qq.com</p>
+                    <p>手机：188-8888-5188</p>
+                </div>
+            </div>
+            <div class="col-md-4 last_item">
+                <p>服务热线</p>
+                <p class="large_text">400-023-8520</p>
+                <p>服务热线</p>
+                <div class="line">—</div>
+                <p>咨询电话</p>
+                <p class="large_text">023-88732610</p>
+                <p>服务时间：周一到周五9:00—18:00</p>
+
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+
+</div>
+
 <script>
     $(function () {
 
-        $("#header").load("page/include/header.html")
+        $("#header").load("page/include/header.html");
+        $("#footer").load("page/include/footer.html");
     })
+</script>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(106.533051, 29.574139), 18);
+    var walking = new BMap.WalkingRoute(map, {
+        renderOptions: {
+            map: map,
+            autoViewport: true
+        }
+    });
+
+    map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+    /*    function showInfo(e){
+            alert(e.point.lng + ", " + e.point.lat);
+        }
+        map.addEventListener("click", showInfo);//点击获取指定位置的坐标信息
+        */
+
+
+    var pt = new BMap.Point(106.533051, 29.574139);
+    var myIcon = new BMap.Icon("image/about_page/position.png", new BMap.Size(30, 30));
+    var marker2 = new BMap.Marker(pt, {icon: myIcon});  // 创建标注
+    map.addOverlay(marker2);
+
 </script>
 </body>
 </html>

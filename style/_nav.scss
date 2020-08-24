@@ -69,6 +69,11 @@
 
       }
     }
+    & .nav-pills{
+      & a.nav-link.active{
+        border: none !important;
+      }
+    }
     .navbar-toggler {
       border: none;
     }

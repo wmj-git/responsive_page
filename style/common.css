@@ -37,6 +37,8 @@
       text-align: center; }
       .nav_box .navbar-collapse .navbar-nav.nav-pills a.nav-item.nav-link.active {
         border: none !important; }
+  .nav_box .nav-pills a.nav-link.active {
+    border: none !important; }
   .nav_box .navbar-toggler {
     border: none; } }
 html {
