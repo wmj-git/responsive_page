@@ -313,7 +313,6 @@
   }
 }
 
-
 /*相亲活动*/
 
 .blind_banner {
@@ -663,6 +662,61 @@
           height: 4rem !important;
         }
       }
+    }
+  }
+
+  /*情感咨询*/
+  .consultation_page {
+    height: auto !important;
+    padding: 10px 0 170px;
+    .consultation_header {
+      height: 8rem !important;
+      & .consultation_img {
+        width: 450px;
+        height: 30px;
+        overflow: hidden;
+      }
+    }
+    & .consultation-bg {
+      height: 207px !important;
+      & .consultation-container {
+        top: -18px !important;
+        height: 210px ;
+        line-height: 16rem !important;
+        & .JQ-slide-content li {
+          top: 10px;
+          left: 2rem;
+        }
+        & .consultation-img{
+          height: 178px;
+        }
+        & .consultation-content {
+          margin-left: 50px !important;
+          top: 20px;
+          position: relative;
+          & .consultation_btn {
+            width: 7rem !important;
+            height: 20px !important;
+            line-height: 19px !important;
+          }
+        }
+        & .flex-layout {
+          & .JQ-slide-nav {
+            position: relative;
+            top: 200px;
+            height: 120px !important;
+            width: 20% !important;
+            z-index: 1;
+            & li img{
+              width: 6rem !important;
+            }
+          }
+        }
+      }
+    }
+    & .left-bottom {
+      left: 25px !important;
+      top: 138px !important;
     }
   }
 }
