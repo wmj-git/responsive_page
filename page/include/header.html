@@ -13,7 +13,34 @@
                     <li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
                     <li class="nav-item"><a class="nav-link " href="online.html">线上会员</a></li>
                     <li class="nav-item"><a class="nav-link" href="offline.html">线下VIP服务</a></li>
-                    <li class="nav-item"><a class="nav-link" href="consulting.html">情感咨询</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="consulting.html">情感咨询</a>
+                        <div class="dropdown-menu">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                 <li class="nav-item" role="presentation">
+                                     <a class="dropdown-item nav-link active" id="pursuit-tab" data-toggle="tab" href="#pursuit" role="tab"
+                                        aria-controls="pursuit" aria-selected="true">追求中</a>
+                                 </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="dropdown-item nav-link" id="loving-tab" data-toggle="tab" href="#loving" role="tab"
+                                       aria-controls="loving" aria-selected="false">恋爱中</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="dropdown-item nav-link" id="married-tab" data-toggle="tab" href="#married" role="tab"
+                                       aria-controls="married" aria-selected="false">夫妻情感</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="dropdown-item nav-link" id="Love-tab" data-toggle="tab" href="#Love" role="tab"
+                                       aria-controls="Love" aria-selected="false">恋商提升</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="dropdown-item nav-link" id="personalCharm-tab" data-toggle="tab" href="#personalCharm" role="tab"
+                                       aria-controls="personalCharm" aria-selected="false">个人魅力提升</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="case.html">成功案例</a></li>
                     <li class="nav-item"><a class="nav-link " href="activity.html">相亲活动</a></li>
                     <li class="nav-item dropdown">
@@ -49,10 +76,17 @@
     if (!urlstatus) {
         $("#navbar-nav a").eq(0).addClass('active');
     }
-    let dropShow = $(".nav-item").is("dropdown");
-    if(dropShow){
-        console.log(121)
-    } else{
-        console.log(11)
-    }
+</script>
+<script>
+    $(function () {
+        let href = window.location.href;
+        let sub_href = href.lastIndexOf("\/");
+        let real_href= href.substring(sub_href + 1, href.length);
+
+        $("#myTab .nav-link").click(function () {
+            if(real_href != 'consulting.html'){
+                window.location.href= "consulting.html";
+            }
+        });
+    })
 </script>

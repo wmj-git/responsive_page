@@ -1,6 +1,6 @@
 .nav_box {
   .bg-light {
-    background-color: #fff!important;
+    background-color: #fff !important;
     //background-color: transparent !important;
     .container {
       //border-width: 3px 3px 0;
@@ -12,31 +12,35 @@
   }
   //height: 50px;
   font-size: .8rem;
-  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     background-color: $backgroundColor-highlight;
     color: #fff;
     border-bottom: none;
     padding: 10px 8px;
 
   }
-    .nav-pills{
-      & a.nav-link {
-        border-radius: 0;
-        color: black;
-        padding: 10px 0;
-        margin: 0 .3rem;
-        & .phone_img {
-          width: 17px;
-          height: 17px;
-          margin-right: 6px;
-        }
-        &.active {
-          color: $backgroundColor-highlight;
-          background-color: transparent;
-          border-bottom: 2px solid $backgroundColor-highlight;
-        }
+  .dropdown-item .nav-link .active .show {
+    border: none;
+    padding-left: 30px;
+  }
+  .nav-pills {
+    & a.nav-link {
+      border-radius: 0;
+      color: black;
+      padding: 10px 0;
+      margin: 0 .3rem;
+      & .phone_img {
+        width: 17px;
+        height: 17px;
+        margin-right: 6px;
+      }
+      &.active {
+        color: $backgroundColor-highlight;
+        background-color: transparent;
+        border-bottom: 2px solid $backgroundColor-highlight;
       }
     }
+  }
 
   .login_btn {
     color: darken($textColor-base, 80%);
@@ -46,9 +50,29 @@
     }
   }
 }
-.dropdown-item.active, .dropdown-item:active{
-  background-color: transparent;
-  color: $backgroundColor-highlight;
+
+.dropdown-item {
+  color: #656565;
+  font-size: .7rem;
+  &.active, &:active {
+    background-color: transparent;
+    color: $backgroundColor-highlight;
+  }
+}
+
+.nav-tabs {
+  display: block !important;
+  border: none;
+  & .nav-item {
+    & a.nav-link {
+      margin: 0;
+      padding-left: 30px;
+      &:hover,&.active {
+        border: none;
+        padding-left: 30px;
+      }
+    }
+  }
 
 }
 
@@ -64,7 +88,7 @@
       & .navbar-nav {
         float: right;
         text-align: center;
-        &.nav-pills{
+        &.nav-pills {
           & a.nav-item.nav-link {
             &.active {
               border: none !important;
@@ -74,8 +98,8 @@
 
       }
     }
-    & .nav-pills{
-      & a.nav-link.active{
+    & .nav-pills {
+      & a.nav-link.active {
         border: none !important;
       }
     }

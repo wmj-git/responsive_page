@@ -8,6 +8,9 @@
     color: #fff;
     border-bottom: none;
     padding: 10px 8px; }
+  .nav_box .dropdown-item .nav-link .active .show {
+    border: none;
+    padding-left: 30px; }
   .nav_box .nav-pills a.nav-link {
     border-radius: 0;
     color: black;
@@ -27,9 +30,22 @@
       padding: 0 5px;
       color: #d0d0d0; }
 
-.dropdown-item.active, .dropdown-item:active {
-  background-color: transparent;
-  color: #9c8ef0; }
+.dropdown-item {
+  color: #656565;
+  font-size: .7rem; }
+  .dropdown-item.active, .dropdown-item:active {
+    background-color: transparent;
+    color: #9c8ef0; }
+
+.nav-tabs {
+  display: block !important;
+  border: none; }
+  .nav-tabs .nav-item a.nav-link {
+    margin: 0;
+    padding-left: 30px; }
+    .nav-tabs .nav-item a.nav-link:hover, .nav-tabs .nav-item a.nav-link.active {
+      border: none;
+      padding-left: 30px; }
 
 @media (max-width: 786px) {
   .nav_box .navbar-brand {
