@@ -68,7 +68,7 @@
 <script type="text/javascript">
     // 百度地图API功能
     var map = new BMap.Map("allmap");
-    map.centerAndZoom(new BMap.Point(106.533051, 29.574139), 18);
+    map.centerAndZoom(new BMap.Point(106.539551, 29.580195), 18);
     var walking = new BMap.WalkingRoute(map, {
         renderOptions: {
             map: map,
@@ -85,7 +85,7 @@
         */
 
 
-    var pt = new BMap.Point(106.533051, 29.574139);
+    var pt = new BMap.Point(106.539551, 29.580195);
     var myIcon = new BMap.Icon("image/about_page/position.png", new BMap.Size(30, 30));
     var marker2 = new BMap.Marker(pt, {icon: myIcon});  // 创建标注
     map.addOverlay(marker2);
