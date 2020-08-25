@@ -1,8 +1,10 @@
 .service_body {
   background-color: #f6f6f6; }
 
-.service_bg {
-  width: 100%; }
+.bg_padding {
+  padding: 0; }
+  .bg_padding .service_bg {
+    width: 100%; }
 
 .service_container {
   position: relative; }
@@ -28,12 +30,34 @@
       margin-bottom: 1rem; }
     .service_container .service_content .service_agreement_page p {
       color: #8a8989;
-      margin-bottom: .2rem; }
+      margin-bottom: .4rem;
+      font-size: .6rem; }
     .service_container .service_content .service_agreement_page .title {
       color: #000000;
       font-size: .8rem;
-      padding-left: 40px; }
+      padding-left: 20px; }
+    .service_container .service_content .service_agreement_page ul {
+      padding-left: 20px; }
     .service_container .service_content .service_agreement_page .item_title {
-      color: #000000; }
+      color: #000000;
+      font-size: .7rem; }
+    .service_container .service_content .top_right_img {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      width: 6rem;
+      height: 5rem; }
+  .service_container .footer {
+    margin-top: -9rem; }
+
+@media screen and (max-width: 768px) {
+  .service_bg {
+    height: 11rem; }
+
+  .footer {
+    margin-top: -2rem !important; }
+
+  .service_container .service_content {
+    top: -3rem; } }
 
 /*# sourceMappingURL=service.css.map */

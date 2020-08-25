@@ -98,6 +98,8 @@ ul li {
   margin: 5rem auto 3rem;
   color: black;
   font-size: .8rem; }
+  .footer .container {
+    padding: 0; }
   .footer .footer_nav {
     margin: 0 auto; }
     .footer .footer_nav ul {

@@ -31,6 +31,8 @@
         .about_body .about_container .about_page .last_item .large_text {
           font-size: 1.6rem;
           font-weight: bold; }
+    .about_body .about_container .footer {
+      margin-top: -6rem; }
 
 @media screen and (max-width: 768px) {
   .large_text {

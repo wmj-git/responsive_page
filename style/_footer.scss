@@ -4,6 +4,9 @@
   margin: 5rem auto 3rem;
   color: black;
   font-size: .8rem;
+  & .container{
+    padding: 0;
+  }
   & .footer_nav {
     margin: 0 auto;
     & ul {
