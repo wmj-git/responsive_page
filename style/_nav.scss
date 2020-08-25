@@ -60,11 +60,11 @@
   }
 }
 
-.nav-tabs {
+.nav-tabs.inside_tabs {
   display: block !important;
   border: none;
   & .nav-item {
-    & a.nav-link {
+    & a.inside_nav.nav-link {
       margin: 0;
       padding-left: 30px;
       &:hover,&.active {

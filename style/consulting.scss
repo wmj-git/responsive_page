@@ -1,0 +1,138 @@
+@import "variable";
+
+.banner_bg {
+  background-size: cover;
+  height: 100%;
+  padding: 2rem 0;
+  &.pursuit_bg {
+    background: url("../image/consulting/bg01.png") no-repeat center;
+  }
+  &.loving_bg{
+    background: url("../image/consulting/bg02.png") no-repeat center;
+  }
+  &.married_bg{
+    background: url("../image/consulting/bg03.png") no-repeat center;
+  }
+  &.Love_bg{
+    background: url("../image/consulting/bg04.png") no-repeat center;
+  }
+  &.personalCharm_bg{
+    background: url("../image/consulting/bg05.png") no-repeat center;
+  }
+}
+
+.consulting_container {
+  & .footer {
+    margin-top: 1rem;
+  }
+}
+
+.content_container {
+  top: 4rem;
+  & .consulting_title {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    top: 3rem;
+    margin-bottom: 4rem;
+    & p {
+      margin-bottom: 10px;
+      &.title {
+        font-size: 2rem;
+      }
+      &.sub_title {
+        font-size: 1rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  & .consulting_content {
+    text-align: center;
+    font-size: .6rem;
+    & .consulting_list {
+      & .col-md-3 {
+        padding: 60px 5px 30px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 5px;
+        max-width: 23%;
+        margin: 0 10px;
+        position: relative;
+        overflow: hidden;
+        & .num_img {
+          width: 2.5rem;
+          height: 2rem;
+          position: absolute;
+          left: 15px;
+          top: 15px;
+          filter: drop-shadow(-250px 0 #fff);
+          -webkit-filter: drop-shadow(-250px 0 #fff);
+        }
+        & p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin-bottom: 5px;
+          &.item_title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6c6c6c;
+          }
+          &.item_text {
+            margin: 10px auto 20px;
+            color: rgba(0, 0, 0, .6);
+          }
+        }
+        & .item_btn {
+          border: 1px solid #c5c5c5;
+          border-radius: 1rem;
+          padding: .2rem 1rem;
+          background-color: transparent;
+          &:after {
+            border: none;
+          }
+        }
+        &.active {
+          background-color: $backgroundColor-highlight;
+          color: #fff;
+          box-shadow: 0 4px 20px 0 #9183e0;
+          & .item_title {
+            color: #fff;
+          }
+          & .item_btn {
+            background-color: #fff;
+            color: $backgroundColor-highlight;
+            border-color: #fff;
+          }
+          & .num_img {
+            transform: translate(250px, 0);
+            -webkit-transform: translate(250px, 0);
+            -ms-transform: translate(250px, 0);
+            -o-transform: translate(250px, 0);
+          }
+          & .item_sub_title, & .item_text, & div {
+            color: rgba(255, 255, 255, .6);
+          }
+        }
+      }
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content_container {
+    & .consulting_content {
+      & .consulting_list {
+        & .col-md-3 {
+          margin: 5px;
+          padding: 36px 5px 10px;
+          max-width: 46%;
+        }
+      }
+    }
+  }
+
+}
