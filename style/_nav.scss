@@ -12,7 +12,7 @@
   }
   //height: 50px;
   font-size: .8rem;
-  .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: $backgroundColor-highlight;
     color: #fff;
     border-bottom: none;
@@ -45,6 +45,11 @@
       color: #d0d0d0;
     }
   }
+}
+.dropdown-item.active, .dropdown-item:active{
+  background-color: transparent;
+  color: $backgroundColor-highlight;
+
 }
 
 @media (max-width: 786px) {

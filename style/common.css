@@ -27,6 +27,10 @@
       padding: 0 5px;
       color: #d0d0d0; }
 
+.dropdown-item.active, .dropdown-item:active {
+  background-color: transparent;
+  color: #9c8ef0; }
+
 @media (max-width: 786px) {
   .nav_box .navbar-brand {
     padding-left: 1rem; }
