@@ -10,48 +10,57 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <ul class="navbar-nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
-                    <li class="nav-item"><a class="nav-link " href="online.html">线上会员</a></li>
-                    <li class="nav-item"><a class="nav-link" href="offline.html">线下VIP服务</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">首页</a><i></i></li>
+                    <li class="nav-item"><a class="nav-link " href="online.html">线上会员</a><i></i></li>
+                    <li class="nav-item"><a class="nav-link" href="offline.html">线下VIP服务</a><i></i></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="consulting.html">情感咨询</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false" href="consulting.html">情感咨询</a><i></i>
                         <div class="dropdown-menu">
                             <ul class="nav nav-tabs inside_tabs" id="insideTab" role="tablist">
-                                 <li class="nav-item" role="presentation">
-                                     <a class="dropdown-item inside_nav nav-link active" id="pursuit-tab" data-toggle="tab" href="#pursuit" role="tab"
-                                        aria-controls="pursuit" aria-selected="true">追求中</a>
-                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="dropdown-item inside_nav nav-link" id="loving-tab" data-toggle="tab" href="#loving" role="tab"
+                                    <a class="dropdown-item inside_nav nav-link active" id="pursuit-tab"
+                                       data-toggle="tab" href="#pursuit" role="tab"
+                                       aria-controls="pursuit" aria-selected="true">追求中</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="dropdown-item inside_nav nav-link" id="loving-tab" data-toggle="tab"
+                                       href="#loving" role="tab"
                                        aria-controls="loving" aria-selected="false">恋爱中</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="dropdown-item inside_nav nav-link" id="married-tab" data-toggle="tab" href="#married" role="tab"
+                                    <a class="dropdown-item inside_nav nav-link" id="married-tab" data-toggle="tab"
+                                       href="#married" role="tab"
                                        aria-controls="married" aria-selected="false">夫妻情感</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="dropdown-item inside_nav nav-link" id="Love-tab" data-toggle="tab" href="#Love" role="tab"
+                                    <a class="dropdown-item inside_nav nav-link" id="Love-tab" data-toggle="tab"
+                                       href="#Love" role="tab"
                                        aria-controls="Love" aria-selected="false">恋商提升</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <a class="dropdown-item inside_nav nav-link" id="personalCharm-tab" data-toggle="tab" href="#personalCharm" role="tab"
+                                    <a class="dropdown-item inside_nav nav-link" id="personalCharm-tab"
+                                       data-toggle="tab" href="#personalCharm" role="tab"
                                        aria-controls="personalCharm" aria-selected="false">个人魅力提升</a>
                                 </li>
                             </ul>
 
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="case.html">成功案例</a></li>
-                    <li class="nav-item"><a class="nav-link " href="activity.html">相亲活动</a></li>
+                    <li class="nav-item"><a class="nav-link" href="case.html">成功案例</a><i></i></li>
+                    <li class="nav-item"><a class="nav-link " href="activity.html">相亲活动</a><i></i></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-haspopup="true" aria-expanded="false">关于我们</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button"
+                           aria-haspopup="true" aria-expanded="false">关于我们</a><i></i>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="about.html">联系我们</a>
                             <a class="dropdown-item" href="service.html">服务协议</a>
                             <a class="dropdown-item" href="feedback.html">意见反馈</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-item nav-link "><img class="phone_img" src="image/index_page/phone.png">400 023 8520</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link "><img class="phone_img"
+                                                                            src="image/index_page/phone.png">400 023
+                        8520</a></li>
                     <li class="nav-item"><a class="nav-item nav-link ">
                         <span class="login_btn">登录</span>
                         <span class="login_btn line">|</span>
@@ -81,12 +90,27 @@
     $(function () {
         let href = window.location.href;
         let sub_href = href.lastIndexOf("\/");
-        let real_href= href.substring(sub_href + 1, href.length);
+        let real_href = href.substring(sub_href + 1, href.length);
 
         $("#insideTab .nav-link").click(function () {
-            if(real_href != 'consulting.html'){
-                window.location.href= "consulting.html";
+            if (real_href != 'consulting.html') {
+                window.location.href = "consulting.html";
             }
         });
+        let el =  $(".dropdown.show");
+        let p_width = el.innerWidth();
+        el.find(".dropdown-menu").css("width",p_width);
+
+
+    /*    $(".navbar-toggler").click(function () {
+            console.log('dianji')
+        })
+        //判断是否有子标题
+        $('#navbarNavAltMarkup ul li').each(function () {
+            $(this).find('i').addClass('icon');
+           /!* if ($(this).children('.dropdown-menu').find('a').length < 1) {
+                $(this).children('.nav-link').children('i').removeClass('icon');
+            }*!/
+        });*/
     })
 </script>

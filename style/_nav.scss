@@ -41,7 +41,6 @@
       }
     }
   }
-
   .login_btn {
     color: darken($textColor-base, 80%);
     &.line {
@@ -50,7 +49,17 @@
     }
   }
 }
-
+.dropdown-toggle::after {
+  border: none;
+}
+.dropdown-menu{
+  min-width: auto;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
 .dropdown-item {
   color: #656565;
   font-size: .7rem;
@@ -59,17 +68,17 @@
     color: $backgroundColor-highlight;
   }
 }
-
+.icon{ background:url(../image/nav/plus.png) 100% no-repeat;background-position: 50% 50%; -webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}
+.icon_on{background:url(../image/nav/reduce.jpg) 50% no-repeat!important;background-position: 50% 50%;-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}
 .nav-tabs.inside_tabs {
   display: block !important;
   border: none;
   & .nav-item {
     & a.inside_nav.nav-link {
       margin: 0;
-      padding-left: 30px;
-      &:hover,&.active {
+      padding: 10px .2rem;
+      &:hover, &.active {
         border: none;
-        padding-left: 30px;
       }
     }
   }
