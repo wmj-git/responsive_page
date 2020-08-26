@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+.online_body {
+  background-color: #f5f5f5;
+  & .online_detail_bg {
+    background-size: cover;
+    height: 100%;
+    padding: 10rem 0;
+    background: url("../image/online/online_bg.png") no-repeat center;
+  }
+  & .online_detail {
+    position: relative;
+    top: -7rem;
+    & .detail_left {
+      background-color: #fff;
+      & .detail_info {
+        position: relative;
+        top: -5rem;
+        padding: 0 1rem;
+        color: #fff;
+        font-size: .8rem;
+        & .header_img {
+          width: 9rem;
+          height: 11rem;
+          border-radius: 8px;
+        }
+        & .info_base {
+          margin-left: .5rem;
+          & .info_name {
+            font-size: 1.2rem;
+          }
+          & p {
+            margin-bottom: .2rem;
+          }
+          & .info_left {
+            & span {
+              padding: 0 .3rem;
+              border-right: 2px solid #fff;
+              &:first-child {
+                padding-left: 0;
+              }
+              &:last-child {
+                border-right: none;
+              }
+            }
+          }
+          & .info_right {
+            position: absolute;
+            right: -15px;
+            display: flex;
+            align-items: center;
+            & img {
+              width: .8rem;
+              height: .8rem;
+              margin-right: .1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.four_flash {
+  position: relative;
+  width: 650px;
+  height: auto;
+  left: 5.8rem;
+  top: -7rem;
+  margin: 0 auto;
+  bottom: 40px;
+  & .flashBg {
+    width: 530px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    top: 40px;
+    & ul.mobile {
+      width: 2000%;
+      height: 400px;
+      position: absolute;
+      padding: 0;
+      & li {
+        float: left;
+        width: 102px;
+        margin-left: 26px;
+        color: #6C6E85;
+        &:hover {
+          color: #fff;
+        }
+        & img {
+          width: 100px;
+          height: 100px;
+          display: block;
+          margin: 0 auto;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  & .operate_btn {
+    position: absolute;
+    top: 60px;
+    color: #c8c8c8;
+    font-size: 2rem;
+    &.btn_left {
+      left: 32px;
+    }
+    &.btn_right {
+      right: 32px;
+    }
+  }
+}

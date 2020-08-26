@@ -109,6 +109,8 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2; }
+      .online_body .online_container .online_list .list_item:hover {
+        cursor: pointer; }
   .online_body .footer {
     margin-top: 0; }
 

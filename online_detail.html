@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0,
+    maximum-scale=1.0,
+    user-scalable=0">
+    <link rel="stylesheet" href="style/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style/common.css">
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style/online_detail.css">
+    <script src="js/lb_js/jq.Slide.js"></script>
+    <title>线上会员详情</title>
+</head>
+<body class="online_body">
+<div class="online_detail_bg"></div>
+<div class="container">
+    <div id="header"></div>
+    <div class="online_detail row">
+        <div class="detail_left col-md-9">
+            <div class="detail_info row">
+                <img src="image/online/img01.png" class="header_img img-fluid">
+                <div class="info_base">
+                    <p class="info_name">橙子妹</p>
+                    <p>ID：<span>68089536</span></p>
+                    <div class="row">
+                        <div class="info_left">
+                            <span>宁波</span>
+                            <span>30岁</span>
+                            <span>大学本科</span>
+                            <span>未婚</span>
+                            <span>165cm</span>
+                            <span>3001~5000元</span>
+                        </div>
+                        <div class="info_right">
+                            <img src="image/online/login_time.png">
+                            查看最后登录时间
+                        </div>
+                    </div>
+                </div>
+                <div id="four_flash" class="four_flash">
+                    <div class="flashBg">
+                        <ul class="mobile">
+                            <li>
+                                <img src="image/online/img01.png">
+                            </li>
+                            <li>
+                                <img src="image/online/img02.png">
+                            </li>
+                            <li>
+                                <img src="image/online/img03.png">
+                            </li>
+                            <li>
+                                <img src="image/online/img04.png">
+                            </li>
+                            <li>
+                                <img src="image/online/img05.png">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn_left operate_btn">&lt;</div>
+                    <div class="btn_right operate_btn">&gt;</div>
+                </div>
+            </div>
+        </div>
+        <div class="detail_right col-md-3"></div>
+    </div>
+    <div id="footer"></div>
+</div>
+<script type="text/javascript">
+    var _index = 0;
+    var len = $(".flashBg ul.mobile li").length;
+    var width = $(".flashBg ul.mobile li").outerWidth(true);
+
+    $("#four_flash .btn_right").click(function () {
+        console.log('向右')
+        _index++;
+        if (_index + (len - 1) > len) {
+            $("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
+        }
+        $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
+    });
+
+
+    $("#four_flash .btn_left").click(function () {
+        console.log('向左')
+        if (_index == 0) {
+            $("ul.mobile").prepend($("ul.mobile").html());
+            let allW = $("ul.mobile").outerWidth() / (len * 2);
+            console.log('hh', allW);
+            $("ul.mobile").css("left", -allW + "px");
+            _index = len;
+        }
+        _index--;
+        $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
+    });
+</script>
+<script>
+    $(function () {
+        $("#header").load("page/include/header.html");
+        $("#footer").load("page/include/footer.html");
+    })
+</script>
+</body>
+</html>

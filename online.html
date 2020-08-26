@@ -413,6 +413,11 @@
             }
         });
 
+        $(".online_list").find(".list_item").click(function () {
+            let index = $(this).index();
+            window.location.href = "online_detail.html?id="+index;
+        })
+
     })
 </script>
 </body>

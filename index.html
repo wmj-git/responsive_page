@@ -679,7 +679,6 @@
     var width = $(".flashBg ul.mobile li").outerWidth(true);
 
     $("#four_flash .btn_right").click(function () {
-        console.log('向右')
         _index++;
         if (_index + (len - 1) > len) {
             $("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
