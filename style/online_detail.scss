@@ -47,7 +47,6 @@
           & .info_right {
             position: absolute;
             right: -15px;
-            top: 0;
             display: flex;
             align-items: center;
             & img {
@@ -141,6 +140,7 @@
           }
           & .info_right {
             right: 0 !important;
+            top: 0;
             & img {
               width: 1rem !important;
               height: 1rem !important;
@@ -151,7 +151,6 @@
           left: 0.8rem !important;
           top: 0 !important;
           & .flashBg {
-            top: 20px !important;
             width: 260px !important;
             height: 50px !important;
             & .mobile {
@@ -196,6 +195,7 @@
           left: 5rem;
           width: 80%;
           & .info_right {
+            top: 0;
             & img {
               width: 1rem !important;
               height: 1rem !important;
