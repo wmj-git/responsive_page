@@ -145,6 +145,12 @@ a:hover {
   margin: 5rem auto 3rem;
   color: black;
   font-size: .8rem; }
+  .footer._footer {
+    text-align: left;
+    background-color: #fff; }
+    .footer._footer .footer_nav ul li {
+      font-size: .67rem;
+      font-weight: normal; }
   .footer .container {
     padding: 0; }
   .footer .footer_nav {
@@ -166,6 +172,8 @@ a:hover {
         height: .8rem;
         line-height: .8rem;
         border-right: 1px solid #4e555b; }
+        .footer .footer_nav ul li:last-child {
+          border: none; }
   .footer .footer_info {
     color: #4040409c;
     font-size: .75rem; }
@@ -178,6 +186,26 @@ a:hover {
       margin: .2rem auto; }
       .footer .footer_info .footer_item p span {
         margin: 0 .5rem; }
+    .footer .footer_info .city_title {
+      font-weight: bold;
+      margin-bottom: .5rem; }
+    .footer .footer_info .flex_layout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+      font-size: .7rem; }
+      .footer .footer_info .flex_layout .city_footer {
+        padding: 0; }
+        .footer .footer_info .flex_layout .city_footer .city_name button {
+          border: none;
+          background-color: transparent;
+          width: 4rem;
+          text-align: left;
+          color: #5f5f5f; }
+    .footer .footer_info .footer_status p {
+      margin-bottom: .5rem;
+      font-size: .6rem; }
   .footer .footer_sub_info {
     color: #4040409c; }
 
