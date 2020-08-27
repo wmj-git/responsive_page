@@ -4,7 +4,6 @@
     <list default="true" id="e9656edd-507d-4269-9702-e937b3a6a589" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/online_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/online_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/online_detail.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/online_detail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/online_detail.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style/online_detail.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style/online_detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/online_detail.scss" afterDir="false" />
@@ -62,7 +61,7 @@
           <entry key="css" value="4" />
           <entry key="html" value="14929" />
           <entry key="js" value="681" />
-          <entry key="scss" value="12215" />
+          <entry key="scss" value="12232" />
           <entry key="ts" value="1" />
           <entry key="txt" value="18" />
         </counts>
@@ -73,7 +72,7 @@
           <entry key="HTML" value="14929" />
           <entry key="JavaScript" value="681" />
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="SCSS" value="12215" />
+          <entry key="SCSS" value="12232" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
@@ -86,8 +85,13 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/style/online_detail.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="511">
-                  <caret line="208" selection-start-line="208" selection-end-line="208" />
+                <state relative-caret-position="209">
+                  <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#249#1397#0" />
+                    <element signature="e#2381#3866#0" />
+                    <element signature="e#3956#5494#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -99,10 +103,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/online_detail.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="544">
-                  <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+                <state relative-caret-position="251">
+                  <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
                   <folding>
                     <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
                   </folding>
                 </state>
               </provider>
@@ -327,7 +332,7 @@
       <workItem from="1598315249043" duration="30910000" />
       <workItem from="1598401739448" duration="33975000" />
       <workItem from="1598437756278" duration="11000" />
-      <workItem from="1598488231465" duration="6587000" />
+      <workItem from="1598488231465" duration="7859000" />
     </task>
     <task id="LOCAL-00001" summary="首页~~">
       <created>1597743717630</created>
@@ -354,7 +359,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243692000" />
+    <option name="totallyTimeSpent" value="244964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="73" width="3082" height="1318" extended-state="0" />
@@ -899,18 +904,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/online_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="81" column="9" lean-forward="true" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        <state relative-caret-position="251">
+          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style/online_detail.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        <state relative-caret-position="209">
+          <caret line="61" column="1" lean-forward="true" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+          <folding>
+            <element signature="e#249#1397#0" />
+            <element signature="e#2381#3866#0" />
+            <element signature="e#3956#5494#0" />
+          </folding>
         </state>
       </provider>
     </entry>

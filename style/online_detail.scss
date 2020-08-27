@@ -66,7 +66,7 @@
   width: 650px;
   height: auto;
   left: 5.8rem;
-  top: -7rem;
+  top: -5rem;
   margin: 0 auto;
   bottom: 40px;
   & .flashBg {
@@ -75,7 +75,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    top: 40px;
+    //top: 40px;
     & ul.mobile {
       width: 2000%;
       height: 400px;
@@ -101,7 +101,7 @@
   }
   & .operate_btn {
     position: absolute;
-    top: 60px;
+    top: 20px;
     color: #c8c8c8;
     font-size: 2rem;
     &:hover {
@@ -149,7 +149,7 @@
         }
         & .four_flash {
           left: 0.8rem !important;
-          top: 0 !important;
+          top: 2rem !important;
           & .flashBg {
             width: 260px !important;
             height: 50px !important;
@@ -165,7 +165,7 @@
             }
           }
           & .operate_btn{
-            top: 50px !important;
+            top: 10px !important;
             &.btn_left{
               left: 10px !important;
             }
@@ -204,7 +204,7 @@
         }
         & .four_flash {
           left: 0.8rem !important;
-          top: 0 !important;
+          top: 2rem !important;
           & .flashBg {
             width: 340px !important;
             height: 100px !important;
@@ -220,7 +220,7 @@
             }
           }
           & .operate_btn{
-            top: 50px !important;
+            top: 10px !important;
             &.btn_left{
               left: 10px !important;
             }
