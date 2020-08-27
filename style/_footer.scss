@@ -71,6 +71,7 @@
       font-size: .7rem;
       & .city_footer{
         padding: 0;
+        margin-bottom: 1rem;
         & .city_name{
           & button {
             border: none;
@@ -100,5 +101,9 @@
     border: none;
     height: 2.8rem;
     line-height: 1.4rem;
+  }
+  ._footer .footer_nav ul li {
+    margin: 0;
+    padding: 0;
   }
 }

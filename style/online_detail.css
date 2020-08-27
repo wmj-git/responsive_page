@@ -235,7 +235,13 @@
           .online_detail .detail_left .detail_info .four_flash .operate_btn.btn_left {
             left: 10px !important; }
           .online_detail .detail_left .detail_info .four_flash .operate_btn.btn_right {
-            right: 10px !important; } }
+            right: 10px !important; }
+  .online_detail .detail_right {
+    width: 100% !important;
+    border-radius: 6px;
+    position: relative !important;
+    top: 1rem;
+    margin-left: 0 !important; } }
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .online_detail .detail_left {
     padding-left: 8px; }

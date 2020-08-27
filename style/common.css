@@ -196,7 +196,8 @@ a:hover {
       margin-bottom: 3rem;
       font-size: .7rem; }
       .footer .footer_info .flex_layout .city_footer {
-        padding: 0; }
+        padding: 0;
+        margin-bottom: 1rem; }
         .footer .footer_info .flex_layout .city_footer .city_name button {
           border: none;
           background-color: transparent;
@@ -213,6 +214,10 @@ a:hover {
   .footer .footer_nav ul li {
     border: none;
     height: 2.8rem;
-    line-height: 1.4rem; } }
+    line-height: 1.4rem; }
+
+  ._footer .footer_nav ul li {
+    margin: 0;
+    padding: 0; } }
 
 /*# sourceMappingURL=common.css.map */
