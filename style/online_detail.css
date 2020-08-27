@@ -10,11 +10,12 @@
     top: -7rem; }
     .online_body .online_detail .detail_left {
       background-color: #fff;
-      height: 11rem;
+      height: auto;
+      border-radius: 6px;
       padding: 0; }
       .online_body .online_detail .detail_left .detail_info {
         position: relative;
-        height: inherit;
+        height: 11rem;
         top: -5rem;
         color: #fff;
         font-size: .8rem;
@@ -68,6 +69,86 @@
             width: 1rem;
             height: 1rem;
             margin-right: 2px; }
+      .online_body .online_detail .detail_left .detail_form {
+        background: #fff;
+        position: relative;
+        top: -2rem;
+        padding: 15px;
+        font-size: .75rem; }
+        .online_body .online_detail .detail_left .detail_form .form_item {
+          margin-bottom: 1rem; }
+          .online_body .online_detail .detail_left .detail_form .form_item p {
+            margin-bottom: 1rem;
+            color: #6c6c6c; }
+            .online_body .online_detail .detail_left .detail_form .form_item p.item_title {
+              font-size: .9rem;
+              border-left: 2px solid #9c8ef0;
+              color: #000;
+              height: .8rem;
+              line-height: .8rem;
+              padding-left: 6px; }
+          .online_body .online_detail .detail_left .detail_form .form_item .sub_title {
+            padding-left: 8px; }
+            .online_body .online_detail .detail_left .detail_form .form_item .sub_title button {
+              margin: 0 .2rem .5rem;
+              border: none;
+              border-radius: 1rem;
+              padding: .2rem .8rem; }
+              .online_body .online_detail .detail_left .detail_form .form_item .sub_title button:after {
+                border: none; }
+            .online_body .online_detail .detail_left .detail_form .form_item .sub_title .tag_top {
+              margin-bottom: 1rem; }
+              .online_body .online_detail .detail_left .detail_form .form_item .sub_title .tag_top button {
+                background-color: #eaebff; }
+            .online_body .online_detail .detail_left .detail_form .form_item .sub_title .tag_bottom button {
+              background-color: #fcf2f6; }
+          .online_body .online_detail .detail_left .detail_form .form_item .hobbies .col-md-6 {
+            display: flex;
+            align-items: flex-start; }
+            .online_body .online_detail .detail_left .detail_form .form_item .hobbies .col-md-6 span {
+              display: inline-block;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              max-width: 13rem; }
+    .online_body .online_detail .detail_right {
+      width: 23%;
+      background-color: #fff;
+      border-radius: 6px;
+      position: absolute;
+      right: 0;
+      height: auto;
+      margin-left: 1rem; }
+      .online_body .online_detail .detail_right .right_title {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 10px; }
+        .online_body .online_detail .detail_right .right_title span {
+          font-size: .8rem; }
+          .online_body .online_detail .detail_right .right_title span.float_right {
+            color: #9971f9; }
+      .online_body .online_detail .detail_right .right_list .list_item {
+        display: flex;
+        font-size: .7rem; }
+        .online_body .online_detail .detail_right .right_list .list_item img {
+          width: 4rem;
+          height: 4.2rem; }
+        .online_body .online_detail .detail_right .right_list .list_item ul {
+          padding-left: 12px; }
+          .online_body .online_detail .detail_right .right_list .list_item ul li span {
+            margin-right: 5px;
+            color: #5f5f5f; }
+          .online_body .online_detail .detail_right .right_list .list_item ul li.item_text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; }
+          .online_body .online_detail .detail_right .right_list .list_item ul li:first-child {
+            font-weight: bold; }
+  .online_body .footer {
+    margin-top: -7rem; }
 
 .four_flash {
   position: relative;
