@@ -144,6 +144,10 @@
           border-radius: 50%;
           font-size: 1.2rem;
           color: #9c9a9a; }
+          .offline_content .relationship_box .relationship_container .relationship_list .relationship_item .info .style_icon .iconfont:hover {
+            border-color: #e4e4e4;
+            color: #8b8989;
+            cursor: pointer; }
 
 @media screen and (max-width: 768px) {
   .offline_bg .offline_img {
