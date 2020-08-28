@@ -104,21 +104,36 @@
 
 
         let obj = $(".private_list .col-md-4");
+        obj.first().addClass("active");
         let _obj = $(".private_list .col-md-4.active");
         let all_height = _obj.outerHeight();
         let sole_height = all_height - obj.last().height();
-        obj.first().addClass("active");
         obj.css("height", all_height);
-        console.log('11',all_height);
+        obj.each(function () {
+            if ($(this).hasClass("active")) {
+                $(this).css("paddingTop", "30px");
+                $(this).css("paddingBottom", "30px");
+            } else{
+                $(this).css("paddingTop", sole_height / 2);
+                $(this).css("paddingBottom", sole_height / 2);
+            }
+        })
         obj.hover(function () {
             $(this).addClass("active").siblings().removeClass("active");
-            $(this).css("paddingTop", '30px');
-            $(this).css("paddingBottom", '30px');
-        },function () {
+            obj.each(function () {
+                if ($(this).hasClass("active")) {
+                    $(this).css("paddingTop", "30px");
+                    $(this).css("paddingBottom", "30px");
+                } else{
+                    $(this).css("paddingTop", sole_height / 2);
+                    $(this).css("paddingBottom", sole_height / 2);
+                }
+            })
+        }, function () {
             $(this).removeClass("active");
-            obj.css("paddingTop", sole_height / 2);
-            obj.css("paddingBottom", sole_height / 2);
             obj.first().addClass("active");
+            obj.first().css("paddingTop", "30px");
+            obj.first().css("paddingBottom", "30px");
         });
 
     })

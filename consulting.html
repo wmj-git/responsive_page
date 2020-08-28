@@ -15,7 +15,8 @@
 </head>
 <body>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active pursuit_bg banner_bg" id="pursuit" role="tabpanel" aria-labelledby="pursuit-tab">
+    <div class="tab-pane fade show active pursuit_bg banner_bg" id="pursuit" role="tabpanel"
+         aria-labelledby="pursuit-tab">
         <div class="container content_container">
             <div class="consulting_title">
                 <p class="title">追求中</p>
@@ -23,7 +24,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3 active">
+                    <div class="col-md-3">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">表白未果</p>
                         <p class="item_sub_title">I LOVE IN VAIN</p>
@@ -55,8 +56,6 @@
                         <p class="item_text">根据客户需要定制爱情方案</p>
                         <button class="item_btn">立即咨询</button>
                     </div>
-                </div>
-                <div class="consulting_list row">
                     <div class="col-md-3">
                         <img src="image/consulting/num05.png" class="num_img img-fluid">
                         <p class="item_title">无法邀约</p>
@@ -101,7 +100,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3 active">
+                    <div class="col-md-3">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">争吵</p>
                         <p class="item_sub_title">FOR NOISY</p>
@@ -133,8 +132,6 @@
                         <p class="item_text">根据客户需要定制爱情方案</p>
                         <button class="item_btn">立即咨询</button>
                     </div>
-                </div>
-                <div class="consulting_list row">
                     <div class="col-md-3">
                         <img src="image/consulting/num05.png" class="num_img img-fluid">
                         <p class="item_title">异地恋</p>
@@ -179,7 +176,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3 active">
+                    <div class="col-md-3">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">父母养老</p>
                         <p class="item_sub_title">PARENTS ENDOWMENT</p>
@@ -211,8 +208,6 @@
                         <p class="item_text">根据客户需要定制爱情方案</p>
                         <button class="item_btn">立即咨询</button>
                     </div>
-                </div>
-                <div class="consulting_list row">
                     <div class="col-md-3">
                         <img src="image/consulting/num05.png" class="num_img img-fluid">
                         <p class="item_title">两性</p>
@@ -257,7 +252,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3 active">
+                    <div class="col-md-3">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">情感电路</p>
                         <p class="item_sub_title">EMOTIONAL CIRCUIT</p>
@@ -289,8 +284,6 @@
                         <p class="item_text">根据客户需要定制爱情方案</p>
                         <button class="item_btn">立即咨询</button>
                     </div>
-                </div>
-                <div class="consulting_list row">
                     <div class="col-md-3">
                         <img src="image/consulting/num05.png" class="num_img img-fluid">
                         <p class="item_title">情绪把控</p>
@@ -327,7 +320,8 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade banner_bg personalCharm_bg" id="personalCharm" role="tabpanel" aria-labelledby="personalCharm-tab">
+    <div class="tab-pane fade banner_bg personalCharm_bg" id="personalCharm" role="tabpanel"
+         aria-labelledby="personalCharm-tab">
         <div class="container content_container">
             <div class="consulting_title">
                 <p class="title">个人魅力提升</p>
@@ -335,7 +329,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3 active">
+                    <div class="col-md-3">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">形象提升</p>
                         <p class="item_sub_title">IMAGE PROMOTION</p>
@@ -367,8 +361,6 @@
                         <p class="item_text">根据客户需要定制爱情方案</p>
                         <button class="item_btn">立即咨询</button>
                     </div>
-                </div>
-                <div class="consulting_list row">
                     <div class="col-md-3">
                         <img src="image/consulting/num05.png" class="num_img img-fluid">
                         <p class="item_title">肢体语言</p>
@@ -414,11 +406,14 @@
     $(function () {
         $("#header").load("page/include/header.html");
         $("#footer").load("page/include/footer.html");
-        $(".consulting_list .col-md-3").hover(function () {
+        let obj = $(".consulting_list .col-md-3");
+        console.log('高度',obj.height());
+        obj.first().addClass("active");
+        obj.hover(function () {
             $(this).addClass("active").siblings().removeClass("active");
         }, function () {
             $(this).removeClass("active");
-
+            obj.first().addClass("active");
         });
     })
 </script>
