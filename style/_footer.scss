@@ -8,9 +8,14 @@
     text-align: left;
     background-color: #fff;
     & .footer_nav {
-      & ul li {
-        font-size: .67rem;
-        font-weight: normal;
+      & ul {
+        align-items: flex-start;
+        justify-content: space-between;
+        display: flex;
+        & li {
+          font-size: .67rem;
+          font-weight: normal;
+        }
       }
     }
   }
@@ -29,8 +34,8 @@
       color: #404040;
       display: flex;
       font-size: .8rem;
-      align-items: flex-start;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
       & li {
         padding-right: .5rem;
         margin-right: .5rem;
