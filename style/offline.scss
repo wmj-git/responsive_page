@@ -1,12 +1,32 @@
 @import "variable";
 
 .offline_bg {
-  & .offline_img{
+  & .offline_img {
     width: 100%;
   }
 }
 
+._footer{
+  margin-top: 2rem;
+}
 .offline_content {
+  & .item-6 {
+    padding: 0;
+    & .section_title {
+      font-size: 1rem;
+      color: $text-base;
+    }
+    & .sub_title {
+      font-size: .6rem;
+      color: $text-base;
+      font-weight: bold;
+    }
+    & .sub_text {
+      font-size: .9rem;
+      color: black;
+      padding-top: 1rem;
+    }
+  }
   & .record_box {
     padding: 2rem 0;
     border-bottom: 2px solid #ececec;
@@ -29,7 +49,7 @@
     }
   }
   & .private_container {
-    padding: 2rem 0;
+    padding: 2rem 15px;
     & .private_title {
       text-align: center;
       padding: 1rem 0;
@@ -57,7 +77,7 @@
       text-align: center;
       & .col-md-4 {
         border: 1px dashed #d5d5d5;
-        padding: 1.5rem 0;
+        padding: 1.5rem .5rem;
         background-color: #f7f7f7;
         overflow: hidden;
         &:nth-child(2) {
@@ -113,11 +133,85 @@
       }
     }
   }
+  & .service_value {
+    background-color: #f1f1f1;
+    padding: 1rem 0;
+    & .service_container {
+      & .service_list {
+        padding: 1rem 0;
+        text-align: center;
+        & .list_item {
+          padding: .5rem;
+          & .item_title {
+            padding-bottom: 1rem;
+            & p {
+              margin-bottom: .3rem;
+              color: $text-base;
+              &.title_name {
+                font-size: 1rem;
+              }
+              &.title_en {
+                font-size: .8rem;
+              }
+            }
+          }
+          & .service_icon {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 1rem;
+          }
+          & .service_text {
+            font-size: .7rem;
+          }
+        }
+      }
+    }
+  }
+  & .relationship_box {
+    border-bottom: 2px solid #ececec;
+    padding: 1rem 0;
+    & .relationship_container {
+      & .relationship_list {
+        padding: 1rem 0;
+        & .relationship_item {
+          padding: 0 .3rem;
+          margin: .5rem;
+          color: $text-base;
+          max-width: 31%;
+          & .relationship_img {
+            width: 18rem;
+            height: 9rem;
+            margin-bottom: 1rem;
+          }
+          & .name {
+            margin-bottom: .5rem;
+          }
+          & .info {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            & .text {
+              font-size: .6rem;
+            }
+            & .style_icon{
+              & .iconfont{
+                border: 1px solid #efefef;
+                padding: .2rem;
+                border-radius: 50%;
+                font-size: 1.2rem;
+                color: #9c9a9a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and(max-width: 768px) {
-  .offline_bg{
-    & .offline_img{
+  .offline_bg {
+    & .offline_img {
       height: 11rem;
     }
   }
@@ -128,6 +222,34 @@
           & .col-md-3 {
             width: 50% !important;
             padding: .5rem 0;
+          }
+        }
+      }
+    }
+    & .private_container {
+      & .private_list {
+        & .col-md-4 {
+          width: 50% !important;
+          border: none;
+        }
+      }
+    }
+    & .service_value {
+      & .service_list {
+        & .list_item {
+          width: 50% !important;
+        }
+      }
+    }
+    & .relationship_box{
+      & .relationship_container{
+        & .relationship_list{
+          & .relationship_item {
+            max-width: 100% !important;
+            & .relationship_img {
+              width: 100% !important;
+              height: 60% !important;
+            }
           }
         }
       }

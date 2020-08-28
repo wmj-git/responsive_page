@@ -1,6 +1,22 @@
 .offline_bg .offline_img {
   width: 100%; }
 
+._footer {
+  margin-top: 2rem; }
+
+.offline_content .item-6 {
+  padding: 0; }
+  .offline_content .item-6 .section_title {
+    font-size: 1rem;
+    color: #3c3c3c; }
+  .offline_content .item-6 .sub_title {
+    font-size: .6rem;
+    color: #3c3c3c;
+    font-weight: bold; }
+  .offline_content .item-6 .sub_text {
+    font-size: .9rem;
+    color: black;
+    padding-top: 1rem; }
 .offline_content .record_box {
   padding: 2rem 0;
   border-bottom: 2px solid #ececec; }
@@ -14,7 +30,7 @@
       color: #4d4d4d;
       font-weight: bolder; }
 .offline_content .private_container {
-  padding: 2rem 0; }
+  padding: 2rem 15px; }
   .offline_content .private_container .private_title {
     text-align: center;
     padding: 1rem 0; }
@@ -36,7 +52,7 @@
     text-align: center; }
     .offline_content .private_container .private_list .col-md-4 {
       border: 1px dashed #d5d5d5;
-      padding: 1.5rem 0;
+      padding: 1.5rem .5rem;
       background-color: #f7f7f7;
       overflow: hidden; }
       .offline_content .private_container .private_list .col-md-4:nth-child(2) {
@@ -77,6 +93,57 @@
           -webkit-transform: translate(1060px, 0); }
         .offline_content .private_container .private_list .col-md-4.active .private_btn {
           display: inline-block; }
+.offline_content .service_value {
+  background-color: #f1f1f1;
+  padding: 1rem 0; }
+  .offline_content .service_value .service_container .service_list {
+    padding: 1rem 0;
+    text-align: center; }
+    .offline_content .service_value .service_container .service_list .list_item {
+      padding: .5rem; }
+      .offline_content .service_value .service_container .service_list .list_item .item_title {
+        padding-bottom: 1rem; }
+        .offline_content .service_value .service_container .service_list .list_item .item_title p {
+          margin-bottom: .3rem;
+          color: #3c3c3c; }
+          .offline_content .service_value .service_container .service_list .list_item .item_title p.title_name {
+            font-size: 1rem; }
+          .offline_content .service_value .service_container .service_list .list_item .item_title p.title_en {
+            font-size: .8rem; }
+      .offline_content .service_value .service_container .service_list .list_item .service_icon {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 1rem; }
+      .offline_content .service_value .service_container .service_list .list_item .service_text {
+        font-size: .7rem; }
+.offline_content .relationship_box {
+  border-bottom: 2px solid #ececec;
+  padding: 1rem 0; }
+  .offline_content .relationship_box .relationship_container .relationship_list {
+    padding: 1rem 0; }
+    .offline_content .relationship_box .relationship_container .relationship_list .relationship_item {
+      padding: 0 .3rem;
+      margin: .5rem;
+      color: #3c3c3c;
+      max-width: 31%; }
+      .offline_content .relationship_box .relationship_container .relationship_list .relationship_item .relationship_img {
+        width: 18rem;
+        height: 9rem;
+        margin-bottom: 1rem; }
+      .offline_content .relationship_box .relationship_container .relationship_list .relationship_item .name {
+        margin-bottom: .5rem; }
+      .offline_content .relationship_box .relationship_container .relationship_list .relationship_item .info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between; }
+        .offline_content .relationship_box .relationship_container .relationship_list .relationship_item .info .text {
+          font-size: .6rem; }
+        .offline_content .relationship_box .relationship_container .relationship_list .relationship_item .info .style_icon .iconfont {
+          border: 1px solid #efefef;
+          padding: .2rem;
+          border-radius: 50%;
+          font-size: 1.2rem;
+          color: #9c9a9a; }
 
 @media screen and (max-width: 768px) {
   .offline_bg .offline_img {
@@ -84,6 +151,16 @@
 
   .offline_content .record_box .record_container .offline_record .col-md-3 {
     width: 50% !important;
-    padding: .5rem 0; } }
+    padding: .5rem 0; }
+  .offline_content .private_container .private_list .col-md-4 {
+    width: 50% !important;
+    border: none; }
+  .offline_content .service_value .service_list .list_item {
+    width: 50% !important; }
+  .offline_content .relationship_box .relationship_container .relationship_list .relationship_item {
+    max-width: 100% !important; }
+    .offline_content .relationship_box .relationship_container .relationship_list .relationship_item .relationship_img {
+      width: 100% !important;
+      height: 60% !important; } }
 
 /*# sourceMappingURL=offline.css.map */
