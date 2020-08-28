@@ -24,7 +24,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 list_first">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">表白未果</p>
                         <p class="item_sub_title">I LOVE IN VAIN</p>
@@ -100,7 +100,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 list_first">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">争吵</p>
                         <p class="item_sub_title">FOR NOISY</p>
@@ -176,7 +176,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 list_first">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">父母养老</p>
                         <p class="item_sub_title">PARENTS ENDOWMENT</p>
@@ -252,7 +252,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 list_first">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">情感电路</p>
                         <p class="item_sub_title">EMOTIONAL CIRCUIT</p>
@@ -329,7 +329,7 @@
             </div>
             <div class="consulting_content">
                 <div class="consulting_list row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 list_first">
                         <img src="image/consulting/num01.png" class="num_img img-fluid">
                         <p class="item_title">形象提升</p>
                         <p class="item_sub_title">IMAGE PROMOTION</p>
@@ -407,13 +407,13 @@
         $("#header").load("page/include/header.html");
         $("#footer").load("page/include/footer.html");
         let obj = $(".consulting_list .col-md-3");
-        console.log('高度',obj.height());
-        obj.first().addClass("active");
+        let _first = $(".consulting_list .col-md-3.list_first");
+        _first.addClass("active");
         obj.hover(function () {
             $(this).addClass("active").siblings().removeClass("active");
         }, function () {
             $(this).removeClass("active");
-            obj.first().addClass("active");
+            _first.addClass('active');
         });
     })
 </script>

@@ -103,39 +103,47 @@
         $("#footer").load("page/include/_footer.html");
 
 
+        var $win = $(window).width();
         let obj = $(".private_list .col-md-4");
         obj.first().addClass("active");
         let _obj = $(".private_list .col-md-4.active");
         let all_height = _obj.outerHeight();
         let sole_height = all_height - obj.last().height();
-        obj.css("height", all_height);
-        obj.each(function () {
-            if ($(this).hasClass("active")) {
-                $(this).css("paddingTop", "30px");
-                $(this).css("paddingBottom", "30px");
-            } else{
-                $(this).css("paddingTop", sole_height / 2);
-                $(this).css("paddingBottom", sole_height / 2);
-            }
-        })
-        obj.hover(function () {
-            $(this).addClass("active").siblings().removeClass("active");
+        if ($win > 768) {
+            obj.css("height", all_height);
             obj.each(function () {
                 if ($(this).hasClass("active")) {
                     $(this).css("paddingTop", "30px");
                     $(this).css("paddingBottom", "30px");
-                } else{
+                } else {
                     $(this).css("paddingTop", sole_height / 2);
                     $(this).css("paddingBottom", sole_height / 2);
                 }
             })
-        }, function () {
-            $(this).removeClass("active");
-            obj.first().addClass("active");
-            obj.first().css("paddingTop", "30px");
-            obj.first().css("paddingBottom", "30px");
-        });
-
+            obj.hover(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+                obj.each(function () {
+                    if ($(this).hasClass("active")) {
+                        $(this).css("paddingTop", "30px");
+                        $(this).css("paddingBottom", "30px");
+                    } else {
+                        $(this).css("paddingTop", sole_height / 2);
+                        $(this).css("paddingBottom", sole_height / 2);
+                    }
+                })
+            }, function () {
+                $(this).removeClass("active");
+                obj.first().addClass("active");
+                obj.first().css("paddingTop", "30px");
+                obj.first().css("paddingBottom", "30px");
+            });
+        } else {
+            obj.hover(function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            }, function () {
+                $(this).removeClass("active");
+            })
+        }
     })
 </script>
 </body>
