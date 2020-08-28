@@ -19,6 +19,7 @@
   }
   & .footer_nav {
     margin: 0 auto;
+    padding: 1rem 0;
     & ul {
       font-weight: bold;
       width: 100%;
@@ -26,17 +27,17 @@
       padding-bottom: 1rem;
       list-style: none;
       color: #404040;
-      font-size: .8rem;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: .8rem;
+      align-items: flex-start;
+      justify-content: space-between;
       & li {
         padding-right: .5rem;
         margin-right: .5rem;
         height: .8rem;
         line-height: .8rem;
         border-right: 1px solid #4e555b;
-        &:last-child{
+        &:last-child {
           border: none;
         }
       }
@@ -59,32 +60,33 @@
         }
       }
     }
-    & .city_title{
+    & .city_title {
       font-weight: bold;
       margin-bottom: .5rem;
     }
-    & .flex_layout{
+    & .flex_layout {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 3rem;
+      margin-bottom: 1.2rem;
       font-size: .7rem;
-      & .city_footer{
+      & .city_footer {
         padding: 0;
         margin-bottom: 1rem;
-        & .city_name{
+        & .city_name {
           & button {
             border: none;
             background-color: transparent;
-            width: 4rem;
+            width: 70px;
+            padding: 0;
             text-align: left;
-            color: #5f5f5f;
+            color: #908f8f;
           }
         }
       }
     }
-    & .footer_status{
-      & p{
+    & .footer_status {
+      & p {
         margin-bottom: .5rem;
         font-size: .6rem;
       }
@@ -102,8 +104,14 @@
     height: 2.8rem;
     line-height: 1.4rem;
   }
-  ._footer .footer_nav ul li {
-    margin: 0;
-    padding: 0;
+  ._footer .footer_nav ul {
+    display: inline-block;
+    & li {
+      font-size: .67rem;
+      font-weight: normal;
+      float: left;
+      margin: 0 1rem;
+      padding: 0;
+    }
   }
 }
