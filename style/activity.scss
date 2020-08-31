@@ -60,6 +60,11 @@
               height: 1.2rem;
               line-height: 1rem;
               text-align: center;
+              &:hover{
+                cursor: pointer;
+                color: rgba(110, 110, 110, 0.4);
+                border-color: rgba(140, 140, 140, 0.47);
+              }
             }
           }
 
