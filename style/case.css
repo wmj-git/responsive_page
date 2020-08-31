@@ -1,0 +1,58 @@
+.case_img {
+  width: 100%;
+  padding-top: 54px; }
+
+.content_container .case_list {
+  padding: 1rem 0;
+  overflow: hidden;
+  display: flex; }
+  .content_container .case_list .case_item {
+    /* width: 30.9%;
+     float: left;*/
+    margin: .5rem 1rem;
+    overflow: hidden; }
+    .content_container .case_list .case_item:first-child {
+      margin-left: 0; }
+    .content_container .case_list .case_item:last-child {
+      margin-right: 0; }
+    .content_container .case_list .case_item .item_group {
+      margin-bottom: 1.5rem; }
+      .content_container .case_list .case_item .item_group .case_list_left {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: .5rem; }
+      .content_container .case_list .case_item .item_group p {
+        margin-bottom: .5rem;
+        font-size: .6rem;
+        color: #3c3c3c; }
+        .content_container .case_list .case_item .item_group p.group_item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .content_container .case_list .case_item .item_group p.group_item .item_title {
+            color: #000;
+            font-size: .7rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            max-width: 10rem; }
+          .content_container .case_list .case_item .item_group p.group_item .item_name {
+            color: #a2a2a2; }
+        .content_container .case_list .case_item .item_group p.group_text {
+          color: #a9a9a9;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; }
+      .content_container .case_list .case_item .item_group:hover {
+        cursor: pointer; }
+
+@media screen and (max-width: 768px) {
+  .content_container .case_list {
+    display: inline-block; } }
+
+/*# sourceMappingURL=case.css.map */

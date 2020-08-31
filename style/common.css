@@ -87,29 +87,20 @@
     border: none; } }
 html {
   font-size: 62.5% !important;
-  /* 10梅16=62.5% */ }
+  /* 10÷16=62.5% */ }
 
 @media only screen and (min-width: 481px) {
   html {
     font-size: 94% !important;
-    /* 15.04梅16=94% */ } }
+    /* 15.04÷16=94% */ } }
 @media only screen and (min-width: 561px) {
   html {
     font-size: 109% !important;
-    /* 17.44梅16=109% */ } }
+    /* 17.44÷16=109% */ } }
 @media only screen and (min-width: 641px) {
   html {
     font-size: 125% !important;
-    /* 20梅16=125% */ } }
-.breadcrumb_nav {
-  background-color: transparent;
-  padding: 0; }
-
-.breadcrumb > li + li:before {
-  color: #CCCCCC;
-  content: "/ ";
-  padding: 0 5px; }
-
+    /* 20÷16=125% */ } }
 .about {
   top: 60px; }
 
@@ -147,6 +138,67 @@ ul li {
 
 a:hover {
   text-decoration: none; }
+
+/*分页*/
+.page-item {
+  border: none; }
+  .page-item:first-child, .page-item:nth-child(2), .page-item:last-child, .page-item:nth-last-child(2) {
+    height: 40px;
+    width: 45px;
+    background: url(../image/index_page/page_bg.jpg) 8px 7px no-repeat; }
+  .page-item .page-link {
+    border-radius: 0; }
+  .page-item:first-child:hover, .page-item:nth-child(2):hover, .page-item:last-child:hover, .page-item:nth-last-child(2):hover {
+    background: url(../image/index_page/page_bg_hover.jpg) 8px 7px no-repeat;
+    background-color: #9c8ef0; }
+  .page-item:first-child, .page-item:nth-child(2) {
+    margin-right: 2px; }
+    .page-item:first-child span, .page-item:nth-child(2) span {
+      font-weight: bold; }
+    .page-item:first-child .page-link, .page-item:nth-child(2) .page-link {
+      height: 40px; }
+  .page-item:nth-child(2) {
+    margin-left: 2px;
+    background-position: 7px -21px; }
+    .page-item:nth-child(2):hover {
+      background-position: 7px -21px; }
+  .page-item:last-child, .page-item:nth-last-child(2) {
+    margin-left: 2px; }
+    .page-item:last-child span, .page-item:nth-last-child(2) span {
+      font-weight: bold; }
+    .page-item:last-child .page-link, .page-item:nth-last-child(2) .page-link {
+      height: 40px; }
+  .page-item:last-child, .page-item:last-child:hover {
+    background-position: -21px 7px; }
+  .page-item:nth-last-child(2) {
+    margin-right: 2px;
+    background-position: -21px -21px; }
+    .page-item:nth-last-child(2):hover {
+      background-position: -21px -21px; }
+  .page-item.active .page-link {
+    color: #fff;
+    background-color: #9c8ef0; }
+  .page-item .page-link {
+    background-color: transparent; }
+    .page-item .page-link:focus {
+      box-shadow: unset; }
+
+/*面包屑导航*/
+.breadcrumb_nav {
+  background-color: transparent;
+  padding: 15px 0;
+  color: #3c3c3c;
+  font-size: .7rem;
+  margin-bottom: 0;
+  border-bottom: 1px dashed #c3c3c3; }
+  .breadcrumb_nav.breadcrumb a {
+    color: #3c3c3c; }
+    .breadcrumb_nav.breadcrumb a.active {
+      color: #9c8ef0; }
+  .breadcrumb_nav.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "> ";
+    padding: 0 5px; }
 
 .footer {
   text-align: center;
