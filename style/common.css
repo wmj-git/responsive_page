@@ -101,6 +101,15 @@ html {
   html {
     font-size: 125% !important;
     /* 20梅16=125% */ } }
+.breadcrumb_nav {
+  background-color: transparent;
+  padding: 0; }
+
+.breadcrumb > li + li:before {
+  color: #CCCCCC;
+  content: "/ ";
+  padding: 0 5px; }
+
 .about {
   top: 60px; }
 

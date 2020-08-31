@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2076265",
+      "name": "评论",
+      "font_class": "evalue",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "2506222",
+      "name": "转发",
+      "font_class": "share",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "6660766",
+      "name": "点赞",
+      "font_class": "like",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
       "icon_id": "1049939",
       "name": "微信",
       "font_class": "wechat",
