@@ -1,0 +1,120 @@
+@import "variable";
+
+.content_container {
+  position: relative;
+  top: 4rem;
+  & .activity_content {
+    & .content_first {
+      & p {
+        text-align: left;
+        margin-bottom: .5rem;
+        color: #666666;
+        font-size: .7rem;
+        & span {
+          color: #000;
+        }
+        &.content_title {
+          font-size: .8rem;
+          color: #000;
+          font-weight: bold;
+          padding: .5rem 0;
+        }
+      }
+      & .banner_img {
+        width: 100%;
+        height: auto;
+        padding-bottom: 1rem;
+      }
+      & .content_layout {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        border-bottom: 1px dashed #c3c3c3;
+        padding-bottom: 1.5rem;
+        & .content_btn {
+          border: none;
+          background-color: $backgroundColor-highlight;
+          color: #fff;
+          border-radius: 5px;
+          font-size: .7rem;
+          padding: .2rem .5rem;
+        }
+      }
+    }
+    & .content_module {
+      padding: .5rem 0;
+      & p {
+        margin-bottom: .5rem;
+        color: #666;
+        font-size: .6rem;
+        &.item_title {
+          font-weight: bold;
+          color: #1e1e1e;
+          font-size: .7rem;
+          padding: .5rem 0 .5rem .2rem;
+          margin-bottom: 0;
+          &::before {
+            content: "";
+            padding-left: .2rem;
+            border-left: 4px solid #000;
+          }
+        }
+      }
+      & .item_text {
+        padding: .5rem 0 1rem;
+        & p {
+          color: $text-base;
+          padding: 0 4px;
+          &.text_top {
+            margin-bottom: 1rem;
+          }
+        }
+        &.border_bottom {
+          border-bottom: 1px dashed $text-base;
+        }
+      }
+      & .item_images {
+        padding: 0 0 2rem;
+        border-bottom: 1px dashed #c3c3c3;
+
+        & .list_item {
+          padding: 0;
+          max-width: 49.2%;
+          & .list_img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+    & .detail_bottom {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      & .bottom_item{
+        width: 100%;
+        padding: 0;
+        & .bottom_img {
+          width: 100%;
+          max-width: 8rem;
+          height: auto;
+          &.right_img{
+            max-width: 14rem;
+          }
+        }
+        & .title{
+          width: 8rem;
+          & p{
+            margin-bottom: .5rem;
+            font-size: .7rem;
+            color: #3c3c3c;
+            text-align: center;
+          }
+        }
+        &:last-child{
+          text-align: right;
+        }
+      }
+    }
+  }
+}

@@ -321,7 +321,11 @@
             _first.addClass("active");
         });
 
-    })
+        obj.click(function () {
+            let _index = $(this).index();
+            window.location.href = "activity_detail.html?id="+_index;
+        });
+    });
 </script>
 </body>
 </html>
