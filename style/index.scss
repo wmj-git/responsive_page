@@ -14,6 +14,26 @@
 .banner {
   width: 100%;
   text-align: center;
+  & .banner_box{
+    position: relative;
+    & .button_start{
+      border-radius: 1rem;
+      color: #000;
+      font-size: .6rem;
+      font-weight: bold;
+      background-color: #ffde00;
+      border: none;
+      padding: .2rem 1.5rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: 1rem;
+      z-index: 1;
+      & span{
+        margin-left: .2rem;
+      }
+    }
+  }
 }
 
 .fullpage {
@@ -666,6 +686,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .banner .banner_box .button_start{
+    padding: .2rem .8rem;
+  }
   .height_auto {
     & .fp-tableCell {
       height: auto !important;

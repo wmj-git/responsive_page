@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/index.css"/>
     <link rel="stylesheet" href="style/css/lb.css">
     <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/icons/iconfont.css">
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/fullpage.js" type="text/javascript"></script>
@@ -31,8 +32,8 @@
         <div class="section banner">
             <div class="">
                 <div class="bd-example">
-                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-
+                    <div id="carouselExampleCaptions" class="carousel slide banner_box" data-ride="carousel">
+                        <button class="button_start">立即开启<span class="iconfont icon-arrow"></span></button>
                         <div class="carousel-inner">
                             <ol class="carousel-indicators">
                                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -776,6 +777,10 @@
             $.fn.fullpage.setAutoScrolling(true);
             $(".banner").removeClass("fp-auto-height");
         }
+
+        let _start = $(".button_start");
+        let startW = _start.innerWidth();
+        _start.css("marginLeft", - startW / 2);
     }
 
     // 获取页面传递过来的参数

@@ -29,6 +29,8 @@
     .nav_box .login_btn.line {
       padding: 0 5px;
       color: #d0d0d0; }
+    .nav_box .login_btn:hover {
+      cursor: pointer; }
 
 .dropdown-toggle::after {
   border: none; }

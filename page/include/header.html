@@ -67,9 +67,9 @@
                                                                             src="image/index_page/phone.png">400 023
                         8520</a></li>
                     <li class="nav-item"><a class="nav-item nav-link ">
-                        <span class="login_btn">登录</span>
+                        <span class="login_btn" id="login">登录</span>
                         <span class="login_btn line">|</span>
-                        <span class="login_btn">注册</span>
+                        <span class="login_btn" id = register>注册</span>
                     </a></li>
                 </ul>
             </div>
@@ -106,6 +106,12 @@
         let p_width = el.innerWidth();
         el.find(".dropdown-menu").css("width",p_width);
 
+        $("#login").click(function () {
+            window.location.href = "login.html";
+        });
+        $("#register").click(function () {
+            window.location.href = "register.html";
+        });
 
     /*    $(".navbar-toggler").click(function () {
             console.log('dianji')
