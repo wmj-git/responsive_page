@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import "banner";
 @import "variable";
-
+.index_body{
+  overflow: hidden !important;
+}
 .header {
   & .nav_box {
     & .bg-light {

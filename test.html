@@ -1,99 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>修改range</title>
+    <title>使用wow做的项目</title>
     <style>
-        .slider-1 {
-            width: 600px;
-            margin: 200px auto;
+        .container{
+            width:800px;
+            margin:0 auto;
         }
-
-        .slider-1 input[type=range] {
-            -webkit-appearance: none;
-            width: 600px;
-            border-radius: 5px;
-            background: -webkit-linear-gradient(#a068ef, #9463f7) no-repeat #E6E6E5;
-            background-size: 37.5% 100%;
+        .container ul{
+            display:flex;
+            display:-webkit-flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
-
-        .slider-1 input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
+        .container ul li{
+            width:300px;
+            height:300px;
+            margin-bottom:40px;
+            list-style:none;
+            border-radius:50%;
+            text-align:center;
+            vertical-align:middle;
+            align-items: center;
+            line-height:300px;
+            background-color:pink;
         }
-
-        .slider-1 input[type=range]::-webkit-slider-runnable-track {
-            height: 10px;
-            border-radius: 5px;
+        .container ul li:nth-child(4n){
+            background-color:#409EFF;
         }
-
-        .slider-1 input[type=range]:focus {
-            outline: none;
+        .container ul li:nth-child(4n+1){
+            background-color:#67C23A;
         }
-
-        .slider-1 input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            height: 20px;
-            width: 2px;
-            margin-top: 0;
-            background: #9463f7;
-            cursor: pointer;
-        }
-
-        .slider-1 .s-mark {
-            margin-top: 17px;
-        }
-
-        .slider-1 .s-mark span {
-            font-size: 12px;
-            color: #3E3A39;
-            display: block;
-            text-align: center;
-        }
-
-        .slider-1 .s-mark span:first-child {
-            float: left;
-        }
-
-        .slider-1 .s-mark span:nth-child(2) {
-            float: right;
-        }
-        input::-webkit-input-placeholder{
-            color:red;
-        }
-        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-            color:red;
-        }
-        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-            color:red;
-        }
-        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
-            color:red;
+        .container ul li:nth-child(4n+2){
+            background-color:#E6A23C;
         }
     </style>
-    <link rel="stylesheet" href="style/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/css/animate.css">
-    <script src="js/wow.min.js"></script>
-    <style>
-        .slideInLeft{
-            height: 200px;
-            width: 500px;
-            background-color: #0b2e13;
-        }
-    </style>
 </head>
-
 <body>
-<input placeholder="输入数据">
-<section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
+<section class="container">
+    <ul>
+        <li class="wow bounceInLeft">bounceInLeft</li>
+        <li class="wow bounceInRight">bounceInRight</li>
+        <li class="wow bounceIn">bounceIn</li>
+        <li class="wow bounceInUp">bounceInUp</li>
+        <li class="wow bounceInDown">bounceInDown</li>
+        <li class="wow slideInUp">slideInUp</li>
+        <li class="wow slideInDown">slideInDown</li>
+        <li class="wow slideInLeft">slideInLeft</li>
+        <li class="wow slideInRight">slideInRight</li>
+        <li class="wow lightSpeedIn">lightSpeedIn</li>
+        <li class="wow pulse">pulse</li>
+        <li class="wow flipInX">flipInX</li>
+        <li class="wow flipInY">flipInY</li>
+        <li class="wow bounce">bounce</li>
+        <li class="wow shake">shake</li>
+        <li class="wow wobble">wobble</li>
+        <li class="wow rollIn">rollIn</li>
+        <li class="wow fadeInUpBig" data-wow-delay="0.3s">fadeInUpBig</li>
+        <li class="wow fadeInUpBig" data-wow-delay="0.6s">fadeInUpBig</li>
+        <li class="wow fadeInUpBig" data-wow-delay="0.9s">fadeInUpBig</li>
+        <li class="wow fadeInUpBig" data-wow-delay="1.2s">fadeInUpBig</li>
+        <li class="wow fadeInUpBig" data-wow-delay="1.5s">fadeInUpBig</li>
+    </ul>
 </section>
+<script src="js/wow.min.js"></script>
 <script>
     new WOW().init();
 </script>
-
 </body>
-
 </html>
-
