@@ -286,12 +286,15 @@ a:hover {
     line-height: 1.4rem; }
 
   ._footer .footer_nav ul {
-    display: inline-block; }
+    display: inline-block !important; }
     ._footer .footer_nav ul li {
       font-size: .67rem;
       font-weight: normal;
       float: left;
       margin: 0 1rem;
-      padding: 0; } }
+      padding: 0; }
+
+  .footer._footer .footer_info {
+    margin-left: .5rem; } }
 
 /*# sourceMappingURL=common.css.map */

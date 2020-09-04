@@ -1,9 +1,11 @@
 @charset "UTF-8";
 @import "banner";
 @import "variable";
-.index_body{
+
+.index_body {
   overflow: hidden !important;
 }
+
 .header {
   & .nav_box {
     & .bg-light {
@@ -12,13 +14,17 @@
   }
 }
 
+.footer {
+  margin-top: 0;
+}
+
 /*轮播图*/
 .banner {
   width: 100%;
   text-align: center;
-  & .banner_box{
+  & .banner_box {
     position: relative;
-    & .button_start{
+    & .button_start {
       border-radius: 1rem;
       color: #000;
       font-size: .6rem;
@@ -31,7 +37,7 @@
       top: 50%;
       margin-top: 1rem;
       z-index: 1;
-      & span{
+      & span {
         margin-left: .2rem;
       }
     }
@@ -357,7 +363,7 @@
         width: 13rem;
         padding: 1rem;
         background-color: #1f5d66b5;
-        & p{
+        & p {
           margin-bottom: .5rem;
           &.title {
             font-size: 1rem;
@@ -367,8 +373,15 @@
             height: 1px;
             background-color: rgba(255, 255, 255, 0.71);
           }
+          &.area{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+          }
         }
-        & .record_btn{
+        & .record_btn {
           border: none;
           border-radius: 1rem;
           padding: .2rem 1rem;
@@ -688,7 +701,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .banner .banner_box .button_start{
+  .index_body {
+    overflow: auto !important;
+  }
+  .banner .banner_box .button_start {
     padding: .2rem .8rem;
   }
   .height_auto {
@@ -796,5 +812,13 @@
       left: 25px !important;
       top: 138px !important;
     }
+  }
+
+  /*相亲活动*/
+  .blind_banner .blind_container .blind_banner_box .top_box {
+    width: 23rem !important;
+    top: 7% !important;
+    left: 2rem !important;
+    padding: .5rem !important;
   }
 }

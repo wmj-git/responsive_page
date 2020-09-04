@@ -19,6 +19,9 @@
 .header .nav_box .bg-light {
   background-color: rgba(255, 255, 255, 0.7) !important; }
 
+.footer {
+  margin-top: 0; }
+
 /*轮播图*/
 .banner {
   width: 100%;
@@ -295,6 +298,12 @@
         width: .8rem;
         height: 1px;
         background-color: rgba(255, 255, 255, 0.71); }
+      .blind_banner .blind_container .blind_banner_box .top_box p.area {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1; }
     .blind_banner .blind_container .blind_banner_box .top_box .record_btn {
       border: none;
       border-radius: 1rem;
@@ -540,6 +549,9 @@
       top: 1rem; }
 
 @media screen and (max-width: 768px) {
+  .index_body {
+    overflow: auto !important; }
+
   .banner .banner_box .button_start {
     padding: .2rem .8rem; }
 
@@ -615,6 +627,13 @@
             width: 6rem !important; }
     .consultation_page .left-bottom {
       left: 25px !important;
-      top: 138px !important; } }
+      top: 138px !important; }
+
+  /*相亲活动*/
+  .blind_banner .blind_container .blind_banner_box .top_box {
+    width: 23rem !important;
+    top: 7% !important;
+    left: 2rem !important;
+    padding: .5rem !important; } }
 
 /*# sourceMappingURL=index.css.map */
