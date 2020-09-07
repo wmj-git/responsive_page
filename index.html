@@ -378,7 +378,7 @@
                 </div>
             </div>
         </div>
-        <div class="section sectionPage height_auto">
+        <div class="section sectionPage height_auto activity_page">
             <div class="blind_banner">
                 <div class="container blind_container" id="temp1">
                     <div class="col-md-12 blind_banner_box">
@@ -446,7 +446,7 @@
                 </div>
             </div>
         </div>
-        <div class="section sectionPage height_auto">
+        <div class="section sectionPage height_auto case_page">
             <div class="container case_box">
                 <div class="row case_header">
                     <div class="col-md-3 item-6 wow bounceInLeft" data-wow-duration="1s" data-wow-delay="300">
@@ -723,32 +723,6 @@
         }
     });
 </script>
-<script type="text/javascript">
-    var _index = 0;
-    var len = $(".flashBg ul.mobile li").length;
-    var width = $(".flashBg ul.mobile li").outerWidth(true);
-
-    $("#four_flash .btn_right").click(function () {
-        _index++;
-        if (_index + (len - 1) > len) {
-            $("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
-        }
-        $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
-    });
-
-
-    $("#four_flash .btn_left").click(function () {
-        if (_index == 0) {
-            $("ul.mobile").prepend($("ul.mobile").html());
-            let allW = $("ul.mobile").outerWidth() / (len * 2);
-            console.log('hh', allW);
-            $("ul.mobile").css("left", -allW + "px");
-            _index = len;
-        }
-        _index--;
-        $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
-    });
-</script>
 <script>
     $(function () {
         $("#temp").Slide({
@@ -761,6 +735,7 @@
 </script>
 
 <script>
+    var width;
     $(function () {
         let _obj = $(".flex-layout .JQ-slide-nav li");
         let itemH = _obj.innerHeight();
@@ -771,14 +746,15 @@
             _obj.css("top", 0);
         });
 
-
         $("#header").load("page/include/header.html");
         $("#footer").load("page/include/footer.html");
         $(".parse").attr("disabled", true).css("pointer-events", "none")
         autoScrolling();
+        caseScroll();
     });
     $(window).resize(function () {
         autoScrolling();//必须放在这里，否则autoScrolling会在setAutoScrolling之前执行，拿不到setAutoScrolling
+        caseScroll();
     });
 
     function autoScrolling() {
@@ -793,6 +769,8 @@
             $(".banner .banner-img").css("height", "auto");
             $(".banner").addClass("fp-auto-height");
             $(".operate_btn").css("display","none");
+            caseMargin();
+
         } else {
             $.fn.fullpage.setAutoScrolling(true);
             $(".banner").removeClass("fp-auto-height");
@@ -831,6 +809,46 @@
         $(this).find(".blind_info").animate({'height': '0'}, 300);
 
     });
+
+
+    function caseMargin() {
+        let _parentW  = $(".case_banner").innerWidth();
+        let _object = $(".four_flash .flashBg ul.mobile li");
+        _object.css("width",_parentW / 2 - 10);
+        width = _object.outerWidth(true);
+
+        _object.find("img").css("width",_parentW / 2 - 10);
+
+        $(".four_flash").css("width",$(".case_page").innerWidth());
+    }
+
+
+    function caseScroll() {
+        var _index = 0;
+        var len = $(".flashBg ul.mobile li").length;
+        width = $(".flashBg ul.mobile li").outerWidth(true);
+        $("#four_flash .btn_right").click(function () {
+            _index++;
+            if (_index + (len - 1) > len) {
+                $("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
+            }
+            $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
+        });
+
+
+        $("#four_flash .btn_left").click(function () {
+            if (_index == 0) {
+                $("ul.mobile").prepend($("ul.mobile").html());
+                let allW = $("ul.mobile").outerWidth() / (len * 2);
+                console.log('hh', allW);
+                $("ul.mobile").css("left", -allW + "px");
+                _index = len;
+            }
+            _index--;
+            $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
+        });
+    }
 </script>
+
 </body>
 </html>

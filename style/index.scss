@@ -328,7 +328,7 @@
               }
             }
           }
-          .operate_btn{
+          .operate_btn {
             position: absolute;
             height: 130px;
             z-index: 2;
@@ -336,16 +336,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            &.active{
+            &.active {
               background: #f4dada;
             }
-            &.prev{
+            &.prev {
               top: -130px;
             }
-            &.next{
+            &.next {
               top: 390px;
             }
-            &:hover{
+            &:hover {
               cursor: pointer;
             }
           }
@@ -371,6 +371,10 @@
 }
 
 /*相亲活动*/
+.activity_page {
+  padding: 2rem 0;
+  height: auto !important;
+}
 
 .blind_banner {
   & .blind_container {
@@ -399,7 +403,7 @@
             height: 1px;
             background-color: rgba(255, 255, 255, 0.71);
           }
-          &.area{
+          &.area {
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
@@ -477,6 +481,10 @@
 }
 
 /* 成功案例*/
+.case_page {
+  height: auto !important;
+}
+
 .case_box {
   & .case_header {
     margin-bottom: 2rem;
@@ -491,6 +499,9 @@
       }
     }
   }
+  & .case_banner{
+    overflow: hidden;
+  }
   & .four_flash {
     width: 54rem;
     height: 22rem;
@@ -498,7 +509,7 @@
     position: relative;
     bottom: 2rem;
     & .flashBg {
-      width: 58rem;
+      width: 1160px;
       height: 25rem;
       margin: 0 auto;
       position: relative;
@@ -513,8 +524,8 @@
         left: 0;
         & li {
           float: left;
-          width: 13rem;
-          height: 25rem;
+          width: 260px;
+          height: 500px;
           margin-left: 26px;
           padding-top: 2rem;
           color: #6C6E85;
@@ -522,8 +533,8 @@
           overflow: hidden;
           & img {
             border-radius: 2px;
-            width: 12rem;
-            height: 20rem;;
+            width: 240px;
+            height: 400px;
             display: block;
             margin: 0 auto;
           }
@@ -531,9 +542,9 @@
             position: absolute;
             left: .5rem;
             bottom: 3rem;
-            width: 12rem;
+            width: 240px;
             background: rgba(0, 0, 0, 0.3);
-            height: 4rem;
+            height: 80px;
             line-height: 2rem;
             text-align: left;
             color: #fff;
@@ -569,8 +580,12 @@
       color: #fff;
       background: #00000045;
       top: 50%;
+      justify-content: center;
+      &:hover {
+        cursor: pointer;
+      }
       &.btn_left {
-        left: 0;
+        left: -4px;
       }
       &.btn_right {
         right: -.7rem;
@@ -824,7 +839,7 @@
           & .JQ-slide-nav {
             position: relative;
             top: 110px;
-            left: 10px;
+            left: 5px;
             height: 130px !important;
             width: 20% !important;
             z-index: 1;
@@ -848,4 +863,33 @@
     left: 2rem !important;
     padding: .5rem !important;
   }
+
+  /*成功案例*/
+  .case_box {
+    & .case_more {
+      margin-left: 0;
+    }
+    & .four_flash {
+      & .flashBg{
+        left: -4rem !important;
+      }
+      & ul.mobile li {
+        //margin: 0 12px !important;
+        & img {
+          height: 200px !important;
+        }
+      }
+      & .operate_btn {
+        top: 60%;
+        display: block !important;
+        &.btn_left {
+          left: -4%;
+        }
+        &.btn_right {
+          right: 46px;
+        }
+      }
+    }
+  }
+
 }

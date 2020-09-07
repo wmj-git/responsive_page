@@ -297,6 +297,10 @@
     margin-left: -32rem; }
 
 /*相亲活动*/
+.activity_page {
+  padding: 2rem 0;
+  height: auto !important; }
+
 .blind_banner .blind_container .fp-tableCell {
   position: relative; }
 .blind_banner .blind_container .blind_banner_box {
@@ -375,6 +379,9 @@
           color: #fff; }
 
 /* 成功案例*/
+.case_page {
+  height: auto !important; }
+
 .case_box .case_header {
   margin-bottom: 2rem; }
   .case_box .case_header .case_tabs .nav-link {
@@ -383,6 +390,8 @@
     margin: 0 .2rem; }
     .case_box .case_header .case_tabs .nav-link:last-child {
       margin-right: 0; }
+.case_box .case_banner {
+  overflow: hidden; }
 .case_box .four_flash {
   width: 54rem;
   height: 22rem;
@@ -390,7 +399,7 @@
   position: relative;
   bottom: 2rem; }
   .case_box .four_flash .flashBg {
-    width: 58rem;
+    width: 1160px;
     height: 25rem;
     margin: 0 auto;
     position: relative;
@@ -405,8 +414,8 @@
       left: 0; }
       .case_box .four_flash .flashBg ul.mobile li {
         float: left;
-        width: 13rem;
-        height: 25rem;
+        width: 260px;
+        height: 500px;
         margin-left: 26px;
         padding-top: 2rem;
         color: #6C6E85;
@@ -414,17 +423,17 @@
         overflow: hidden; }
         .case_box .four_flash .flashBg ul.mobile li img {
           border-radius: 2px;
-          width: 12rem;
-          height: 20rem;
+          width: 240px;
+          height: 400px;
           display: block;
           margin: 0 auto; }
         .case_box .four_flash .flashBg ul.mobile li .case_info {
           position: absolute;
           left: .5rem;
           bottom: 3rem;
-          width: 12rem;
+          width: 240px;
           background: rgba(0, 0, 0, 0.3);
-          height: 4rem;
+          height: 80px;
           line-height: 2rem;
           text-align: left;
           color: #fff;
@@ -453,9 +462,12 @@
     position: absolute;
     color: #fff;
     background: #00000045;
-    top: 50%; }
+    top: 50%;
+    justify-content: center; }
+    .case_box .four_flash .operate_btn:hover {
+      cursor: pointer; }
     .case_box .four_flash .operate_btn.btn_left {
-      left: 0; }
+      left: -4px; }
     .case_box .four_flash .operate_btn.btn_right {
       right: -.7rem; }
 .case_box .case_more {
@@ -641,7 +653,7 @@
         .consultation_page .consultation-bg .consultation-container .flex-layout .JQ-slide-nav {
           position: relative;
           top: 110px;
-          left: 10px;
+          left: 5px;
           height: 130px !important;
           width: 20% !important;
           z-index: 1; }
@@ -656,6 +668,21 @@
     width: 23rem !important;
     top: 7% !important;
     left: 2rem !important;
-    padding: .5rem !important; } }
+    padding: .5rem !important; }
+
+  /*成功案例*/
+  .case_box .case_more {
+    margin-left: 0; }
+  .case_box .four_flash .flashBg {
+    left: -4rem !important; }
+  .case_box .four_flash ul.mobile li img {
+    height: 200px !important; }
+  .case_box .four_flash .operate_btn {
+    top: 60%;
+    display: block !important; }
+    .case_box .four_flash .operate_btn.btn_left {
+      left: -4%; }
+    .case_box .four_flash .operate_btn.btn_right {
+      right: 46px; } }
 
 /*# sourceMappingURL=index.css.map */
