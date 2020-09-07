@@ -792,9 +792,12 @@
             $(".banner .carousel-item").css("height", "auto");
             $(".banner .banner-img").css("height", "auto");
             $(".banner").addClass("fp-auto-height");
+            $(".operate_btn").css("display","none");
         } else {
             $.fn.fullpage.setAutoScrolling(true);
             $(".banner").removeClass("fp-auto-height");
+            $(".operate_btn").css("display","flex");
+
         }
 
         let _start = $(".button_start");

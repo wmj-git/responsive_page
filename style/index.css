@@ -245,8 +245,7 @@
         left: 2.5rem;
         bottom: 2.36rem; }
     .consultation_page .consultation-bg .container .consultation-container .flex-layout {
-      padding: 0;
-      position: relative; }
+      padding: 0; }
       .consultation_page .consultation-bg .container .consultation-container .flex-layout .JQ-slide-nav {
         box-shadow: inset 0px 2px 17px #e7a4a563;
         padding: 0;
@@ -258,7 +257,10 @@
           background-color: #efdbdca6;
           height: 6.5rem;
           line-height: 6.5rem;
-          position: relative; }
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
           .consultation_page .consultation-bg .container .consultation-container .flex-layout .JQ-slide-nav li img {
             width: 8rem;
             height: inherit; }
@@ -638,7 +640,8 @@
             padding: 2px 0; }
         .consultation_page .consultation-bg .consultation-container .flex-layout .JQ-slide-nav {
           position: relative;
-          top: 200px;
+          top: 110px;
+          left: 10px;
           height: 130px !important;
           width: 20% !important;
           z-index: 1; }

@@ -315,6 +315,9 @@
               height: 6.5rem;
               line-height: 6.5rem;
               position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
 
               & img {
                 width: 8rem;
@@ -820,7 +823,8 @@
         & .flex-layout {
           & .JQ-slide-nav {
             position: relative;
-            top: 200px;
+            top: 110px;
+            left: 10px;
             height: 130px !important;
             width: 20% !important;
             z-index: 1;
