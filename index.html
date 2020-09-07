@@ -380,10 +380,9 @@
         </div>
         <div class="section sectionPage height_auto activity_page">
             <div class="blind_banner">
-                <div class="container blind_container" id="temp1">
+                <div class="container blind_container">
                     <div class="col-md-12 blind_banner_box">
                         <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-
                             <div class="carousel-inner">
                                 <div class="top_box wow  rollIn" data-wow-duration="1s" data-wow-delay="300">
                                     <p class="title">余生有你 · 让爱起航</p>
@@ -396,13 +395,13 @@
                                     <button class="record_btn">立即报名</button>
                                 </div>
                                 <div class="carousel-item active" data-interval="10000">
-                                    <img src="image/index_page/blind_banner3.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item" data-interval="2000">
                                     <img src="image/index_page/blind_banner1.png" class="d-block w-100" alt="...">
                                 </div>
-                                <div class="carousel-item">
+                                <div class="carousel-item" data-interval="2000">
                                     <img src="image/index_page/blind_banner2.jpg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="image/index_page/blind_banner3.jpg" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleInterval" role="button"
@@ -424,15 +423,15 @@
                                     </div>
                                     <div class="col-md-7 sub_banner wow slideInRight" data-wow-duration="1s" data-wow-delay="300">
                                         <div class="row">
-                                            <div class="blind_sub_banner"><a href="#" class="blind_hover"><img
+                                            <div class="blind_sub_banner active"><a href="javascript:void(0)" class="blind_hover"><img
                                                     class="sub_banner_img"
                                                     src="image/index_page/blind_banner1.png"><span
                                                     class="blind_info">七夕有你，让爱不期而遇~</span></a></div>
-                                            <div class="blind_sub_banner"><a href="#" class="blind_hover"><img
+                                            <div class="blind_sub_banner"><a href="javascript:void(0)" class="blind_hover"><img
                                                     class="sub_banner_img"
                                                     src="image/index_page/blind_banner2.jpg"><span
                                                     class="blind_info">余生有你，邂逅暖冬...</span></a></div>
-                                            <div class="blind_sub_banner"><a href="#" class="blind_hover"><img
+                                            <div class="blind_sub_banner"><a href="javascript:void(0)" class="blind_hover"><img
                                                     class="sub_banner_img"
                                                     src="image/index_page/blind_banner3.jpg"><span
                                                     class="blind_info">"遇见你，遇见爱"主题联谊活动</span></a></div>
@@ -442,7 +441,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -751,6 +749,7 @@
         $(".parse").attr("disabled", true).css("pointer-events", "none")
         autoScrolling();
         caseScroll();
+        activityBanner();
     });
     $(window).resize(function () {
         autoScrolling();//必须放在这里，否则autoScrolling会在setAutoScrolling之前执行，拿不到setAutoScrolling
@@ -847,6 +846,19 @@
             _index--;
             $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
         });
+    }
+
+    function activityBanner() {
+        $('#carouselExampleInterval').on('slide.bs.carousel', function (event) {
+            var $hoder = $('#carouselExampleInterval').find('.carousel-item'),
+                $items = $(event.relatedTarget);
+            var getIndex= $hoder.index($items);
+            $(".blind_sub_banner").each(function (e) {
+               if(getIndex == e){
+                   $(this).addClass("active").siblings().removeClass("active");
+               }
+            })
+        })
     }
 </script>
 
