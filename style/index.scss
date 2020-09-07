@@ -245,6 +245,7 @@
         top: -6rem;
         max-width: 1090px;
         position: relative;
+        height: 390px;
         & .consultation-banner {
           margin-left: 0;
           & .consultation-img {
@@ -310,9 +311,10 @@
             overflow: hidden;
             text-align: center;
             & li {
-              background-color: #efdbdc;
+              background-color: #efdbdca6;
               height: 6.5rem;
               line-height: 6.5rem;
+              position: relative;
 
               & img {
                 width: 8rem;
@@ -321,6 +323,27 @@
               &.on {
                 background-color: $backgroundColor-highlight;
               }
+            }
+          }
+          .operate_btn{
+            position: absolute;
+            height: 130px;
+            z-index: 2;
+            width: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.active{
+              background: #f4dada;
+            }
+            &.prev{
+              top: -130px;
+            }
+            &.next{
+              top: 390px;
+            }
+            &:hover{
+              cursor: pointer;
             }
           }
         }

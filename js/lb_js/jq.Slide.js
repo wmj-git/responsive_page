@@ -108,6 +108,12 @@
 		fade:function(contentObj,navObj,i,slideW,opts){
 			contentObj.children().eq(i).stop().animate({opacity:1},opts.speed).css({"z-index": "1"}).siblings().animate({opacity: 0},opts.speed).css({"z-index":"0"});
 			navObj.eq(i).addClass("on").siblings().removeClass("on");
+            let _itemW = navObj.eq(i).innerHeight();
+			if(i == 3){
+                navObj.css("top", - _itemW * 3);
+			} else if( i == 0){
+                navObj.css("top", - 0);
+			}
 		},
 		scroolTxt:function(contentObj,undefined,i,slideH,opts){
 			//alert(i*opts.steps*slideH);
