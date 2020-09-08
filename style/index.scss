@@ -381,56 +381,52 @@
     & .fp-tableCell {
       position: relative;
     }
-    & .blind_banner_box {
+    & .top_box {
+      position: absolute;
+      font-size: .6rem;
+      top: 35%;
+      z-index: 1;
+      left: 4rem;
+      color: #fff;
+      width: 13rem;
+      padding: 1rem;
+      background-color: #1f5d66b5;
+      & p {
+        margin-bottom: .5rem;
+        &.title {
+          font-size: 1rem;
+        }
+        &.line {
+          width: .8rem;
+          height: 1px;
+          background-color: rgba(255, 255, 255, 0.71);
+        }
+        &.area {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        }
+      }
+      & .record_btn {
+        border: none;
+        border-radius: 1rem;
+        padding: .2rem 1rem;
+        font-size: .7rem;
+      }
+    }
+    & .JQ-slide-content {
       padding: 0;
-      & .top_box {
-        position: absolute;
-        font-size: .6rem;
-        top: 35%;
-        z-index: 1;
-        left: 4rem;
-        color: #fff;
-        width: 13rem;
-        padding: 1rem;
-        background-color: #1f5d66b5;
-        & p {
-          margin-bottom: .5rem;
-          &.title {
-            font-size: 1rem;
-          }
-          &.line {
-            width: .8rem;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.71);
-          }
-          &.area {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-          }
-        }
-        & .record_btn {
-          border: none;
-          border-radius: 1rem;
-          padding: .2rem 1rem;
-          font-size: .7rem;
-        }
-      }
-      & .JQ-slide-content {
-        padding: 0;
-        height: 21rem;
+      height: 21rem;
+      width: 100%;
+      & img {
         width: 100%;
-        & img {
-          width: 100%;
-          height: auto;
-        }
+        height: auto;
       }
-      & .carousel-inner {
-        border-radius: 8px;
-        margin-bottom: 2rem;
-      }
+    }
+    & .carousel-inner {
+      border-radius: 8px;
     }
 
   }
@@ -438,6 +434,7 @@
 }
 
 .blind_footer {
+  padding-top: 2rem;
   & .blind_bg {
     background: url("../image/index_page/blind_date.png") no-repeat;
     padding: 0;
@@ -863,7 +860,7 @@
   }
 
   /*相亲活动*/
-  .blind_banner .blind_container .blind_banner_box .top_box {
+  .blind_banner .blind_container .top_box {
     width: 23rem !important;
     top: 7% !important;
     left: 2rem !important;

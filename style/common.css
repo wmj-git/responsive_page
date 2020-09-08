@@ -213,6 +213,17 @@ a:hover {
     content: "> ";
     padding: 0 5px; }
 
+/*轮播按钮*/
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 25px;
+  height: 30px; }
+
+.carousel-control-next-icon.next, .carousel-control-prev-icon.prev {
+  background-color: #000000ad; }
+
+.carousel-control-next, .carousel-control-prev {
+  width: 6%; }
+
 .footer {
   text-align: center;
   padding: 1.5rem .5rem;
