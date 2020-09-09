@@ -714,19 +714,31 @@
     padding-top: 2rem; }
 
   /*优质会员*/
-  .pic-layout .col-responsive-5 {
-    width: 50%; }
-    .pic-layout .col-responsive-5 a {
-      margin: 5px; }
-    .pic-layout .col-responsive-5.last_right {
+  .pic-layout {
+    display: grid; }
+    .pic-layout .col-responsive-5 {
+      width: 50%; }
+      .pic-layout .col-responsive-5 a {
+        margin: 5px; }
+      .pic-layout .col-responsive-5.last_right {
+        position: absolute;
+        right: 0; }
+      .pic-layout .col-responsive-5 img {
+        width: 100%; }
+      .pic-layout .col-responsive-5:nth-child(3) {
+        position: absolute;
+        right: 0;
+        top: 38%; }
+    .pic-layout .see_more {
       position: absolute;
-      right: 0; }
-    .pic-layout .col-responsive-5 img {
-      width: 100%; }
-  .pic-layout .see_more {
-    position: absolute;
-    right: 30px;
-    bottom: 0; }
+      right: 25%;
+      bottom: 30px;
+      margin-right: -50px;
+      bottom: 30px; }
+
+  .nav-tabs img {
+    height: 1.6rem;
+    padding: 0 3px; }
 
   /* 婚恋服务*/
   .service-item .service_line {

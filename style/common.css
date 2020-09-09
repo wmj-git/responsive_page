@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(my_nav.css);
 .nav_box {
   font-size: .8rem; }
   .nav_box .bg-light {
@@ -23,7 +24,7 @@
     border-radius: 0;
     color: black;
     margin: 0 .3rem;
-    padding: 16px px; }
+    padding: 16px 9px; }
     .nav_box .nav-pills a.nav-link .phone_img {
       width: 17px;
       height: 17px;
@@ -92,14 +93,20 @@
     .nav-tabs.inside_tabs .nav-item a.inside_nav.nav-link:hover, .nav-tabs.inside_tabs .nav-item a.inside_nav.nav-link.active {
       border: none; }
 
+.close_icon {
+  display: none;
+  font-size: 14px !important; }
+
 @media (max-width: 786px) {
   .nav_box .navbar-brand {
     padding-left: 1rem; }
   .nav_box .navbar-collapse {
     padding-left: 0; }
     .nav_box .navbar-collapse .navbar-nav {
-      float: right;
-      text-align: center; }
+      float: left;
+      margin-left: 70px;
+      background-color: #fff;
+      width: 100%; }
       .nav_box .navbar-collapse .navbar-nav.nav-pills a.nav-item.nav-link.active {
         border: none !important; }
   .nav_box .nav-pills a.nav-link.active {

@@ -883,6 +883,7 @@
 
   /*优质会员*/
   .pic-layout {
+    display: grid;
     & .col-responsive-5 {
       width: 50%;
       & a {
@@ -895,12 +896,24 @@
       & img {
         width: 100%;
       }
+      &:nth-child(3){
+        position: absolute;
+        right: 0;
+        top: 38%;
+      }
     }
     & .see_more {
       position: absolute;
-      right: 30px;
-      bottom: 0;
+      right: 25%;
+      bottom: 30px;
+      margin-right: -50px;
+      bottom: 30px;
     }
+
+  }
+  .nav-tabs img {
+    height: 1.6rem;
+    padding: 0 3px;
   }
 
   /* 婚恋服务*/

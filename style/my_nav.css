@@ -1,0 +1,90 @@
+@charset "utf-8";
+/*a{text-decoration:none;cursor:pointer;outline:none;color: #363636;}
+a:hover{text-decoration:none;}
+body{ color: #f5f5f5}*/
+
+
+
+/* 主菜单 */
+
+.head{
+    width: 100%;height:48px}
+.head .navbox{max-width: 1140px;margin: 0 auto;}
+.head .nav{display: block; float: left;width:calc(100% - 180px)}
+.head .nav .nav_pc{ width: 100%;}
+.head .nav ul li{float:left;position: relative;box-sizing: border-box}
+.head .nav ul li.other_nav{display: flex;
+    align-items: center;
+    height: 48px;
+    justify-content: center;}
+.phoneNumber{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.head .nav ul li.other_nav:hover a{
+    color: #000;
+}
+.head .nav ul li.other_nav .login_btn{font-size: 16px;}
+.head .nav ul li.other_nav .login_btn.line{
+    padding: 0 5px;
+    color: #d0d0d0;
+}
+.head .nav ul li.other_nav .login_btn:hover{
+    cursor: pointer;
+}
+.head .nav ul li .f_a{line-height:48px;display:block;text-align:center;font-size:16px;color:#000;}
+.head .nav ul li:hover .f_a{background-color: #9c8ef0;color: #fff; transition:all .3s}
+.head .nav ul li .s_navbox{display:none;position: absolute;left: 0;width: 100%; background:#fff;background-color: rgba(156, 142, 240, 0.64);z-index: 9999;box-sizing: border-box}
+.head .nav ul li .s_navbox .s_a a{color:#fff;font-size:14px;text-transform:uppercase;display:block;text-align: center;padding: 10px 0;border-top: 1px solid #fff;}
+.head .nav ul li .s_navbox .s_a a:hover{background-color: #9c8ef0;color: #fff;}
+.m_nav{display:none}
+.head .headlf{display: block;float: left;margin-right: 30px;}
+.m_img .headlf{display: none;}
+.headrg .m_menuimg{display: none}
+
+
+
+/*小于1600大于1200稍微调整下字体*/
+@media screen and (max-width: 1600px) and (min-width:1200px) {
+    .nav ul li .f_a{font-size:14px}
+    .nav ul li .s_navbox .s_a a{font-size:12px}
+    .foot_top ul{margin-left:60px}
+    .nav ul li .s_navbox .s_a{width:100%}
+}
+
+
+/*移动端导航*/
+@media screen and (max-width: 1024px) and (min-width: 0px){
+    .msgNum{display: none;}
+    .slider{margin-top: 44px;}
+    .head{display:none}
+    .m_img{display:block;height:44px;background:#fff;position:fixed;top:0px;left:0px;width:100%;z-index:9999;border-bottom:1px solid #ddd;overflow: hidden;}
+    .m_img .headlf{padding-top:2px;padding-left:5px;float: left;display: block;}
+    .m_img .headlf .m_logo{height:40px;display: block}
+    .m_img .headrg{padding-right:5%;padding-top:14px;float: right;}
+    .m_img .headrg a .m_menuimg{height:16px;vertical-align:top;display: block}
+    .m_nav {display:block;position:fixed;top:0px;left:0px;width:0px;height:0px;overflow:hidden;z-index:10000}
+    .m_nav .closecover{position:absolute;width:100%;height:100%;background:#0b0d19;filter:alpha(opacity=0);opacity:0;left:0px;top:0px;z-index:1}
+    .m_nav .closeicon{position:absolute;width:20%;left:25px;top:5%;z-index:100;text-align:center;filter:alpha(opacity=0);opacity:0}
+    .m_nav .m_navList{position:absolute;width:80%;right:0px;top:0px;background: rgba(11, 13, 25, 0.57);height:100%;z-index:100;right:-80%;overflow-y: scroll;}
+    .m_nav .m_navList ul{padding-left:5%;padding-right:5%}
+    .m_nav .m_navList ul li{border-bottom:1px solid #555556a1}
+    .m_nav .m_navList ul li.other_nav{
+        display: flex;
+        align-items: center;
+        height: 45px;
+        color: #fff;
+        padding-left: 16px;
+    }
+    .m_nav .m_navList ul li.other_nav .login_btn{font-size: 14px;}
+    .m_nav .m_navList ul li.other_nav .login_btn.line{ padding: 0 5px;
+        color: #d0d0d0;}
+    .m_nav .m_navList ul li a{height:45px;color:#fff;line-height:45px;padding-left:5%;font-size:14px ;width: 100%;}
+    .m_nav .m_navList ul li .m_f_a{display: flex;align-items: center;justify-content: space-between; width: 100%}
+    .m_nav .m_navList ul li .m_f_a a{flex: 1;}
+    .m_nav .m_navList ul li .m_f_a i{width: 40px;height:35px;box-sizing: border-box; padding:0 5px; display: block;}
+    .icon{ background:url(../image/nav/plus.png) 100% no-repeat;background-position: 50% 50%; -webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}
+    .icon_on{background:url(../image/nav/reduce.jpg) 50% no-repeat!important;background-position: 50% 50%;-webkit-transition:all 0s;-moz-transition:all 0s;transition:all 0s}
+    .m_nav .m_navList ul li .m_s_nav{display:none;width: 100%;}
+    .m_nav .m_navList ul li .m_s_nav a{display: block; height:40px;line-height:40px;font-size:13px;padding-left:10%;overflow: hidden; white-space: nowrap;width: 90%;text-overflow: ellipsis;}
+}
