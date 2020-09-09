@@ -631,13 +631,13 @@
     height: 22rem;
     margin: 0 auto;
     position: relative;
-    bottom: 2rem;
     & .flashBg {
       width: 1160px;
       height: 25rem;
       margin: 0 auto;
       position: relative;
       overflow: hidden;
+      bottom: 2rem;
       left: -2rem;
       & ul.mobile {
         width: 2000%;
@@ -1014,13 +1014,13 @@
         }
       }
       & .operate_btn {
-        top: 60%;
-        display: block !important;
+        top: -60%;
+        position: relative !important;
         &.btn_left {
-          left: -4%;
+          left: -5px;
         }
-        &.btn_right {
-          right: 46px;
+        &.btn_right{
+          top: -76%;
         }
       }
     }
@@ -1064,6 +1064,38 @@
           }
         }
       }
+    }
+  }
+  /*成功案例*/
+  .case_box {
+    & .case_more {
+      margin-left: 0;
+    }
+    & .four_flash {
+      height: 19rem !important;
+      & .flashBg {
+        left: -2rem !important;
+        height: 18rem!important;
+      }
+      & ul.mobile {
+        height: inherit !important;
+        & li {
+          height: 18rem !important;
+          margin-left: 20px !important;
+          & img {
+            height: 15rem !important;
+          }
+        }
+      }
+      & .operate_btn {
+        &.btn_right{
+
+        }
+        &.btn_left{
+          left: -10px!important;
+        }
+      }
+
     }
   }
 }

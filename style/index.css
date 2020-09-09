@@ -515,14 +515,14 @@
   width: 54rem;
   height: 22rem;
   margin: 0 auto;
-  position: relative;
-  bottom: 2rem; }
+  position: relative; }
   .case_box .four_flash .flashBg {
     width: 1160px;
     height: 25rem;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    bottom: 2rem;
     left: -2rem; }
     .case_box .four_flash .flashBg ul.mobile {
       width: 2000%;
@@ -805,12 +805,12 @@
       height: inherit !important;
       line-height: inherit !important; }
   .case_box .four_flash .operate_btn {
-    top: 60%;
-    display: block !important; }
+    top: -60%;
+    position: relative !important; }
     .case_box .four_flash .operate_btn.btn_left {
-      left: -4%; }
+      left: -5px; }
     .case_box .four_flash .operate_btn.btn_right {
-      right: 46px; } }
+      top: -76%; } }
 @media screen and (max-width: 320px) {
   .consultation_page .consultation-bg .container .container_bg .consultation-nav {
     top: 120px !important; } }
@@ -835,7 +835,25 @@
           height: 5.5rem !important;
           line-height: 5.5rem !important; }
           .consultation_page .consultation-bg .container_bg .consultation-nav .JQ-slide-nav li img {
-            width: 6rem !important; } }
+            width: 6rem !important; }
+
+  /*成功案例*/
+  .case_box .case_more {
+    margin-left: 0; }
+  .case_box .four_flash {
+    height: 19rem !important; }
+    .case_box .four_flash .flashBg {
+      left: -2rem !important;
+      height: 18rem !important; }
+    .case_box .four_flash ul.mobile {
+      height: inherit !important; }
+      .case_box .four_flash ul.mobile li {
+        height: 18rem !important;
+        margin-left: 20px !important; }
+        .case_box .four_flash ul.mobile li img {
+          height: 15rem !important; }
+    .case_box .four_flash .operate_btn.btn_left {
+      left: -10px !important; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .consultation_page .consultation-bg .container .container_bg .consultation-banner {
     margin-top: 6%; } }

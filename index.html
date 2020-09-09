@@ -781,14 +781,13 @@
             $(".banner .carousel-item").css("height", "auto");
             $(".banner .banner-img").css("height", "auto");
             $(".banner").addClass("fp-auto-height");
-            $(".operate_btn").css("display", "none");
+            $(".consultation-nav .operate_btn").css("display", "none");
             caseMargin();
 
         } else {
             $.fn.fullpage.setAutoScrolling(true);
             $(".banner").removeClass("fp-auto-height");
-            $(".operate_btn").css("display", "flex");
-            // caseMarginPC();
+            $(".consultation-nav .operate_btn").css("display", "flex");
         }
 
         let _start = $(".button_start");
@@ -823,18 +822,6 @@
 
     });
 
-    function caseMarginPC() {
-        let _parentW = $(".case_banner").innerWidth();
-        let _object = $(".four_flash .flashBg ul.mobile li");
-        _object.css("width", _parentW / 4 - 10);
-        $(".case_info").css("width", _parentW / 4 - 10);
-        width = _object.outerWidth(true);
-
-        _object.find("img").css("width", _parentW / 4 - 10);
-
-        $(".four_flash").css("width", $(".case_page").innerWidth());
-    }
-
     function caseMargin() {
         let _parentW = $(".case_banner").innerWidth();
         let _object = $(".four_flash .flashBg ul.mobile li");
@@ -844,7 +831,10 @@
 
         _object.find("img").css("width", _parentW / 2 - 10);
 
-        $(".four_flash").css("width", $(".case_page").innerWidth());
+        $(".four_flash").css("width", $(".case_page").innerWidth() - 50);
+        let _liW = _object.innerWidth();
+        let allW = _liW * 2 - 26;
+        $(".operate_btn.btn_right").css("right",-allW);
     }
 
 
