@@ -1,22 +1,19 @@
 .nav_box {
   .bg-light {
     background-color: #fff !important;
-    //background-color: transparent !important;
-    .container {
-      //border-width: 3px 3px 0;
-      //border-style: solid;
-      //background-color: rgba(255, 255, 255, 0.51);
-      //border-color: #000;
-      //border-radius: 10px 10px 0 0;
-    }
   }
-  //height: 50px;
   font-size: .8rem;
   .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
     background-color: $backgroundColor-highlight;
     color: #fff;
     border-bottom: none;
-    padding: 16px 8px;
+    padding: 16px 6px;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link.dropdown-toggle.consulting_dropdown {
+    padding: 16px 12px;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link.dropdown-toggle.dropdown_case {
+    padding: 16px 9px;
   }
   .dropdown-item .nav-link .active .show {
     border: none;
@@ -38,7 +35,7 @@
       border-radius: 0;
       color: black;
       margin: 0 .3rem;
-      padding: 16px 8px;
+      padding: 16px 9px;
       & .phone_img {
         width: 17px;
         height: 17px;
@@ -78,12 +75,17 @@
   background-color: #fff;
   border: none;
   padding: 0;
+  box-shadow: 0px 3px 20px 0px #00000063;
   border-radius: 0;
 }
 .dropdown-item {
   color: #656565;
   font-size: .7rem;
-  padding: .25rem .75rem;
+  padding: 10px .75rem;
+  &:hover{
+    background-color: #9688e729;
+    color: #9285e0ba !important;
+  }
   &.active, &:active {
     background-color: transparent;
     color: $backgroundColor-highlight;

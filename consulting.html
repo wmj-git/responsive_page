@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="tab-content" id="myTabContent">
-    <div class="tab-pane fade show active pursuit_bg banner_bg" id="pursuit" role="tabpanel"
+    <div class="tab-pane fade active show pursuit_bg banner_bg" id="pursuit" role="tabpanel"
          aria-labelledby="pursuit-tab">
         <div class="container content_container">
             <div class="consulting_title">
@@ -94,7 +94,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade loving_bg banner_bg" id="loving" role="tabpanel" aria-labelledby="loving-tab">
+    <div class="tab-pane fade show loving_bg banner_bg" id="loving" role="tabpanel" aria-labelledby="loving-tab">
         <div class="container content_container">
             <div class="consulting_title">
                 <p class="title">恋爱中</p>
@@ -170,7 +170,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade banner_bg married_bg" id="married" role="tabpanel" aria-labelledby="married-tab">
+    <div class="tab-pane fade show banner_bg married_bg" id="married" role="tabpanel" aria-labelledby="married-tab">
         <div class="container content_container">
             <div class="consulting_title">
                 <p class="title">夫妻情感</p>
@@ -246,7 +246,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade banner_bg Love_bg" id="Love" role="tabpanel" aria-labelledby="Love-tab">
+    <div class="tab-pane fade show banner_bg Love_bg" id="Love" role="tabpanel" aria-labelledby="Love-tab">
         <div class="container content_container">
             <div class="consulting_title">
                 <p class="title">恋商提升</p>
@@ -322,7 +322,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade banner_bg personalCharm_bg" id="personalCharm" role="tabpanel"
+    <div class="tab-pane fade show banner_bg personalCharm_bg" id="personalCharm" role="tabpanel"
          aria-labelledby="personalCharm-tab">
         <div class="container content_container">
             <div class="consulting_title">
@@ -399,7 +399,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade banner_bg" id="copywriter" role="tabpanel"
+    <div class="tab-pane fade show banner_bg" id="copywriter" role="tabpanel"
          aria-labelledby="personalCharm-tab">
         <img src="image/consulting/bg06.png" class="img-fluid copyWriter_img">
         <div class="container content_container">
@@ -559,7 +559,18 @@
             $(this).removeClass("active");
             _first.addClass('active');
         });
-    })
+        let activeHref = GetRequest();
+        $("#"+activeHref).addClass("active").siblings().removeClass("active");
+    });
+    function GetRequest() {
+        var url = window.location.href; //获取url中"?"符后的字串
+        let real_href = "";
+        if (url.indexOf("#") != -1) {
+            let sub_href = url.lastIndexOf("#");
+            real_href = url.substring(sub_href + 1, url.length);
+        }
+        return real_href;
+    }
 </script>
 </body>
 </html>
