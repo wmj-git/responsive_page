@@ -79,7 +79,7 @@
                         <div class="sub_title">MEMBERS</div>
                     </div>
                     <div class="col-md-9 hy_tabs wow bounceInRight" data-wow-duration="1s" data-wow-delay="300">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <ul class="nav nav-tabs" id="myTab" role="hyList">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active" id="roumei-tab" data-toggle="tab" href="#roumei" role="tab"
                                    aria-controls="roumei" aria-selected="true">柔美</a>
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="qingchun" role="tabpanel" aria-labelledby="qingchun-tab">
-                        <div class="row pic-layout">
+                        <div class="row pic-layout wow slideInRight">
                             <div class="col-responsive-5">
                                 <a href="#" class="hy_hover">
                                     <img src="image/index_page/hy001.png"><span class="hy_info">重庆 · 25岁 · 160CM</span></a>
@@ -457,7 +457,7 @@
                     </div>
                     <div class="col-md-9 hy_tabs case_tabs wow lightSpeedIn" data-wow-duration="1s"
                          data-wow-delay="325">
-                        <ul class="nav nav-tabs" id="allTab" role="tablist">
+                        <ul class="nav nav-tabs" id="allTab" role="caseList">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab"
                                    aria-controls="all" aria-selected="true">全部</a>
@@ -538,25 +538,46 @@
                                 <ul class="mobile">
                                     <li>
                                         <img src="image/index_page/case04.png" class="case_img"/>
-                                        <div>dad</div>
+                                        <div class="case_info">
+                                            <p>Yami&龙昆</p>
+                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                        </div>
                                     </li>
                                     <li>
                                         <img src="image/index_page/case03.png" class="case_img"/>
+                                        <div class="case_info">
+                                            <p>Yami&龙昆</p>
+                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                        </div>
                                     </li>
                                     <li>
                                         <img src="image/index_page/case02.png" class="case_img"/>
+                                        <div class="case_info">
+                                            <p>Yami&龙昆</p>
+                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                        </div>
                                     </li>
                                     <li>
                                         <img src="image/index_page/case03.png" class="case_img"/>
+                                        <div class="case_info">
+                                            <p>Yami&龙昆</p>
+                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                        </div>
                                     </li>
                                     <li>
                                         <img src="image/index_page/case01.png" class="case_img"/>
-                                        <div>蒋介石打</div>
+                                        <div class="case_info">
+                                            <p>Yami&龙昆</p>
+                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                        </div>
 
                                     </li>
                                     <li>
                                         <img src="image/index_page/case02.png" class="case_img"/>
-                                        <div>csc,lds;c</div>
+                                        <div class="case_info">
+                                            <p>Yami&龙昆</p>
+                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -578,7 +599,7 @@
                         <div class="sub_title">NEWS</div>
                     </div>
                     <div class="col-md-9 hy_tabs case_tabs wow slideInRight">
-                        <ul class="nav nav-tabs" id="allNew" role="tablist">
+                        <ul class="nav nav-tabs" id="allNew" role="newsList">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active" id="all-news" data-toggle="tab" href="#allNews" role="tab"
                                    aria-controls="all" aria-selected="true">全部</a>
@@ -839,10 +860,12 @@
 
 
     function caseScroll() {
+        console.log('调用方法')
         var _index = 0;
         var len = $(".flashBg ul.mobile li").length;
         width = $(".flashBg ul.mobile li").outerWidth(true);
         $("#four_flash .btn_right").click(function () {
+            console.log('右')
             _index++;
             if (_index + (len - 1) > len) {
                 $("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
@@ -852,6 +875,8 @@
 
 
         $("#four_flash .btn_left").click(function () {
+            console.log('左')
+
             if (_index == 0) {
                 $("ul.mobile").prepend($("ul.mobile").html());
                 let allW = $("ul.mobile").outerWidth() / (len * 2);
@@ -890,6 +915,10 @@
         let contentH = _objTop.innerHeight();
         _objTop.css("marginTop", -contentH / 2);
     }
+
+    $("#allTab li").click(function () {
+        caseScroll();
+    })
 </script>
 
 </body>

@@ -197,7 +197,7 @@
 <script src="js/nav.js"></script>
 <script>
     $(function () {
-        $("li a").click(function () {
+        $(".navbar li a").click(function () {
             if($(this).attr('href')) window.location = "consulting.html"+$(this).attr('href');
 
         })
@@ -209,7 +209,7 @@
         });
         var urlstr = location.href;
         var urlstatus = false;
-        $("li a").each(function () {
+        $(".navbar li a").each(function () {
             if ((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
                 $(this).addClass('active');
                 urlstatus = true;
@@ -219,7 +219,7 @@
             }
         });
         if (!urlstatus) {
-            $("li a").eq(0).addClass('active');
+            $(".navbar li a").eq(0).addClass('active');
         }
 
         $(".s_a a").click(function () {
