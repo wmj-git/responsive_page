@@ -13,10 +13,14 @@
     <link rel="stylesheet" href="style/index.css"/>
     <link rel="stylesheet" href="style/icons/iconfont.css">
     <link rel="stylesheet" href="style/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <link rel="stylesheet" href="style/css/rvc.css">
+
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/fullpage.js" type="text/javascript"></script>
     <script src="js/lb_js/jq.Slide.js"></script>
+    <script src="js/lb_js/rvc.js"></script>
 
     <title>余生婚恋</title>
     <style>
@@ -34,7 +38,7 @@
         <div class="section banner">
             <div class="">
                 <div class="bd-example">
-                    <div id="carouselExampleCaptions" class="carousel slide banner_box" data-ride="carousel">
+                    <div id="carouselExampleCaptions" class="carousel carousel-fade slide banner_box" data-ride="carousel">
                         <button class="button_start wow bounceInLeft" data-wow-duration="1s" data-wow-delay="300">
                             立即开启<span class="iconfont icon-arrow"></span></button>
                         <div class="carousel-inner">
@@ -480,109 +484,71 @@
                 </div>
                 <div class="tab-content case_banner" id="caseTabContent">
                     <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                        <div id="four_flash" class="four_flash wow bounceIn">
-                            <div class="flashBg">
-                                <ul class="mobile">
-                                    <li>
-                                        <img src="image/index_page/case01.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case02.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case03.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case04.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case03.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case04.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
+                        <div class="rvc" id="rvc1">
+                            <div class="rvc-wrapper">
+                                <ul>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case01.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case02.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case03.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case04.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case03.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case01.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
                                 </ul>
                             </div>
-                            <div class="btn_left operate_btn">&lt;</div>
-                            <div class="btn_right operate_btn">&gt;</div>
+                            <div class="rvc-prv"><img src="image/index_page/prv_icon.png"></div>
+                            <div class="rvc-next"><img src="image/index_page/next_icon.png"></div>
                         </div>
                     </div>
                     <div class="tab-pane fade show" id="unmarried" role="tabpanel" aria-labelledby="unmarried-tab">
-                        <div class="four_flash">
-                            <div class="flashBg">
-                                <ul class="mobile">
-                                    <li>
-                                        <img src="image/index_page/case04.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case03.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case02.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case03.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case01.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-
-                                    </li>
-                                    <li>
-                                        <img src="image/index_page/case02.png" class="case_img"/>
-                                        <div class="case_info">
-                                            <p>Yami&龙昆</p>
-                                            <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                        </div>
-                                    </li>
+                        <div class="rvc" id="rvc2">
+                            <div class="rvc-wrapper">
+                                <ul>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case01.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case02.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case03.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case04.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case03.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
+                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case01.png" class="case_img img-fluid"><div class="case_info">
+                                        <p>Yami&龙昆</p>
+                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
+                                    </div></div></a></li>
                                 </ul>
                             </div>
-                            <div class="btn_left operate_btn">&lt;</div>
-                            <div class="btn_right operate_btn">&gt;</div>
+                            <div class="rvc-prv"><img src="image/index_page/prv_icon.png"></div>
+                            <div class="rvc-next"><img src="image/index_page/next_icon.png"></div>
                         </div>
                     </div>
                 </div>
@@ -760,6 +726,22 @@
             speed: "normal",
             timer: 3000
         });
+        $('#rvc1').rvc({
+            liNum: 4,//2~5之间的整数
+            spaceBetween: 30,//li项之间的距离
+            plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
+            time: 400,//动画时间
+            prv: '.rvc-prv',//前一个按钮
+            next: '.rvc-next'//下一个按钮
+        });
+        $('#rvc2').rvc({
+            liNum: 4,//2~5之间的整数
+            spaceBetween: 30,//li项之间的距离
+            plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
+            time: 450,//动画时间
+            prv: '.rvc-prv',//前一个按钮
+            next: '.rvc-next'//下一个按钮
+        })
     })
 
 </script>
@@ -787,7 +769,7 @@
     });
     $(window).resize(function () {
         autoScrolling();//必须放在这里，否则autoScrolling会在setAutoScrolling之前执行，拿不到setAutoScrolling
-        caseScroll();
+        // caseScroll();
         carouselTop();
     });
 
@@ -860,7 +842,6 @@
 
 
     function caseScroll() {
-        console.log('调用方法')
         var _index = 0;
         var len = $(".flashBg ul.mobile li").length;
         width = $(".flashBg ul.mobile li").outerWidth(true);
@@ -872,7 +853,6 @@
             }
             $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
         });
-
 
         $("#four_flash .btn_left").click(function () {
             console.log('左')
@@ -887,6 +867,7 @@
             _index--;
             $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
         });
+
     }
 
     function activityBanner() {
@@ -916,9 +897,6 @@
         _objTop.css("marginTop", -contentH / 2);
     }
 
-    $("#allTab li").click(function () {
-        caseScroll();
-    })
 </script>
 
 </body>
