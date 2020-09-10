@@ -226,5 +226,13 @@
             $(this).addClass("active").siblings().removeClass("active");
             window.location = "consulting.html"+$(this).attr('href');
         })
+
+        $(".s_a a").each(function () {
+            if($(this).hasClass("active")){
+                let _parent = $(this).parents('li');
+                _parent.find(".f_a").addClass("active");
+                console.log(121)
+            }
+        })
     })
 </script>
