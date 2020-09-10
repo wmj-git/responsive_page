@@ -85,12 +85,14 @@ $(function () {
     //判断是否有子标题
     $('.m_navList ul li').each(function () {
         $(this).children('.m_f_a').find('i').addClass('icon')
-        console.log(121)
         if ($(this).children('.m_s_nav').find('a').length < 1) {
             $(this).children('.m_f_a').children('i').removeClass('icon');
         }
     });
-
+    $('.m_s_nav a').click(function () {
+        $(".m_nav").css("height",0); // 移动端点击下拉时收起遮罩
+        $('body').css('overflow','auto');
+    })
     //点击图标展开关闭子导航
     $('.m_navList ul li').find('.m_f_a i').click(function () {
         $(this).parent().parent().siblings().children('.m_s_nav').slideUp();

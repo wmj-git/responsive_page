@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="style/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="style/common.css">
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="style/consulting.css">
     <link rel="stylesheet" href="style/icons/iconfont.css">
 
     <title>情感咨询</title>
 </head>
-<body>
+<body onhashchange="myFunction()">
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade active show pursuit_bg banner_bg" id="pursuit" role="tabpanel"
          aria-labelledby="pursuit-tab">
@@ -94,7 +93,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade show loving_bg banner_bg" id="loving" role="tabpanel" aria-labelledby="loving-tab">
+    <div class="tab-pane fade loving_bg banner_bg" id="loving" role="tabpanel" aria-labelledby="loving-tab">
         <div class="container content_container">
             <div class="consulting_title">
                 <p class="title">恋爱中</p>
@@ -170,7 +169,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade show banner_bg married_bg" id="married" role="tabpanel" aria-labelledby="married-tab">
+    <div class="tab-pane fade banner_bg married_bg" id="married" role="tabpanel" aria-labelledby="married-tab">
         <div class="container content_container">
             <div class="consulting_title">
                 <p class="title">夫妻情感</p>
@@ -246,7 +245,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade show banner_bg Love_bg" id="Love" role="tabpanel" aria-labelledby="Love-tab">
+    <div class="tab-pane fade banner_bg Love_bg" id="Love" role="tabpanel" aria-labelledby="Love-tab">
         <div class="container content_container">
             <div class="consulting_title">
                 <p class="title">恋商提升</p>
@@ -322,7 +321,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade show banner_bg personalCharm_bg" id="personalCharm" role="tabpanel"
+    <div class="tab-pane fade banner_bg personalCharm_bg" id="personalCharm" role="tabpanel"
          aria-labelledby="personalCharm-tab">
         <div class="container content_container">
             <div class="consulting_title">
@@ -399,7 +398,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane fade show banner_bg" id="copywriter" role="tabpanel"
+    <div class="tab-pane fade banner_bg" id="copywriter" role="tabpanel"
          aria-labelledby="personalCharm-tab">
         <img src="image/consulting/bg06.png" class="img-fluid copyWriter_img">
         <div class="container content_container">
@@ -560,7 +559,8 @@
             _first.addClass('active');
         });
         let activeHref = GetRequest();
-        $("#"+activeHref).addClass("active").siblings().removeClass("active");
+        $("#"+activeHref).addClass("active show").siblings().removeClass("active"); // header.html
+
     });
     function GetRequest() {
         var url = window.location.href; //获取url中"?"符后的字串
@@ -571,6 +571,12 @@
         }
         return real_href;
     }
+    /* 监听url变化*/
+    function myFunction() {
+        let activeHref = GetRequest();
+        $("#"+activeHref).addClass("active show").siblings().removeClass("active"); // nav.html
+    }
+
 </script>
 </body>
 </html>

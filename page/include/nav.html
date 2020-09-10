@@ -9,7 +9,7 @@
                 <div class="nav headrg">
                     <ul class="nav_pc">
                         <li>
-                            <a class="f_a" href="index.html">首页</a>
+                            <a class="f_a active" href="index.html">首页</a>
                             <div class="s_navbox">
                                 <div class="s_a"></div>
                             </div>
@@ -47,7 +47,7 @@
                                     <a id="personalCharm-tab"
                                        data-toggle="tab" href="#personalCharm" role="tab"
                                        aria-controls="personalCharm" aria-selected="false">个人魅力提升</a>
-                                    <a class="dropdown-item inside_nav nav-link" id="copywriter-tab"
+                                    <a id="copywriter-tab"
                                        data-toggle="tab" href="#copywriter" role="tab"
                                        aria-controls="copywriter" aria-selected="false">情感文案</a>
                                 </div>
@@ -68,7 +68,7 @@
                             </div>
                         </li>
                         <li>
-                            <a class="f_a" href="#">关于我们</a>
+                            <a class="f_a" href="javascript:void(0)">关于我们</a>
                             <div class="s_navbox">
                                 <div class="s_a">
                                     <a href="about.html">联系我们</a>
@@ -133,6 +133,9 @@
                             <i></i>
                         </div>
                         <div class="m_s_nav">
+                            <a id="pursuit-tab1"
+                               data-toggle="tab" href="#pursuit" role="tab"
+                               aria-controls="pursuit" aria-selected="true">追求中</a>
                             <a class="" id="loving-tab1" data-toggle="tab"
                                href="#loving" role="tab"
                                aria-controls="loving" aria-selected="false">恋爱中</a>
@@ -196,6 +199,7 @@
     $(function () {
         $("li a").click(function () {
             if($(this).attr('href')) window.location = "consulting.html"+$(this).attr('href');
+
         })
         $(".login_btn.login").click(function () {
             window.location.href = "login.html";
@@ -203,6 +207,24 @@
         $(".login_btn.register").click(function () {
             window.location.href = "register.html";
         });
+        var urlstr = location.href;
+        var urlstatus = false;
+        $("li a").each(function () {
+            if ((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+                $(this).addClass('active');
+                urlstatus = true;
 
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+        if (!urlstatus) {
+            $("li a").eq(0).addClass('active');
+        }
+
+        $(".s_a a").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+            window.location = "consulting.html"+$(this).attr('href');
+        })
     })
 </script>
