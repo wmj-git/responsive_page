@@ -581,16 +581,12 @@
 
     function listWidthFn(){
         consultiongW = $(".tab-pane.active .consulting_list").outerWidth();
-        console.log('width',consultiongW);
         $(".col-md-3-width").css("width", consultiongW / 4 - 20);
         let $win = $(window).width();
         if($win < 1024 && $win > 768){
-            console.log('小于1024')
-
             $(".col-md-3-width").css("width", consultiongW / 3 - 20);
         }
         else if($win < 767){
-            console.log('小于768')
             $(".col-md-3-width").css("width", consultiongW / 2 - 20);
         }
     }
