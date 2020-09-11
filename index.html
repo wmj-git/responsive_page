@@ -466,7 +466,7 @@
                                 <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab"
                                    aria-controls="all" aria-selected="true">全部</a>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            <li class="nav-item second" role="presentation">
                                 <a class="nav-link" id="unmarried-tab" data-toggle="tab" href="#unmarried" role="tab"
                                    aria-controls="unmarried" aria-selected="false">未婚</a>
                             </li>
@@ -503,18 +503,11 @@
                                         <p>Yami&龙昆</p>
                                         <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
                                     </div></div></a></li>
-                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case03.png" class="case_img img-fluid"><div class="case_info">
-                                        <p>Yami&龙昆</p>
-                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                    </div></div></a></li>
-                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case01.png" class="case_img img-fluid"><div class="case_info">
-                                        <p>Yami&龙昆</p>
-                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                    </div></div></a></li>
                                 </ul>
+                                <div class="rvc-prv"><img src="image/index_page/prv_icon.png"></div>
+                                <div class="rvc-next"><img src="image/index_page/next_icon.png"></div>
                             </div>
-                            <div class="rvc-prv"><img src="image/index_page/prv_icon.png"></div>
-                            <div class="rvc-next"><img src="image/index_page/next_icon.png"></div>
+
                         </div>
                     </div>
                     <div class="tab-pane fade show" id="unmarried" role="tabpanel" aria-labelledby="unmarried-tab">
@@ -537,18 +530,10 @@
                                         <p>Yami&龙昆</p>
                                         <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
                                     </div></div></a></li>
-                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case03.png" class="case_img img-fluid"><div class="case_info">
-                                        <p>Yami&龙昆</p>
-                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                    </div></div></a></li>
-                                    <li><a href=""><div class="img-wrapper"><img src="image/index_page/case01.png" class="case_img img-fluid"><div class="case_info">
-                                        <p>Yami&龙昆</p>
-                                        <p class="case_item">“幸福不是等来的”，找一个能与我想爱的人一起到老，主动出击也不算什么坏事。</p>
-                                    </div></div></a></li>
                                 </ul>
+                                <div class="rvc-prv"><img src="image/index_page/prv_icon.png"></div>
+                                <div class="rvc-next"><img src="image/index_page/next_icon.png"></div>
                             </div>
-                            <div class="rvc-prv"><img src="image/index_page/prv_icon.png"></div>
-                            <div class="rvc-next"><img src="image/index_page/next_icon.png"></div>
                         </div>
                     </div>
                 </div>
@@ -719,32 +704,6 @@
         }
     });
 </script>
-<script>
-    $(function () {
-        $("#temp").Slide({
-            effect: "fade",
-            speed: "normal",
-            timer: 3000
-        });
-        $('#rvc1').rvc({
-            liNum: 4,//2~5之间的整数
-            spaceBetween: 30,//li项之间的距离
-            plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
-            time: 400,//动画时间
-            prv: '.rvc-prv',//前一个按钮
-            next: '.rvc-next'//下一个按钮
-        });
-        $('#rvc2').rvc({
-            liNum: 4,//2~5之间的整数
-            spaceBetween: 30,//li项之间的距离
-            plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
-            time: 450,//动画时间
-            prv: '.rvc-prv',//前一个按钮
-            next: '.rvc-next'//下一个按钮
-        })
-    })
-
-</script>
 
 <script>
     var width;
@@ -760,6 +719,33 @@
 
         $("#header").load("page/include/nav.html");
         $("#footer").load("page/include/footer.html");
+
+        $("#temp").Slide({
+            effect: "fade",
+            speed: "normal",
+            timer: 3000
+        });
+        $('#rvc1').rvc({
+            liNum: 4,//2~5之间的整数
+            spaceBetween: 15,//li项之间的距离
+            plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
+            time: 400,//动画时间
+            prv: '.rvc-prv',//前一个按钮
+            next: '.rvc-next'//下一个按钮
+        });
+        $("#allTab .nav-item.second").click(function () {
+            console.log(111)
+            $('#rvc2').rvc({
+                liNum: 9,//2~5之间的整数
+                spaceBetween:25,//li项之间的距离
+                plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
+                time:350,//动画时间
+                prv: '.rvc-prv',//前一个按钮
+                next: '.rvc-next'//下一个按钮
+            });
+
+        })
+
         $(".parse").attr("disabled", true).css("pointer-events", "none")
         autoScrolling();
         caseScroll();

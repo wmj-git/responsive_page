@@ -52,12 +52,12 @@
                 widthFn();
             });
             function widthFn() {
-                console.log('diaoy')
                 ww = $(window).width();
                 self.css('width',ww-plr*2);
                 sw = self.width();
                 rvcw.css('width',sw-sb*2);
                 rvcww = rvcw.width();
+                console.log('rvcww:',rvcww,'rvcw:',rvcw,'sw:',sw,'ww:',ww);
                 prv.width(sb)
                 next.width(sb)
                 if (ww>=1024) {
@@ -70,10 +70,10 @@
                     liw = (rvcww - (obj.spaceBetween*(2)))/1
                 }
                 rvcw_li.css({'width':liw,'margin-left':obj.spaceBetween});
-                $(".case_info").css({'width':liw - 56});
                 rvcw_ul.css('width',(liw+sb)*size);
                 if (onload) {
                     rvcw_ul.css('left',-(liw+sb)*(size/3));
+
                     onload = false;
                 }
             }
@@ -89,18 +89,6 @@
                     }
                 });
             }
-            // var _timer = {};
-            // function delay_till_last(id, fn, wait) {
-            //     if (_timer[id]) {
-            //         window.clearTimeout(_timer[id]);
-            //         delete _timer[id];
-            //     }
-
-            //     return _timer[id] = window.setTimeout(function() {
-            //         fn();
-            //         delete _timer[id];
-            //     }, wait);
-            // }
             $(next).on('click',function(){
                 prv_num = true;
                 if (next_num) {
