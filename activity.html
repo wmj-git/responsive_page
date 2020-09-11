@@ -300,6 +300,7 @@
     <div id="footer"></div>
 </div>
 <script>
+    var parentW;
     $(function () {
         $("#header").load("page/include/nav.html");
         $("#footer").load("page/include/footer.html");
@@ -325,7 +326,19 @@
             let _index = $(this).index();
             window.location.href = "activity_detail.html?id="+_index;
         });
+        listWidthFn();
     });
+    function listWidthFn(){
+        parentW = $(".activity_layout_flex").innerWidth();
+        $(".activity_list").css("width", parentW / 3 - 20);
+        let $win = $(window).width();
+        if($win < 980){
+            $(".activity_list").css("width", parentW / 2 - 20);
+        }
+    }
+    $(window).resize(function () {
+        listWidthFn();
+    })
 </script>
 </body>
 </html>

@@ -17,15 +17,13 @@
                         <li>
                             <a class="f_a" href="online.html">线上会员</a>
                             <div class="s_navbox">
-                                <div class="s_a">
-                                </div>
+                                <div class="s_a"></div>
                             </div>
                         </li>
                         <li>
                             <a class="f_a" href="offline.html">线下VIP服务</a>
                             <div class="s_navbox">
-                                <div class="s_a">
-                                </div>
+                                <div class="s_a"></div>
                             </div>
                         </li>
                         <li>
@@ -231,8 +229,19 @@
             if($(this).hasClass("active")){
                 let _parent = $(this).parents('li');
                 _parent.find(".f_a").addClass("active");
-                console.log(121)
             }
+        })
+
+        $(".nav_pc li").click(function () {
+            var index = $(this).index();
+            sessionStorage.setItem("currentNav",index);
+        });
+        $(window).on('load',function () {
+            console.log('页面加载');
+            var index = sessionStorage.getItem("currentNav");
+            console.log('index：',index);
+            var li = $(".nav_pc li").eq(index);
+            li.find("a").addClass("active").parents('li').siblings().find('a').removeClass("active");
         })
     })
 </script>

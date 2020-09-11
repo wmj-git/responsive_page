@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="style/online_detail.css">
     <link rel="stylesheet" href="style/icons/iconfont.css">
     <script src="js/lb_js/jq.Slide.js"></script>
+
     <title>线上会员详情</title>
 </head>
 <body class="online_body">
@@ -195,7 +196,6 @@
     var width = $(".flashBg ul.mobile li").outerWidth(true);
 
     $("#four_flash .btn_right").click(function () {
-        console.log('向右')
         _index++;
         if (_index + (len - 1) > len) {
             $("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
@@ -205,23 +205,26 @@
 
 
     $("#four_flash .btn_left").click(function () {
-        console.log('向左')
+        rightFn();
+    });
+    function rightFn() {
         if (_index == 0) {
             $("ul.mobile").prepend($("ul.mobile").html());
             let allW = $("ul.mobile").outerWidth() / (len * 2);
-            console.log('hh', allW);
             $("ul.mobile").css("left", -allW + "px");
             _index = len;
         }
         _index--;
         $("#four_flash .flashBg ul.mobile").stop().animate({left: -_index * width}, 1000);
-    });
+    }
 </script>
 <script>
     $(function () {
         $("#header").load("page/include/nav.html");
         $("#footer").load("page/include/_footer.html");
+        // setInterval(rightFn,2500);
     })
 </script>
+
 </body>
 </html>

@@ -57,7 +57,6 @@
                 sw = self.width();
                 rvcw.css('width',sw-sb*2);
                 rvcww = rvcw.width();
-                console.log('rvcww:',rvcww,'rvcw:',rvcw,'sw:',sw,'ww:',ww);
                 prv.width(sb)
                 next.width(sb)
                 if (ww>=1024) {
@@ -105,7 +104,7 @@
                     move_left();
                 }
             })
-            // setInterval(move_left, 2500);
+            setInterval(move_left, 2500);
             // 右滑
             function move_right(){
                 prv_b = true;

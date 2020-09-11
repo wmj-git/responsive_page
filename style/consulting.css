@@ -38,15 +38,14 @@
   .content_container .consulting_content {
     text-align: center;
     font-size: .6rem; }
-    .content_container .consulting_content .consulting_list .col-md-3 {
+    .content_container .consulting_content .consulting_list .col-md-3-width {
       padding: 60px 5px 30px;
       background-color: rgba(255, 255, 255, 0.85);
       border-radius: 5px;
-      max-width: 23%;
       margin: 10px;
       position: relative;
       overflow: hidden; }
-      .content_container .consulting_content .consulting_list .col-md-3 .num_img {
+      .content_container .consulting_content .consulting_list .col-md-3-width .num_img {
         width: 2.5rem;
         height: 2rem;
         position: absolute;
@@ -54,41 +53,41 @@
         top: 15px;
         filter: drop-shadow(-250px 0 #fff);
         -webkit-filter: drop-shadow(-250px 0 #fff); }
-      .content_container .consulting_content .consulting_list .col-md-3 p {
+      .content_container .consulting_content .consulting_list .col-md-3-width p {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         margin-bottom: 5px; }
-        .content_container .consulting_content .consulting_list .col-md-3 p.item_title {
+        .content_container .consulting_content .consulting_list .col-md-3-width p.item_title {
           font-size: 1.2rem;
           font-weight: bold;
           color: #6c6c6c; }
-        .content_container .consulting_content .consulting_list .col-md-3 p.item_text {
+        .content_container .consulting_content .consulting_list .col-md-3-width p.item_text {
           margin: 10px auto 20px;
           color: rgba(0, 0, 0, 0.6); }
-      .content_container .consulting_content .consulting_list .col-md-3 .item_btn {
+      .content_container .consulting_content .consulting_list .col-md-3-width .item_btn {
         border: 1px solid #c5c5c5;
         border-radius: 1rem;
         padding: .2rem 1rem;
         background-color: transparent; }
-        .content_container .consulting_content .consulting_list .col-md-3 .item_btn:after {
+        .content_container .consulting_content .consulting_list .col-md-3-width .item_btn:after {
           border: none; }
-      .content_container .consulting_content .consulting_list .col-md-3.active {
+      .content_container .consulting_content .consulting_list .col-md-3-width.active {
         background-color: #9c8ef0;
         color: #fff;
         box-shadow: 0 4px 20px 0 #9183e0; }
-        .content_container .consulting_content .consulting_list .col-md-3.active .item_title {
+        .content_container .consulting_content .consulting_list .col-md-3-width.active .item_title {
           color: #fff; }
-        .content_container .consulting_content .consulting_list .col-md-3.active .item_btn {
+        .content_container .consulting_content .consulting_list .col-md-3-width.active .item_btn {
           background-color: #fff;
           color: #9c8ef0;
           border-color: #fff; }
-        .content_container .consulting_content .consulting_list .col-md-3.active .num_img {
+        .content_container .consulting_content .consulting_list .col-md-3-width.active .num_img {
           transform: translate(250px, 0);
           -webkit-transform: translate(250px, 0);
           -ms-transform: translate(250px, 0);
           -o-transform: translate(250px, 0); }
-        .content_container .consulting_content .consulting_list .col-md-3.active .item_sub_title, .content_container .consulting_content .consulting_list .col-md-3.active .item_text, .content_container .consulting_content .consulting_list .col-md-3.active div {
+        .content_container .consulting_content .consulting_list .col-md-3-width.active .item_sub_title, .content_container .consulting_content .consulting_list .col-md-3-width.active .item_text, .content_container .consulting_content .consulting_list .col-md-3-width.active div {
           color: rgba(255, 255, 255, 0.6); }
     .content_container .consulting_content .consulting_list:first-child {
       margin-bottom: 1rem; }
@@ -148,11 +147,5 @@
                   padding-right: .2rem; }
                 .content_container .copywriter_list .copyWriter_item .row .col-md-8 .copyWriter_other .copyWriter_flex .right .other_item:last-child {
                   border: none; }
-
-@media screen and (max-width: 768px) {
-  .content_container .consulting_content .consulting_list .col-md-3 {
-    margin: 5px;
-    padding: 36px 5px 10px;
-    max-width: 46%; } }
 
 /*# sourceMappingURL=consulting.css.map */
