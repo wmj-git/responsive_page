@@ -143,6 +143,9 @@
                 color: #fff;
                 font-size: .8rem;
                 background: linear-gradient(to right, #a068ef, #886cf0);
+                &:disabled{
+                  background: linear-gradient(to right, rgba(160, 104, 239, 0.59), rgba(136, 108, 240, 0.58));
+                }
               }
             }
           }

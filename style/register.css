@@ -117,6 +117,8 @@
               color: #fff;
               font-size: .8rem;
               background: linear-gradient(to right, #a068ef, #886cf0); }
+              .register_box .register_form .container .register-content .register_left .form-group .register_margin .register_btn:disabled {
+                background: linear-gradient(to right, rgba(160, 104, 239, 0.59), rgba(136, 108, 240, 0.58)); }
       .register_box .register_form .container .register-content .register_right {
         position: relative; }
         .register_box .register_form .container .register-content .register_right .register_img {

@@ -142,7 +142,7 @@
                                         <option selected>请选择</option>
                                         <option value="1">20k以上</option>
                                         <option value="2">20k</option>
-                                        <option value="3">1.5k</option>
+                                        <option value="3">15k</option>
                                         <option value="3">10k</option>
                                         <option value="3">5k</option>
                                         <option value="3">3k以下</option>
@@ -171,14 +171,15 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 register_margin">
-                                <input type="checkbox">已阅读和同意<a>余生婚恋网的服务协议</a>和<a>个人信息保护政策</a>并同意将本人提供之信息
+                                <input type="checkbox" id="checked_service" name="service"
+                                       checked>已阅读和同意<a>余生婚恋网的服务协议</a>和<a>个人信息保护政策</a>并同意将本人提供之信息
                                 由珍爱网提供线上/线下服务使用
                             </div>
 
                         </div>
                         <div class="form-group">
                             <div class="col-md-10 register_margin">
-                                <button class="register_btn">同意协议并注册</button>
+                                <button class="register_btn" type="submit">同意协议并注册</button>
                             </div>
                         </div>
                     </form>
@@ -218,8 +219,21 @@
         obj.onchange = function () {
             console.log('选择收入', $("#incomeSelect option:selected").text());
         }
+        $(".register_btn").click(function () {
+            console.log('提交注册信息');
+        });
+        serviceFn();
     });
-
+    function serviceFn() {
+        $("input[name='service']").on("change", function () {
+            var change = $("input[type='checkbox']").is(':checked'); //checkbox选中判断
+            if (change) {
+                $(".register_btn").removeAttr("disabled");
+            } else {
+                $(".register_btn").attr("disabled","true");
+            }
+        });
+    }
     function mark() {
         event || (event = window.event);
         $('input[type=range]').val(event.target.value);
