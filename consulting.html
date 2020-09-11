@@ -565,7 +565,7 @@
         listWidthFn();
     });
     function GetRequest() {
-        var url = window.location.href; //获取url中"?"符后的字串
+        var url = window.location.href; //获取url中"#"符后的字串
         let real_href = "";
         if (url.indexOf("#") != -1) {
             let sub_href = url.lastIndexOf("#");

@@ -211,13 +211,12 @@
             if ((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
                 $(this).addClass('active');
                 urlstatus = true;
-
             } else {
                 $(this).removeClass('active');
             }
         });
         if (!urlstatus) {
-            $(".navbar li a").eq(0).addClass('active');
+            $(".navbar li a").eq(0).addClass('active').siblings().removeClass("active");
         }
 
         $(".s_a a").click(function () {
@@ -227,21 +226,18 @@
 
         $(".s_a a").each(function () {
             if($(this).hasClass("active")){
-                let _parent = $(this).parents('li');
-                _parent.find(".f_a").addClass("active");
+                $(this).parents('li').find(".f_a").addClass("active");
             }
         })
-
         $(".nav_pc li").click(function () {
             var index = $(this).index();
             sessionStorage.setItem("currentNav",index);
         });
         $(window).on('load',function () {
-            console.log('页面加载');
             var index = sessionStorage.getItem("currentNav");
-            console.log('index：',index);
+            console.log('当前点击nav：',index);
             var li = $(".nav_pc li").eq(index);
-            li.find("a").addClass("active").parents('li').siblings().find('a').removeClass("active");
+            li.find("a").addClass("active").siblings().find('a').removeClass("active");
         })
     })
 </script>
