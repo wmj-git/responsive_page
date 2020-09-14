@@ -53,10 +53,12 @@
             });
             function widthFn() {
                 ww = $(window).width();
+                console.log('window宽度',ww);
                 self.css('width',ww-plr*2);
                 sw = self.width();
                 rvcw.css('width',sw-sb*2);
                 rvcww = rvcw.width();
+                console.log('wind',rvcww);
                 prv.width(sb)
                 next.width(sb)
                 if (ww>=1024) {
@@ -104,7 +106,7 @@
                     move_left();
                 }
             })
-            setInterval(move_left, 2500);
+            // setInterval(move_left, 2500);
             // 右滑
             function move_right(){
                 prv_b = true;

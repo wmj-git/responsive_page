@@ -778,15 +778,19 @@
             height: 12.5rem !important;
             position: absolute; }
         .consultation_page .consultation-bg .container_bg .consultation-banner .consultation-img {
-          width: 80% !important; }
+          width: 76% !important; }
         .consultation_page .consultation-bg .container_bg .consultation-banner .JQ-slide-content li {
           height: 125px; }
           .consultation_page .consultation-bg .container_bg .consultation-banner .JQ-slide-content li .banner_left:after {
             left: .5rem !important; }
+          .consultation_page .consultation-bg .container_bg .consultation-banner .JQ-slide-content li .banner_left {
+            position: relative;
+            left: 20%; }
         .consultation_page .consultation-bg .container_bg .consultation-banner .consultation-content {
           top: 70px !important;
           position: relative;
-          left: 1rem; }
+          left: 3rem;
+          padding: 0 2rem; }
           .consultation_page .consultation-bg .container_bg .consultation-banner .consultation-content .content_page {
             padding: 0 !important;
             -webkit-line-clamp: 2 !important;

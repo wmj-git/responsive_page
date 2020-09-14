@@ -968,18 +968,23 @@
         }
         & .consultation-banner {
           & .consultation-img {
-            width: 80% !important;
+            width: 76% !important;
           }
           & .JQ-slide-content li {
             height: 125px;
             & .banner_left:after {
               left: .5rem !important;
             }
+            & .banner_left{
+              position: relative;
+              left: 20%;
+            }
           }
           & .consultation-content {
             top: 70px !important;
             position: relative;
-            left: 1rem;
+            left: 3rem;
+            padding: 0 2rem;
             & .content_page {
               padding: 0 !important;
               -webkit-line-clamp: 2 !important;

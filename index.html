@@ -733,9 +733,17 @@
             prv: '.rvc-prv',//前一个按钮
             next: '.rvc-next'//下一个按钮
         });
-        $("#allTab .nav-item.second").click(function () {
+        $('#rvc2').rvc({
+            liNum: 4,//2~5之间的整数
+            spaceBetween:25,//li项之间的距离
+            plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
+            time:350,//动画时间
+            prv: '.rvc-prv',//前一个按钮
+            next: '.rvc-next'//下一个按钮
+        });
+        /*$("#allTab .nav-item.second").click(function () {
             $('#rvc2').rvc({
-                liNum: 9,//2~5之间的整数
+                liNum: 4,//2~5之间的整数
                 spaceBetween:25,//li项之间的距离
                 plr: 20,//当屏幕小于1024时，rvc的padding-left，padding-right值
                 time:350,//动画时间
@@ -744,7 +752,7 @@
             });
 
         })
-
+*/
         $(".parse").attr("disabled", true).css("pointer-events", "none")
         autoScrolling();
         caseScroll();
@@ -814,7 +822,7 @@
         let _parentW = $(".case_banner").innerWidth();
         let _object = $(".four_flash .flashBg ul.mobile li");
         _object.css("width", _parentW / 2 - 10);
-        $(".case_info").css("width", _parentW / 2 - 10);
+        // $(".case_info").css("width", _parentW / 2 - 10);
         width = _object.outerWidth(true);
 
         _object.find("img").css("width", _parentW / 2 - 10);
