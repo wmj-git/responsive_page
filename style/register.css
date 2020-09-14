@@ -61,6 +61,8 @@
             height: .9rem;
             width: .9rem;
             background: url("../image/login_regist/circle.png") no-repeat center; }
+            .register_box .register_form .container .register-content .register_left .form-group input[type="range"]::-webkit-slider-thumb:hover {
+              cursor: pointer; }
           .register_box .register_form .container .register-content .register_left .form-group .register_tooltip {
             background: #fff;
             box-shadow: 0 0 4px #bbb;
@@ -110,6 +112,8 @@
             .register_box .register_form .container .register-content .register_left .form-group .register_margin a {
               color: #9c8ef0;
               text-decoration: underline; }
+              .register_box .register_form .container .register-content .register_left .form-group .register_margin a:hover {
+                cursor: pointer; }
             .register_box .register_form .container .register-content .register_left .form-group .register_margin .register_btn {
               border: none;
               border-radius: 3px;
@@ -141,7 +145,7 @@
             font-size: .7rem;
             color: #000; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .register_form .container {
     padding: 0 !important; }
     .register_form .container .register_left .form-group label {
@@ -161,5 +165,8 @@
       padding: .1rem .2rem !important;
       top: -1.6rem !important;
       left: 11rem !important; } }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .register_form .container .register_left .form-group input[type="range"] {
+    top: 12px !important; } }
 
 /*# sourceMappingURL=register.css.map */

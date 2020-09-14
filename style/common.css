@@ -239,6 +239,23 @@ a:hover {
 .carousel-control-next, .carousel-control-prev {
   width: 6%; }
 
+.form-control {
+  border: none;
+  box-shadow: unset;
+  font-size: .7rem;
+  padding: .4rem .5rem !important; }
+  .form-control:invalid:focus {
+    box-shadow: 0 0 0 2px #dc354540 !important; }
+  .form-control:valid:focus {
+    box-shadow: 0 0 0 2px #28a74540 !important; }
+
+.custom-select:focus {
+  border-color: transparent; }
+.custom-select:invalid:focus {
+  box-shadow: 0 0 0 2px #dc354540 !important; }
+.custom-select:valid:focus {
+  box-shadow: 0 0 0 2px #28a74540 !important; }
+
 .footer {
   text-align: center;
   padding: 1.5rem .5rem;
