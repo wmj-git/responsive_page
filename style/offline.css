@@ -1,5 +1,7 @@
-.offline_bg .offline_img {
-  width: 100%; }
+.offline_bg {
+  padding-top: 48px; }
+  .offline_bg .offline_img {
+    width: 100%; }
 
 ._footer {
   margin-top: 2rem; }

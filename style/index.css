@@ -13,6 +13,9 @@
 .carousel-control-next-icon, .carousel-control-prev-icon {
   background-size: 50%; }
 
+.index_page .bg-light {
+  background-color: rgba(255, 255, 255, 0.69) !important; }
+
 .index_body {
   overflow: hidden !important; }
 
@@ -415,7 +418,7 @@
 
 /*相亲活动*/
 .activity_page {
-  padding: 2rem 0;
+  padding: 48px 0 2rem;
   height: auto !important; }
 
 .blind_banner .blind_container .fp-tableCell {

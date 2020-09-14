@@ -8,7 +8,6 @@
     user-scalable=0">
     <link rel="stylesheet" href="style/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="style/common.css">
-    <link rel="stylesheet" href="style/index.css"/>
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="style/offline.css">
@@ -194,6 +193,9 @@
         $("#header").load("page/include/nav.html");
         $("#footer").load("page/include/_footer.html");
 
+        autoFn();
+    });
+    function autoFn() {
         var $win = $(window).width();
         let obj = $(".private_list .col-md-4");
         obj.first().addClass("active");
@@ -201,7 +203,7 @@
         let all_height = _obj.outerHeight();
         let sole_height = all_height - obj.last().height();
         obj.css("height", all_height);
-        if ($win > 768) {
+        if ($win > 769) {
             obj.each(function () {
                 if ($(this).hasClass("active")) {
                     $(this).css("paddingTop", "30px");
@@ -258,6 +260,10 @@
         }
         let line_height = $(".style_icon").height();
         $(".text").css("lineHeight",line_height+"px");
+    }
+    $(window).resize(function () {
+        let obj = $(".private_list .col-md-4");
+        obj.css("height","auto");
     })
 </script>
 </body>
