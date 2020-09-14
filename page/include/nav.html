@@ -4,7 +4,7 @@
             <div class="navbox">
                 <!-- 主菜单 -->
                 <div class="headlf">
-                    <a href="index.html"> <img src="image/index_page/logo.png" /></a>
+                    <a href="index.html"> <img src="image/index_page/logo.png"/></a>
                 </div>
                 <div class="nav headrg">
                     <ul class="nav_pc">
@@ -68,7 +68,7 @@
                         <li>
                             <a class="f_a" href="javascript:void(0)">关于我们</a>
                             <div class="s_navbox">
-                                <div class="s_a">
+                                <div class="s_a about">
                                     <a href="about.html">联系我们</a>
                                     <a href="service.html">服务协议</a>
                                     <a href="feedback.html">意见反馈</a>
@@ -91,16 +91,16 @@
         <!-- 手机端导航--开始 -->
         <div class="m_img">
             <div class="headlf">
-                <a href="index.html"> <img class="m_logo" src="image/index_page/logo.png" /></a>
+                <a href="index.html"> <img class="m_logo" src="image/index_page/logo.png"/></a>
             </div>
             <div class="headrg">
-                <a href="javascript:;" class="a_js"> <img class="m_menuimg" src="image/nav/m_menuimg.png" /></a>
+                <a href="javascript:;" class="a_js"> <img class="m_menuimg" src="image/nav/m_menuimg.png"/></a>
             </div>
         </div>
         <div class="m_nav">
             <div class="closecover a_closed"></div>
             <div class="closeicon">
-                <a href="javascript:;" class="a_closed"> <img src="image/nav/close.png" width="22" /></a>
+                <a href="javascript:;" class="a_closed"> <img src="image/nav/close.png" width="22"/></a>
             </div>
             <div class="m_navList">
                 <ul>
@@ -178,7 +178,8 @@
                         </div>
                     </li>
                     <li class="other_nav">
-                        <img src="image/index_page/phone_mobile.png"><a href="#" class="phoneNumber"><span>400 023 8520</span></a>
+                        <img src="image/index_page/phone_mobile.png"><a href="#"
+                                                                        class="phoneNumber"><span>400 023 8520</span></a>
                     </li>
                     <li class="other_nav">
                         <span class="login_btn login">登录</span>
@@ -195,21 +196,11 @@
 <script src="js/nav.js"></script>
 <script>
     $(function () {
-        $(".navbar li a").click(function () {
-            if($(this).attr('href')) window.location = "consulting.html"+$(this).attr('href');
-
-        })
-        $(".login_btn.login").click(function () {
-            window.location.href = "login.html";
-        });
-        $(".login_btn.register").click(function () {
-            window.location.href = "register.html";
-        });
         var urlstr = location.href;
         var urlstatus = false;
         $(".navbar li a").each(function () {
             if ((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
-                $(this).addClass('active');
+                $(this).addClass('active').siblings().removeClass("active");
                 urlstatus = true;
             } else {
                 $(this).removeClass('active');
@@ -219,25 +210,38 @@
             $(".navbar li a").eq(0).addClass('active').siblings().removeClass("active");
         }
 
-        $(".s_a a").click(function () {
-            $(this).addClass("active").siblings().removeClass("active");
-            window.location = "consulting.html"+$(this).attr('href');
-        })
-
         $(".s_a a").each(function () {
-            if($(this).hasClass("active")){
+            if ($(this).hasClass("active")) {
                 $(this).parents('li').find(".f_a").addClass("active");
             }
         })
-        $(".nav_pc li").click(function () {
-            var index = $(this).index();
-            sessionStorage.setItem("currentNav",index);
-        });
-        $(window).on('load',function () {
-            var index = sessionStorage.getItem("currentNav");
-            console.log('当前点击nav：',index);
-            var li = $(".nav_pc li").eq(index);
-            li.find("a").addClass("active").siblings().find('a').removeClass("active");
-        })
-    })
+    });
+    $(".login_btn.login").click(function () {
+        window.location.href = "login.html";
+    });
+    $(".login_btn.register").click(function () {
+        window.location.href = "register.html";
+    });
+    $(".s_a a").click(function () {
+        if ($(this).attr('href')) window.location = "consulting.html" + $(this).attr('href');
+        $(this).addClass("active").siblings().removeClass("active");
+        let index = $(this).index();
+        sessionStorage.setItem("currentHref",index);
+    });
+
+    $(".nav_pc li").click(function () {
+        let index = $(this).index();
+        sessionStorage.setItem("currentNav", index);
+    });
+
+    $(window).on('reload', function () {
+        let _index = sessionStorage.getItem("currentHref");
+        let _a = $(".s_a.about a").eq(_index);
+        _a.addClass("active");
+
+        let index = sessionStorage.getItem("currentNav");
+        console.log('当前点击nav：', index);
+        let li = $(".nav_pc li").eq(index);
+        li.find("a").addClass("active").siblings().find("a").removeClass("active");
+    });
 </script>
