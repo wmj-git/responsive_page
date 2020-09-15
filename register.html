@@ -16,6 +16,8 @@
     <script src="js/datapicker/distpicker.data.js"></script>
     <script src="js/datapicker/distpicker.js"></script>
     <script src="js/birthday.js"></script>
+    <script src="js/layer/layer.js"></script>
+    <script src="js/service/ajax.js"></script>
     <title>余生婚恋</title>
 
 </head>
@@ -281,6 +283,7 @@
                 event.stopPropagation();
             }
             $(this).addClass("was-validated");
+
             let _phone = $("input[name='telephone']").val();
             let _pwd = $("input[name='password']").val();
             let _year = $("#year").attr('rel');
@@ -291,6 +294,18 @@
             let _city = $("#city10").attr('rel');
             let _district = $("#district10").attr('rel');
 
+
+            let  data = {};
+            data.phoneMber = _phone;
+            data.pwd = _pwd;
+            data.birth = _year + '-' + _month + '-' + _day;
+            data.address = _province + _city + _district;
+            data.edu = _edu;
+            data.income = _income;
+            data.bodyH = _bodyH;
+            data.married = _married;
+            data.sex = _sex;
+
             if (_year == undefined || _month == undefined || _day == undefined) {
                 layer.msg('请选择出生日期！');
             } else if (_province == undefined || _city == undefined || _district == undefined) {
@@ -298,8 +313,8 @@
             } else {
                 _birth = _year + '-' + _month + '-' + _day; // 生日
                 _address = _province + _city + _district; // 工作地区
-
-                console.log('提交表单', _phone, _pwd, _income, _edu, '_bodyH:', _bodyH, _sex, _married, _birth,_address);
+                post("register.html",data);
+                return false;
             }
         });
     });
