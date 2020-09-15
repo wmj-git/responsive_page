@@ -15,7 +15,6 @@
     <script src="js/layer/layer.js"></script>
     <script src="js/datapicker/distpicker.data.js"></script>
     <script src="js/datapicker/distpicker.js"></script>
-    <script src="js/jquery.time.js"></script>
     <script src="js/birthday.js"></script>
     <title>余生婚恋</title>
 
@@ -62,7 +61,7 @@
                             <div class="col-md-12" id="birthday">
                                 <label>我的生日</label>
                                 <div class="row birth_width">
-                                    <select class="sel_year" name="YYYY" id="year" required>
+                                    <select class="sel_year" name="YYYY" id="year">
                                         <option value="">请选择</option>
                                     </select>
                                     <span>年</span>
@@ -81,7 +80,7 @@
                             <div class="col-md-12">
                                 <label>工作地区</label>
                                 <div id="distPicker" class="row distPicker">
-                                    <select class="" id="province10" required></select>
+                                    <select class="" id="province10"></select>
                                     <select class="" id="city10"></select>
                                     <select class="" id="district10"></select>
                                 </div>
@@ -159,7 +158,7 @@
                                 <div class="col-md-6 padding-none">
                                     <input type="tel" class="form-control" placeholder="请输入手机号码" name="telephone"
                                            required pattern="^1[3456789][0-9]{9}$">
-                                    <div class="invalid-feedback">输入的手机号码不合法！</div>
+                                    <div class="invalid-feedback">请输入合法手机号码！</div>
                                 </div>
                             </div>
                         </div>
@@ -216,6 +215,7 @@
     var _sex;
     var _birth;
     var _married;
+    var _address;
     $(function () {
 
         let _body = $('#show').text();
@@ -225,14 +225,37 @@
         _sex = $('#sex input:radio:checked').val();// 性别默认值
         _married = $("#marriedStatus input:radio:checked").val();
 
-
-        let birth = $("#birthday select option:selected").text();
-        console.log('birth',birth);
-
         $("#formControlRange").val(160);
         $("#footer").load("page/include/footer.html");
         let top = $("#nav").outerHeight();
         $(".register_form").css("top", top + "px");
+
+        /*生日选择器*/
+        $.ms_DatePicker({
+            YearSelector: ".sel_year",
+            MonthSelector: ".sel_month",
+            DaySelector: ".sel_day"
+        });
+        $("#year").change(function () {
+            $(this).attr('rel', $(this).val());
+        });
+        $("#month").change(function () {
+            $(this).attr('rel', $(this).val());
+        });
+        $("#day").change(function () {
+            $(this).attr('rel', $(this).val());
+        });
+
+        /*工作地区选择*/
+        $("#province10").change(function () {
+            $(this).attr("rel", $(this).val())
+        });
+        $("#city10").change(function () {
+            $(this).attr("rel", $(this).val())
+        });
+        $("#district10").change(function () {
+            $(this).attr("rel", $(this).val())
+        });
 
         $("#distPicker").distpicker({
             autoSelect: false
@@ -260,7 +283,24 @@
             $(this).addClass("was-validated");
             let _phone = $("input[name='telephone']").val();
             let _pwd = $("input[name='password']").val();
-            console.log('提交表单', _phone, _pwd, _income, _edu, '_bodyH:', _bodyH,_sex,_married);
+            let _year = $("#year").attr('rel');
+            let _month = $("#month").attr('rel');
+            let _day = $("#day").attr('rel');
+
+            let _province = $("#province10").attr('rel');
+            let _city = $("#city10").attr('rel');
+            let _district = $("#district10").attr('rel');
+
+            if (_year == undefined || _month == undefined || _day == undefined) {
+                layer.msg('请选择出生日期！');
+            } else if (_province == undefined || _city == undefined || _district == undefined) {
+                layer.msg('请选择工作地区！');
+            } else {
+                _birth = _year + '-' + _month + '-' + _day; // 生日
+                _address = _province + _city + _district; // 工作地区
+
+                console.log('提交表单', _phone, _pwd, _income, _edu, '_bodyH:', _bodyH, _sex, _married, _birth,_address);
+            }
         });
     });
 

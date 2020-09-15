@@ -49,11 +49,16 @@
         background-color: #9c8ef0;
         color: #fff;
         padding: .5rem 0;
-        border-radius: 3px; }
+        border-radius: 3px;
+        border: none;
+        width: 100%; }
         .login-form .login_header .form-group .btn-info:active, .login-form .login_header .form-group .btn-info:not(:disabled):not(.disabled).active:focus, .login-form .login_header .form-group .btn-info:not(:disabled):not(.disabled):active:focus, .show > .login-form .login_header .form-group .btn-info.dropdown-toggle:focus {
           background-color: #9c8ef0;
           box-shadow: 0 0 0.5rem #8877ed;
           border-color: transparent; }
+        .login-form .login_header .form-group .btn-info:focus, .login-form .login_header .form-group .btn-info.focus, .login-form .login_header .form-group .btn-info:hover {
+          box-shadow: unset;
+          box-shadow: 0 0 0.5rem #8877ed; }
       .login-form .login_header .form-group input[type=checkbox], .login-form .login_header .form-group input[type=radio] {
         margin-right: 5px; }
       .login-form .login_header .form-group label {

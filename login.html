@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style/login.css">
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/layer/layer.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <title>余生婚恋</title>
 </head>
 <body>
@@ -37,29 +37,34 @@
             <div id="login_header" class="login_header col-md-5">
                 <span class="circle"><img src="image/login_regist/logo_login.png" class="login_logo"></span>
                 <h5 class="text-center">登录余生婚恋</h5>
-                <form class="form-horizontal" role="form">
-                    <div class="form-group has-error ">
+                <form class="form-horizontal" role="form" novalidate id="form-login">
+                    <div class="form-group">
                         <div class="col-md-12">
-                            <input type="tel" name="phone" class="form-control" placeholder="请输入手机">
+                            <input type="text" name="phone" class="form-control" placeholder="请输入手机" required
+                                   pattern="^1[3456789][0-9]{9}$">
+                            <div class="invalid-feedback">请输入合法手机号码！</div>
                         </div>
                     </div>
-                    <div class="form-group has-success">
+                    <div class="form-group">
                         <div class="col-md-12">
-                            <input type="password" name="password" class="form-control" placeholder="请输入密码 ">
+                            <input type="password" name="password" class="form-control" placeholder="请输入密码 " required
+                                   pattern="[A-Za-z0-9]{8,20}">
+                            <div class="invalid-feedback">密码长度至少为8位,只能是大小写字母或数字！</div>
                         </div>
                     </div>
-                    <div class="form-group has-warning">
+                    <div class="form-group">
                         <div class="col-md-12">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox">记住密码
+                                    <input type="checkbox" id="remember" name="remember">记住密码
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="button" class="form-control btn btn-info" onclick="loginFn()" value="立即登录">
+                            <!--<input type="button" class="form-control btn btn-info" value="立即登录">-->
+                            <button class="btn btn-info" id="register">立即登录</button>
                         </div>
                     </div>
                     <div class="form-group form_register">
@@ -75,10 +80,45 @@
     $(function () {
         $("#footer").load("page/include/footer.html");
         let top = $("#nav").outerHeight();
-        $(".login-form").css("top",top+"px");
+        $(".login-form").css("top", top + "px");
+
+        /* if ($.cookie("user") != null && $.cookie("pwd") != null) {
+             $("input[name='phone']").val($.cookie("user"));
+             $("input[name='password']").val($.cookie("pwd"))
+         }*/
+        let _phone = $("input[name='phone']").val();
+        let _pwd = $("input[name='password']").val();
+        console.log(_phone, _pwd)
+        $("#remember").on("change", function () {
+            var change = $("input[type='checkbox']").is(':checked'); //checkbox选中判断
+            if (change) {
+                /*  $.cookie("user", $("input:text").val(), {expires: 1});
+                  $.cookie("pwd", $("input:password").val(), {expires: 1});*/
+
+            } else {
+                /* $.cookie("user", null);
+                 $.cookie("pwd", null);*/
+
+            }
+        });
+        $("#form-login").submit(function (event) {
+            if ($(this)[0].checkValidity() === false) {
+                event.preventDefault();// 阻止提交表单
+                event.stopPropagation();
+            }
+            $(this).addClass("was-validated");
+
+            let _phone = $("input[name='phone']").val();
+            let _pwd = $("input[name='password']").val();
+            if (_phone !== undefined && _pwd !== undefined) {
+                console.log('提交表单');
+                // window.location.href = "index.html?phone=" + _phone;
+            }
+
+        });
     });
 
-    function loginFn() {
+    /*function loginFn() {
         let phone = $("input[name='phone']").val();
         let pwd = $("input[name='password']").val();
         let reg = /^1[3456789]\d{9}$/;
@@ -92,7 +132,8 @@
         } else {
             layer.msg("请填写合法手机号");
         }
-    }
+    }*/
+
 </script>
 </body>
 </html>
