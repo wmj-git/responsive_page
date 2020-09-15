@@ -9,7 +9,7 @@
                 <div class="nav headrg">
                     <ul class="nav_pc">
                         <li>
-                            <a class="f_a active" href="index.html">首页</a>
+                            <a class="f_a" href="index.html">首页</a>
                             <div class="s_navbox">
                                 <div class="s_a"></div>
                             </div>
@@ -200,6 +200,7 @@
         var urlstatus = false;
         $(".navbar li a").each(function () {
             if ((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+                sessionStorage.setItem('currentNav',$(this).html());
                 $(this).addClass('active').siblings().removeClass("active");
                 urlstatus = true;
             } else {
@@ -207,7 +208,13 @@
             }
         });
         if (!urlstatus) {
-            $(".navbar li a").eq(0).addClass('active').siblings().removeClass("active");
+            // $(".navbar li a").eq(0).addClass('active').siblings().removeClass("active");
+            let _currentNav = sessionStorage.getItem('currentNav');
+            $(".navbar li .f_a").each(function (e) {
+                if(_currentNav == $(".navbar li .f_a").eq(e).html()){
+                    $(".navbar li .f_a").eq(e).addClass("active").siblings().removeClass("active");
+                }
+            });
         }
 
         $(".s_a a").each(function () {
