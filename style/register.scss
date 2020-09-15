@@ -76,7 +76,7 @@
               height: .9rem;
               width: .9rem;
               background: url("../image/login_regist/circle.png") no-repeat center;
-              &:hover{
+              &:hover {
                 cursor: pointer;
               }
             }
@@ -138,7 +138,7 @@
               & a {
                 color: $backgroundColor-highlight;
                 text-decoration: underline;
-                &:hover{
+                &:hover {
                   cursor: pointer;
                 }
               }
@@ -149,7 +149,7 @@
                 color: #fff;
                 font-size: .8rem;
                 background: linear-gradient(to right, #a068ef, #886cf0);
-                &:disabled{
+                &:disabled {
                   background: linear-gradient(to right, rgba(160, 104, 239, 0.59), rgba(136, 108, 240, 0.58));
                 }
               }
@@ -159,22 +159,22 @@
         & .register_right {
           position: relative;
           & .register_img {
-            height: 36rem;
+            height: 37.5rem;
             width: 100%;
           }
           & .register_title {
             position: absolute;
             top: 5rem;
-            margin-left: -7rem;
+            margin-left: -35%;
             left: 50%;
-            width: 14rem;
-            height: 3rem;
+            width: 70%;
+            height: auto;
           }
           & .register_copy {
             position: absolute;
             left: 50%;
             margin-left: -63px;
-            top: 10rem;
+            top: 30%;
             text-align: center;
             & p {
               font-size: .7rem;
@@ -187,7 +187,7 @@
   }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .register_form {
     & .container {
       padding: 0 !important;
@@ -218,11 +218,18 @@
           }
         }
       }
+      & .register_right {
+        padding: 15px;
+        & .register_title {
+          width: 50% !important;
+          margin-left: -25% !important;
+        }
+      }
     }
   }
 }
 
-@media screen and (min-width: 480px ) and (max-width: 767px){
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .register_form {
     & .container {
       & .register_left {

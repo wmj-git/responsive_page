@@ -171,8 +171,8 @@ a:hover {
 .page-item {
   border: none; }
   .page-item:first-child, .page-item:nth-child(2), .page-item:last-child, .page-item:nth-last-child(2) {
-    height: 40px;
-    width: 45px;
+    height: 35px;
+    width: 40px;
     background: url(../image/index_page/page_bg.jpg) 8px 7px no-repeat; }
   .page-item .page-link {
     border-radius: 0; }
@@ -184,7 +184,8 @@ a:hover {
     .page-item:first-child span, .page-item:nth-child(2) span {
       font-weight: bold; }
     .page-item:first-child .page-link, .page-item:nth-child(2) .page-link {
-      height: 40px; }
+      height: 40px;
+      border-radius: 0; }
   .page-item:nth-child(2) {
     margin-left: 2px;
     background-position: 7px -21px; }
@@ -195,7 +196,8 @@ a:hover {
     .page-item:last-child span, .page-item:nth-last-child(2) span {
       font-weight: bold; }
     .page-item:last-child .page-link, .page-item:nth-last-child(2) .page-link {
-      height: 40px; }
+      height: 40px;
+      border-radius: 0; }
   .page-item:last-child, .page-item:last-child:hover {
     background-position: -21px 7px; }
   .page-item:nth-last-child(2) {

@@ -53,12 +53,10 @@
             });
             function widthFn() {
                 ww = $(window).width();
-                console.log('window宽度',ww);
                 self.css('width',ww-plr*2);
                 sw = self.width();
                 rvcw.css('width',sw-sb*2);
                 rvcww = rvcw.width();
-                console.log('wind',rvcww);
                 prv.width(sb)
                 next.width(sb)
                 if (ww>=1024) {

@@ -223,7 +223,7 @@
         let _body = $('#show').text();
         _bodyH = _body.substr(0, _body.length - 2); // 身高默认值
 
-
+        formHFn();
         _sex = $('#sex input:radio:checked').val();// 性别默认值
         _married = $("#marriedStatus input:radio:checked").val();
 
@@ -231,6 +231,7 @@
         $("#footer").load("page/include/footer.html");
         let top = $("#nav").outerHeight();
         $(".register_form").css("top", top + "px");
+
 
         /*生日选择器*/
         $.ms_DatePicker({
@@ -295,7 +296,7 @@
             let _district = $("#district10").attr('rel');
 
 
-            let  data = {};
+            let data = {};
             data.phoneMber = _phone;
             data.pwd = _pwd;
             data.birth = _year + '-' + _month + '-' + _day;
@@ -313,7 +314,7 @@
             } else {
                 _birth = _year + '-' + _month + '-' + _day; // 生日
                 _address = _province + _city + _district; // 工作地区
-                post("register.html",data);
+                post("register.html", data);
                 return false;
             }
         });
@@ -340,6 +341,19 @@
         $('input[type=range]').css('background-size', info + '% 100%');
         $(".register_tooltip").css("left", left + "rem");
     }
+
+    function formHFn() {
+        let _formH = $(".register_left").innerHeight();
+        let $win = $(window).width();
+        if($win < 768){
+            $(".register_right .register_img").css("height","35rem");
+        } else{
+            $(".register_right .register_img").css("height",_formH);
+        }
+    }
+    $(window).resize(function () {
+        formHFn();
+    })
 </script>
 </body>
 </html>
